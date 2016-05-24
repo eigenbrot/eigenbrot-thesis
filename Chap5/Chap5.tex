@@ -1,0 +1,96 @@
+\chapter[Stellar Populations in NGC 891]{The Location of Stellar Populations in NGC 891}
+\label{chap:891_pop}
+
+% Leave space between title and quote or publication note.  This has often been
+% 10cm for a quote and 8 cm for a reference, but this is really up to you.
+%\vspace{8cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+%% \begin{chabstract}
+%%     Chapter abstract.
+%% \end{chabstract}
+%% \cleardoublepage
+
+\section{Outline}
+Kind of the ``meat'' of the thesis. Here we go in depth about the analysis
+methods used on the data described in \ref{chap:gradpak_obs}. The punchline is
+some statement about how age (and, to a lesser precision, metallicty) varies
+with radius and height in NGC 891.
+
+\section{Basic Analysis}
+\begin{itemize}
+  \item Velocities
+  \item Emission Correction
+  \item Extinction Model
+\end{itemize}
+\subsection{Schedule}
+This is basically done. The two things that still need work are 1) deciding
+where exactly the extinction model section goes, and 2) basic editing. This
+could be completed in 2 days.
+
+\section{LOS Depths}
+\begin{itemize}
+  \item Velocity-based measurement
+  \item Optical depth based measurement
+\end{itemize}
+\subsection{Schedule}
+Great progress has been made over the last few days on this front. I think the
+velocity stuff is done and 80\% written up.
+
+The optical-depth section of this has a completed framework, but the analysis
+depends on a lot of assumptions about the dust distribution that we will take
+from other sources. This requires more thought. Still, a week should be
+sufficient to complete this section.
+
+\section{SSP Fitting}
+\begin{itemize}
+  \item Basic model
+  \item Chisq weights
+  \item Model Libraries
+  \item Determining Age/Metallicity
+\end{itemize}
+\subsection{Schedule}
+The first three bullet points above are basically done and need only basic
+copy editing. This could be done in a few days.
+
+The last bullet point is where we have been spending most of our time recently
+and I think we are extremely close to being ``done'' with the actual
+analysis. I mean, shit, we could say ``we're going to use weights because they
+exclude known bad metallicities, and we're going to use this power because
+we've sampled a coarse grid of powers and it does the best in terms of
+rejecting metallicities, but not too many metallicities'' tomorrow and be done
+with this. The pipline to produce ages and metallicities already exists, we're
+just iterating on the uncertainties.
+
+Once the anlysis is done this will take a week to write up.
+
+\section{Spectral Indices}
+\begin{itemize}
+  \item Measurement
+  \item Use as independent check on metallicities used in SSP fitting
+  \item Qualitative results of trends in age, metallicity with height
+\end{itemize}
+\subsection{Schedule}
+Some of this is already done. The last bullet point needs the most work. In
+particular I have not settled on exactly what plane of spectral indices are
+the most informative. Trager and Co. like Balmer vs <MgFe> and Balmer vs <Fe>,
+but the latter of those does not work well with our galaxy models (dynamic
+range is very small). We currently use \Hd vs <MgFe> and \Hd vs Mgb, but the
+justification is lacking.
+
+I think if we stay relatively shallow on this topic we can get everything
+figured out relatively quickly. Maybe 1-2 weeks.
+
+\section{Heating Models}
+\begin{itemize}
+  \item Model recipe
+  \item comparison to data
+\end{itemize}
+\subsection{Schedule}
+The ball is mostly in your court on this one. We have ages as a function of r
+and z, now we need models for comparison. In principle this could be a very
+short, ``look, we're not crazy'' section with an eye towards future, in depth
+work.
+
+\bibliographystyle{thesis}
+\bibliography{891_pop}
