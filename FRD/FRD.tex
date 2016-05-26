@@ -4,6 +4,19 @@
 % Leave space between title and quote or publication note.  This has often been
 % 10cm for a quote and 8 cm for a reference, but this is really up to you.
 %\vspace{8cm}
+\vfill
+
+\begin{flushright}
+  \fixspacing
+  \textit{A version of this chapter has previously appeared in\\
+    \emph{Ground-based and Airborne Instrumentation for Astronomy IV. Proceedings of the SPIE}}\\
+    \vspace{1ex}
+    Eigenbrot, Bershady, and Wood 2012. Volume 8446 article 84465W
+\end{flushright}
+
+\vspace{1in}
+
+\cleardoublepage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \begin{chabstract}
@@ -59,18 +72,18 @@ scattering is a particularly sensitive diagnostic of the physical
 mechanisms responsible for FRD.
 
 The method and results of our experiment of FRD dependence on surface
-roughness are presented in \S \ref{sec:polish}. Results for the
+roughness are presented in \S \ref{FRD:sec:polish}. Results for the
 wavelength dependence of FRD are reported in \S
-\ref{sec:wavelength}. The dependence of scattering on input angle is
-reported in \S \ref{sec:angle}, and the implications of our work are
-discussed in \S \ref{sec:summary}.
+\ref{FRD:sec:wavelength}. The dependence of scattering on input angle is
+reported in \S \ref{FRD:sec:angle}, and the implications of our work are
+discussed in \S \ref{FRD:sec:summary}.
 
 \section{Grit Size and Wavelength Dependence}
-\label{sec:polish}
+\label{FRD:sec:polish}
 \subsection{Polishing Method}
 \begin{figure}[ht]
     \includegraphics[width=1.0\textwidth]{FRD/figs/mosaic.eps}
-    \caption{Images of the ``test'' surface of the fiber cable showing
+    \caption{\fixspacing Images of the ``test'' surface of the fiber cable showing
       the appearance of the fiber face at each of the six stages of
       polishing. The number in the bottom right corner of each panel
       denotes the size of grit used. The fiber core diameter is
@@ -112,7 +125,7 @@ Figure~\ref{fig:mosaic}.
 
 
 \subsection{Data Collection}
-\label{sec:direct}
+\label{FRD:sec:direct}
 The experimental apparatus is a modified version of the far-field
 differential beam comparator using a double re-imaging system
 described in Crause et al. (2008)\cite{Crause_08}, which is
@@ -170,7 +183,7 @@ images. The lamp was found to have no significant variation (10\% of the shot no
 \centering
 \includegraphics[width=0.25\textwidth]{FRD/figs/bdirect_3.eps}\includegraphics[width=0.25\textwidth]{FRD/figs/bdirect_42.eps}\includegraphics[width=0.25\textwidth]{FRD/figs/bdirect_63.eps}\includegraphics[width=0.25\textwidth]{FRD/figs/bdirect_135.eps}\\
 \includegraphics[width=0.25\textwidth]{FRD/figs/bfiber_3.eps}\includegraphics[width=0.25\textwidth]{FRD/figs/bfiber_42.eps}\includegraphics[width=0.25\textwidth]{FRD/figs/bfiber_63.eps}\includegraphics[width=0.25\textwidth]{FRD/figs/bfiber_135.eps}
-\caption{\label{fig:dfim}Far-field images of the direct-beam (top) and
+\caption{\fixspacing\label{fig:dfim}Far-field images of the direct-beam (top) and
   fiber-beam (bottom) outputs for all $f$-ratios tested. Data shown is
   at \filty for the FBP300330370 fiber, 17m in length. Direct and fiber beam images for a given \fratio have identical spatial scales, and are adjusted such that the direct beam images are the same apparent size for all $f$-ratios.}
 \end{figure}
@@ -194,12 +207,12 @@ method used. Once the corrections have been applied the only
 differences between the fiber and direct beams are caused by FRD.
 
 \subsection{Results}
-\label{sec:results}
+\label{FRD:sec:results}
 
 \begin{figure}[ht]
 \begin{center}
 \includegraphics[width=\textwidth, trim=0 2.6in 0 0, clip=true]{FRD/figs/basic_FRD.eps}
-\caption{\label{fig:basicFRD} FRD effects at \filty, $f$/4.2 and
+\caption{\fixspacing\label{fig:basicFRD} FRD effects at \filty, $f$/4.2 and
   $f$/6.3, and with the output face polished to 30\mum. The left
   panels show enclosed energy (EE) as a function of \fratio. The right
   panels show the effective \fratio of a beam that captures a certain
@@ -210,7 +223,7 @@ differences between the fiber and direct beams are caused by FRD.
 
 Figure \ref{fig:basicFRD} shows a characteristic set of FRD analysis
 plots at a 30\mum\ end-polish at $f$/4.2 and $f$/6.3.  (See Figure
-\ref{fig:grit} for more grit-sizes and \S\ref{sec:gritwave} for
+\ref{fig:grit} for more grit-sizes and \S\ref{FRD:sec:gritwave} for
 discussion).  The left panels, which consist of normalized curves of
 growth (COG) for both the direct and fiber beams, show how FRD
 scatters light out to larger radii. The dashed and solid lines are the
@@ -230,11 +243,11 @@ at $f$/4.2. If we wanted to capture 90\% of the input light the
 spectrograph optics would need to be $f$/3.2.
 
 \subsubsection{Grit-size and \fratio Dependence}
-\label{sec:gritwave}
+\label{FRD:sec:gritwave}
 \begin{figure}[htp]
   \centering
   \includegraphics[width=\textwidth]{FRD/figs/gritplot.eps}
-  \caption{\label{fig:grit}Dependence of FRD on polish grit size at
+  \caption{\fixspacing\label{fig:grit}Dependence of FRD on polish grit size at
     \filty and all $f$-ratios measured for 17m of FBP300330370 fiber. A color version of this plot is available online.}
 \end{figure}
 
@@ -252,7 +265,7 @@ is relatively \emph{more} light in the fiber beam than in the direct
 beam.  The explanation is straightforward: FRD scatters light from
 each input angle into both larger and smaller output angles. If the
 width of the scattering profile increases towards smaller angles (see
-\S\ref{sec:angle}) then more light is scattered out of these angles
+\S\ref{FRD:sec:angle}) then more light is scattered out of these angles
 compared to larger angles. However, for a uniform input beam
 larger input angles contain more luminosity (because they contain
 larger annular areas) and so the amount of light scattered in from large
@@ -272,11 +285,11 @@ large that the output beam never contains more light than the input
 beam for any angle.
 
 \subsubsection{Wavelength Dependence and Total Throughput}
-\label{sec:wavelength}
+\label{FRD:sec:wavelength}
 \begin{figure}[ht]
   \centering
   \includegraphics[width=\textwidth, trim=0 2.6in 0 0, clip=true]{FRD/figs/filters.eps}
-  \caption{\label{fig:wave} Wavelength dependence of FRD at 0.5 and 60
+  \caption{\fixspacing\label{fig:wave} Wavelength dependence of FRD at 0.5 and 60
    \mum\ polish grit at $f$/4.2 and $f$/6.3 for 17m length
     FBP300330370 fiber. A color version of this plot is available online.}
 \end{figure}
@@ -317,7 +330,7 @@ improves, as would be expected from a surface-scattering phenomenon.
 \begin{figure}[ht]
   \centering
   \includegraphics[width=\textwidth, trim=0 4in 0 0, clip=true]{FRD/figs/tput.eps}
-  \caption{\label{fig:tputwave} Total throughput as a function of
+  \caption{\fixspacing\label{fig:tputwave} Total throughput as a function of
     polish grit for three different wavelengths (left), and the relative
     increase in \filtB and \filty referenced to \filtI (right). Dashed
     lines show the values expected from the product
@@ -326,11 +339,11 @@ improves, as would be expected from a surface-scattering phenomenon.
 \end{figure}
 
 \section{Angle Dependence}
-\label{sec:angle}
+\label{FRD:sec:angle}
 \subsection{Experiment}
 We are also interested in the dependence of FRD on the light input
 angle. The direct beam injection method reported in \S
-\ref{sec:direct} injects a full cone of light into a fiber, i.e., 
+\ref{FRD:sec:direct} injects a full cone of light into a fiber, i.e., 
 the input beam contains rays incident on the fiber face from normal up
 to half of the vertex angle of the cone.  To probe FRD effects at
 single, discrete input angles (essentially an annular cone) we use an
@@ -369,7 +382,7 @@ the profile shape\cite{Haynes11,Carrasco}.
 \begin{figure}[ht]
 \begin{center}
 \includegraphics[width=\textwidth,trim=0 0.3in 0 3.8in,clip=true]{FRD/figs/angles.eps}
-\caption{\label{fig:angle}
+\caption{\fixspacing\label{fig:angle}
 Smearing due to FRD (ring width) as a function on input angle. The vertical dotted line marks the numerical aperture of the fiber specified by the vendor. The horizontal dashed line represents a best fit to the micro-bend model of Carrasco and Parry 1994\cite{Carrasco} over the full angular range of our data adopting $D=\val{1.15\times 10^{-6}}{m^{-1}}$. This value of $D$ is constrained by a best-fit of the micro-bend model to our data in the range of 10 to 18 degrees.}
 \end{center}
 \end{figure}
@@ -408,7 +421,7 @@ coupling. Further analysis of data like that in Figure 7 will allow us
 to quantify this statement.
 
 \section{Summary}
-\label{sec:summary}
+\label{FRD:sec:summary}
 Two experiments to 
 measure the
 amplitude of FRD as a function of wavelength, surface polish, 
@@ -430,10 +443,9 @@ The primary results are:
   light-levels polishing down to the finest grit is measurably
   advantageous.
 
-\item The amount of FRD does \textbf{not} depend on wavelength, as
-  found now in several experiments. This is in contrast to some
-  results and the predictions of micro-bend theory for FRD's
-  origin\cite{Carrasco}.
+\item The amount of FRD does \textbf{not} depend on wavelength, as found now
+  in several experiments. This is in contrast to the predictions of micro-bend
+  theory for FRD's origin \citep{Carrasco}.
 
 \item FRD is dominated by light entering the fiber at smaller angles
   (in our case $<10^{\circ}$), as is well known. Measurements here
