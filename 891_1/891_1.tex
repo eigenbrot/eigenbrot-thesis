@@ -1,0 +1,119 @@
+%% \newcommand{\aeff}{{\rm A}_{\lambda}^{\rm e}}
+%% \newcommand{\aej}{{\rm A}_{\rm J}^{\rm e}}
+%% \newcommand{\aeh}{{\rm A}_{\rm H}^{\rm e}}
+%% \newcommand{\aeks}{{\rm A}_{\rm K_{\rm s}}^{\rm e}}
+%% \newcommand{\ks}{{K_{\rm s}}}
+%% \newcommand{\GP}{$\nabla$Pak\xspace}
+%% \newcommand{\Ha}{\ensuremath{\mathrm{H}\alpha}\xspace}
+%% \newcommand{\HB}{\ensuremath{\mathrm{H}\beta}\xspace}
+%% \newcommand{\Hd}{\ensuremath{\mathrm{H}\delta}\xspace}
+%% \newcommand{\Hda}{\ensuremath{\mathrm{H}\delta_A}\xspace}
+%% \newcommand{\Hg}{\ensuremath{\mathrm{H}\gamma}\xspace}
+%% \newcommand{\He}{\ensuremath{\mathrm{H}\epsilon}\xspace}
+%% \newcommand{\Zsol}{\ensuremath{Z_{\odot}}\xspace}
+%% \newcommand{\tauV}{\ensuremath{\tau_{\mathrm{V,cont}}}\xspace}
+%% \newcommand{\tauVB}{\ensuremath{\tau_{\mathrm{V,Balmer}}}\xspace}
+%% \newcommand{\asim}{\ensuremath{{\sim}}}
+%% %\documentclass[12pt,preprint]{aastex}
+%% \documentclass[twocolumn,revtex4]{emulateapj}
+%% %\usepackage[FIGTOPCAP]{subfigure}
+%% \usepackage{subfigure}
+%% %% \usepackage{caption}
+%% %% \usepackage{subcaption}
+%% \usepackage{upgreek}
+%% \usepackage{amsmath}
+%% \usepackage{xspace}
+%% % \usepackage[page]{appendix}
+%% \usepackage{appendix}
+%% \usepackage{pdflscape}
+%% % \usepackage{rotating}
+%% \usepackage{multirow}
+%% \usepackage{hyperref}
+
+%% \newcommand{\val}[2]{\ensuremath{#1~\mathrm{#2} \xspace}}
+%% \newcommand{\sol}[1]{\ensuremath{#1_{\odot} \xspace}}
+
+%% \bibliographystyle{apj}
+\defcitealias{Eigenbrot16a}{Paper 1}
+
+\chapter[NGC 891 Data]{Vertical Population Gradients in NGC 891 I. Instrumentation and Spectral Data}
+\label{chap:891_1}
+
+\cleardoublepage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{chabstract}
+
+We have undertaken a study of the vertical and radial stellar
+population gradients in the edge-on spiral galaxy NGC 891. Our intent
+is to compare gradients measured in integrated star-light to those
+known for the Milky Way disk from studies of resolved stars.  Our
+optical spectroscopic measurements between 385 and 685 nm extend
+spatially from the disk midplane up to 2.6 kpc in height and out to a
+radius of 12 kpc on both the receding and approaching sides of the
+disk. Data were acquired with \GP, a variable-pitch fiber integral
+field unit (IFU) on the WIYN telescope designed specifically to sample
+vertical gradients in edge-on galaxies. We describe the laboratory and
+on-sky performance of \GP as well as modifications to the standard
+observational and analysis procedures to calibrate data taken with
+this unique IFU. The IFU itself has a mean throughput of 80\% at 550
+nm. To acheive an estimated precision of 10\% in light-weighted mean
+age and metallicity, we define a set of spatial apertures in radius
+and height in which spectra are binned to acheive a signal to noise of
+$\sim 20$ \AA$^{-1}$. We use spectral indices to measure age,
+metallicity, and abundance. Metallicities are found to be in the range
+from 0.2 to 2.5 \Zsol, with abundances between solar and +0.3
+dex. Metallicity and abundance gradients prove difficult to measure
+from indices alone for stellar populations with a broad range of
+ages. However, we find a clear transition from young ($<3$ to 5 Gyr) to
+old ($> 7$ Gyr) stellar populations at \val{0.4}{kpc}, roughly the
+scale height of the thin disk. We also find a slight trend towards
+younger populations at larger radii, consistent with an inside-out
+disk formation scenario.  The vertical age gradient in NGC 891 is in
+remarkable qualitative agreement with a model for disk heating tuned
+to studies of the Milk Way's solar cylinder.
+
+% We have determined the vertical population gradients in age and
+% metallicity in the disk of NGC 891 based on optical spectroscopy.
+% These gradients, measured over a range of projected radii, are
+% combined with estimates of the dust attenuation as a function of
+% radius and height. Using a parameterization of the radial population 
+% gradients in the disk plane, we model the heating rate in this spiral
+% disk and compare it to estimates in the Milky Way solar neighborhood.
+% This abstract will get augmented as we consolidate our results and
+% make decisions about how we undertake the analysis and what object to
+% include. Here and in the following manuscript outline the text gives a
+% description of possible content and analysis choices.  These should be
+% viewed as suggestions to be edited and commented out or deleted as
+% items are completed.
+
+\end{chabstract}
+\cleardoublepage
+
+\input{891_1/introduction1}
+
+\input{891_1/gradpak}
+
+\input{891_1/obs}
+
+\input{891_1/redux}
+
+\input{891_1/maps}
+
+\input{891_1/results1}
+
+\input{891_1/conclusion1}
+
+\acknowledgements{We thank Guy Worthey for contributing his models of
+  simple stellar populations as a function of age, metallicity and
+  abundance. We thank Eric Hooper, as Interim WIYN Director, and
+  Charles Corson for helping make the \GP installation possible; gift
+  funds from the Department of Astronomy made this shipping and travel
+  possible. This research was directly supported by the U.S. National
+  Science Foundation (NSF) ATI-0804576, AST-1009471 and
+  AST-1517006.}
+
+\include{appendix1}
+
+\bibliographystyle{thesis}
+\bibliography{ms_n891_paper}
