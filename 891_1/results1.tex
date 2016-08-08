@@ -1,0 +1,570 @@
+\section{Results and Discussion}
+\label{sec:results}
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=\textwidth]{891_1/figs/mab_data_stack.pdf}
+  \caption{\label{fig:mab_data} Same as Figure \ref{fig:MW_heating},
+    but for the \GP data from NGC 891. Top: Normalized galaxy spectra
+    at different heights, color-coded by intensity (see text for a
+    description of how this image was made). The horizontal line
+    marks the age break at \val{0.4}{kpc} described for Figure
+    \ref{fig:D4000_cuts}. Bottom: Representative spectra at three
+    different heights (labeled). Prominent spectral features are
+    labeled at the boundary between the two panels.}
+\end{figure*}
+
+\subsection{Vertical Trends}
+
+The almost perfectly edge-on nature of NGC 891 allows unambiguous
+determination of vertical trends in our spectra. Figure
+\ref{fig:mab_data} presents our data for direct comparison to Figure
+\ref{fig:MW_heating}. This was made by sorting spectra from all
+apertures by height, regardless of radius, and then interpolating them
+onto a regular grid to form a linear scale in kpc. The grid spacing (8
+pc) was chosen for cosmetic reasons to keep the interpolation from
+being apparent except at the largest heights. As with the model
+spectra in Figure \ref{fig:MW_heating}, the individual spectra were
+first normalized by their mean value.
+
+% Apertures for spectra in \ref{fig:mab_data}
+% 0.3 kpc - P6.12
+% 0.6 kpc - P3.32
+% 1.5 kpc - P6.33
+
+The transition from young, Balmer-dominated spectra to
+old, metal-dominated spectra is clear at \val{0.4}{kpc}, as
+highlighted by the example spectra. At \val{0.3}{kpc} Balmer
+absorption dominates, but a larger heights strong Ca H\&K and G band
+absorption indicate the presence of older populations.  The amazing
+match between Figures \ref{fig:MW_heating} and \ref{fig:mab_data} is
+even more remarkable given that the MW heating model used in Figure
+\ref{fig:MW_heating} includes no information about NGC 891 and is
+simply tuned to observations from the Solar Cylinder.
+
+This first-blush qualitative comparison has visceral appeal, and
+demonstrates the vertical trends in stellar populations seen in the MW
+(as described in \S\ref{sec:introduction}) are manifest in NGC
+891. However, the comparison lacks quantitative rigor.  Our primary
+interest is to quantify the comparison and determine to what extent
+these trends also depend on radius. In particular, precise location of
+a sharp vertical transition from Balmer-line to metal-line dominated
+spectra can be used to calibrate how disk stars are vertically
+stratified in phase space as a function of age and radial
+location. This in turn can be interpreted in terms of time-scales for
+dynamical heating or gas-cooling models, and the extent to which
+vertical age gradients in spiral disks are ubiquitous and
+quantitatively similar or distinct.
+
+Disentangling age from metallicity, and metallicity from abundance is
+fraught with degeneracies, particularly in complex stellar populations
+observed in integrated star-light. In an edge-on galaxy like NGC 891,
+there is the additional complication of projection effects compounded
+with extinction that is patchy, but also changes broadly with height
+and radius. Paper II undertakes to model all of these complexities,
+but here we are interested in using simple spectral indices, the
+measured value of which are model-independent and insensitive to
+redenning. These indices allow us to we probe for vertical {\it age}
+transitions and their radial trends while at the same time bounding
+(providing priors on) the age and metallicity of the more complicated
+modelling we later undertake.
+
+\subsection{Spectral Indices}
+\label{sec:indices}
+
+\subsubsection{Definitions}
+\label{sec:index_defn}
+
+We focus our attention on the spectral indices defined in Table
+\ref{tab:indices}. The first two entries have primary sensitivity to
+age, while the remainder are primarily sensitive to metallicity, and,
+in combination, to abundance. Because the age-sensitive indices have
+varying degrees of dependence on metallicity and vice versa, index
+combinations are required to disentangle these effects, as well
+established in the literature, particularly for older stellar
+populations, as we cite in what follows.
+
+The strength of Balmer absorption has long been used as a mostly
+metallicity-insensitive measure of population age because it depends
+primarily on the main-sequence turn off temperature instead of the red
+giant branch temperature. In other words, strong Balmer absorption is
+produced by young, hot main-sequence stars with lifetimes of
+$<\val{100}{Myr}$, regardless of metal content. \citet{Worthey97} find
+that of the Balmer absorption lines \HB is the least sensitive to
+metallicity (due to a lack of adjacent metal lines that impact the
+continuum) and, given its relative strength, is the most sensitive to
+age.  However, contamination from nebular emission is problematic,
+with increasing intensity for the lower-order Balmer lines.  All of
+our spectra show strong signs of \Ha emission and in some apertures
+Balmer lines have negative equivalent widths as high as \Hg.  The
+traditional trade between age sensitivity (i.e., \emph{insensitivity}
+to metallicity variations) and systematics due to nebular emission, is
+to use \Hda \citep{Worthey97} as an age indicator, which in fact has
+long been used in extragalactic studies of mixed stellar populations
+\citep[e.g.,][]{Couch87}. In Paper II we develop a model for Balmer
+emission and find that applying an emission correction correction
+shifts \Hda by \val{-0.4\pm 0.3}{\AA}, which is roughly 10\% of the
+dynamic range in \Hda across the age transition found in
+\S\ref{sec:age_grad}.
+
+The break at \val{4000}{\AA} can also be used to estimate the age of
+stellar populations, albeit with a larger sensitivity to
+metallicity. This break is caused by an increase in opacity resulting
+from ionization of metal lines; young stars are hot enough to put
+metals into high ionization states and the thus the total opacity is
+low. As temperature decreases more of the metals occupy lower
+ionization states that are suitable for absorption and the opacity
+increases. Beyond a certain limit very cool stars (i.e., M stars) are
+unable to even singly ionize the neutral atoms and the amplitude of
+the break decreases. Thus the \val{4000}{\AA} break traces population
+age (specifically related to the temperature of the red giant branch),
+but also depends on the population metallicity, although not as
+strongly \citep[see][and Figure \ref{fig:D4000_cuts} here]{Bruzual83}.
+The metal line that contributes most to the \val{4000}{\AA} break is
+Ca K at \val{3933}{\AA}, which causes the magnitude of the break to
+also exhibit a weak dependence on abundance. To measure the
+\val{4000}{\AA} break we use the narrower-band definition of
+\citet{Balogh99} primarily because our flux calibration deteriorates
+blueward of \val{3800}{\AA} (Figure \ref{fig:sky_flux_comp}), and we
+adopt the nomenclature, $D_n(4000)$, of \citet{Kauffmann03}.
+
+We also define composite indices to determine metallicity and
+$\alpha$-enhancement in our populations. In particular,
+\citet{Thomas03} find that [MgFe] $= \sqrt{\mathrm{Mg
+    \emph{b}}(0.72\times\mathrm{Fe}_{5270} +
+  0.28\times\mathrm{Fe}_{5335})}$ is almost totally insensitive to
+changes in abundance and is therefore a good tracer of the total
+metallicity in a stellar population. They also note that, when plotted
+against Mg$b$, Fe$_{5270}$, Fe$_{5335}$, and Fe$_{5408}$ are all
+fairly sensitive to changes in abundance. We choose to use
+$\left<\mathrm{Fe}\right>$ = (Fe$_{5270}$+Fe$_{5335}$)/2, because
+these two Fe indices are slightly better calibrated than Fe$_{5408}$
+\citep{Thomas03} and have been have been used in other important
+studies \citep[e.g.,][]{Trager05,Trager08,Trager09}.
+
+The reported ``indices'' are equivalent widths defined as
+\begin{equation}
+  EW = \left(1 - \frac{F_I}{F_C}\right)\Delta_{\lambda},
+\end{equation}
+where $F_I$ and $F_C$ are the average fluxes in the index and
+continuum bands, respectively and $\Delta_{\lambda}$ is the width of
+the index bandpass defined in Table \ref{tab:indices}. The value of
+$F_C$ is computed by linearly interpolating the flux computed in the
+red and blue continuum bands to the center of the index band. In the
+case of $D_n(4000)$ the reported value is simply the ratio of the
+average flux in the red continuum band to the average flux in the blue
+continuum band. Table \ref{tab:index_res} reports our measured values
+for all appertures defined in Table \ref{tab:data_ap}.
+
+Recognizing the wisdom of \citet{Balogh99} we caution that the
+absolute values of our measured indices do not correspond to physical
+quantities. The specific conditions of our data (e.g., spectral
+resolution, sampling, signal-to-noise, etc.) can and will affect the
+derived index values and the reader is warned away from comparing our
+results in an absolute sense to those of other studies unless they are
+careful to match to our spectral sampling and resolution as described
+in Section \ref{sec:obs}.
+
+\begin{deluxetable}{lccccccc}
+\tablewidth{0pt}
+\tablecaption{Spectral Index Definitions}
+\tablehead{
+%  & \multicolumn{6}{c}{Bandpass (\AA)}\\
+%  & \multicolumn{6}{\hline}\\
+  \colhead{Index} &
+  \multicolumn{2}{c}{On-Band} &
+  \multicolumn{2}{c}{Blue Continuum} &
+  \multicolumn{2}{c}{Red Continuum} \\
+  \colhead{Name} &
+  \colhead{Center} &
+  \colhead{Width} &
+  \colhead{Center} &
+  \colhead{Width} &
+  \colhead{Center} &
+  \colhead{Width}\\
+  \colhead{} &
+  \colhead{(\AA)} &
+  \colhead{(\AA)} &
+  \colhead{(\AA)} &
+  \colhead{(\AA)} &
+  \colhead{(\AA)} &
+  \colhead{(\AA)}}
+\startdata
+$D_n(4000)$ & - & - & 3900 & 100 & 4050 & 100 \\
+H$\delta_A$ & 4103.9 & 38.8 & 4060.7 & 38.1 & 4144.8 & 32.5 \\
+%H$\gamma_A$ & 4341.6 & 43.8 & 4301.6 & 36.3 & 4393.5 & 52.5 \\
+%\HB         & 4862.3 & 28.8 & 4837.9 & 20.0 & 4884.1 & 15.0 \\
+Mg\emph{b} & 5176.4 & 32.5 & 5152.0 & 18.8 & 5198.9 & 15.0 \\
+Fe$_{5270}$  & 5265.7 & 40.0 & 5240.7 & 15.0 & 5301.9 & 32.5 \\
+Fe$_{5335}$  & 5332.1 & 40.0 & 5310.3 & 11.3 & 5358.4 & 10.0
+\enddata
+\label{tab:indices}
+\end{deluxetable}
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=0.8\textwidth]{891_1/figs/Dn4000_multires.pdf}
+  \caption{\label{fig:D4000_cuts} Spectral indices \Hda and $D_n(4000)$
+    for all good apertures in NGC 891 as a function of projected
+    radius and height. Rationale for radial and vertical bins is
+    provided in the text. Open symbols are for apertures on the
+    approaching side, while filled circles are for apertures the
+    receding side. Color-coded isochrones, labeled by their mean,
+    light-weighted age at 5550 \AA\ are based on models with
+    exponentially declining star-formation and a total age of 12 Gyr,
+    as described in \S\ref{sec:fidgrid}; these are shown to highlight
+    trends in age and the dependence of these indices on
+    metallicity. The extreme values of metallicity are shown at the
+    ends of the oldest isochrone in the top-left panel; solar
+    metallicity for each isochrone is marked with a filled circle in
+    all panels. The model values are adjusted for the mean
+    instrumental resolution of each vertical bin as described in the
+    text. Dashed lines are fiducial to highlight trends in age.}
+\end{figure*}
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=0.8\textwidth]{891_1/figs/MgFe_multires.pdf}
+  \caption{\label{fig:MgFe_cuts} Spectral indices $H\delta_A$ and
+    [MgFe] for all apertures as a function of projected radius and
+    height. Symbols, bins in radius and height, and models are the
+    same as in Figure \ref{fig:D4000_cuts}. Lines of constant mean
+    light-weighted age (isochrones, solid lines) and lines of constant
+    metallicity (isofers, dotted lines) for the models are labeled in the
+    top-right panel. The model values are adjusted for the mean
+    instrumental resolution of each vertical bin as described in the
+    text.}
+\end{figure*}
+
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=0.8\textwidth]{891_1/figs/Mgb_multires.pdf}
+  \caption{\label{fig:Mgb_cuts} Spectral indices
+    $\left<\mathrm{Fe}\right>$ and Mg$b$ for all apertures as a
+    function of projected radius and height. Symbols, bins in radius
+    and height, and model grid (including color-coding for age) are
+    the same as in Figure \ref{fig:D4000_cuts}. The model values are
+    adjusted for the mean instrumental resolution of each vertical bin
+    as described in the text.}
+\end{figure*}
+
+\input{891_1/index_table.tex}
+
+\subsubsection{Model Grids}
+\label{sec:fidgrid}
+
+To aid interpretation of the indices defined above we construct a set
+of fiducial galaxy models from the SSP basis set of \citet{Bruzual03}
+on a grid of metallicity and age. However, unlike most previous
+applications, we do not use the SSPs themselves as the reference. For
+each model we again assume an exponentially declining star formation
+rate starting 12 Gyr in the past, as described in Appendix
+\ref{sec:tau_model}, and construct galaxies with $\tau_{SF}$ = -1, -3,
+-9, 13, 5, 3 and \val{1}{Gyr}. These models have corresponding mean,
+light-weighted ages of 0.3, 0.7, 1.3, 2.8, 4.7, 7.2, and
+\val{11.2}{Gyr}, respectively, as measured between \val{5450}{\AA}
+$\leq\lambda\leq$ \val{5550}{\AA}. Each model is constructed from
+mono-metallicity SSPs ranging from 0.005, 0.02, 0.2, 0.4, 1, to
+\val{2.5}{\Zsol}. Because we do not have the ability to vary abundance
+in our models \citep[as done, for example, by][]{Trager08} all models
+have solar abundance. 
+
+The model galaxies are degraded to match the spectral resolution and
+sampling of our \GP data before having indices measured in exactly the
+same way as the data. In the concluding three Figures
+(\ref{fig:D4000_cuts} to \ref{fig:Mgb_cuts}) we contrast index
+measurements in three different height bins: $z<0.4$ kpc, $0.4<z<1$
+kpc, and $1<z<2.6$ kpc. Since the fiber size and hence the
+instrumental resolution is correlated with height ($z$), we suitably
+modify our models for the mean resolution in each vertical
+bin. Respectively, for $D_n(4000)$ we adopt 294, 392, and 470 km
+s$^{-1}$; for $H\delta_A$ we adopt 241, 344, and 428 km s$^{-1}$;
+and for Mgb we adopt 200, 258, and 313 km s$^{-1}$. Since
+$\left<\mathrm{Fe}\right>$ is a combination of Fe$_{5270}$ and
+Fe$_{5335}$, we adopt (189, 179), (245, 250), and (298, 303) km
+s$^{-1}$, respectively, for this index pair.  The general effect of
+decreased spectral resolution is to compress the dynamic range in the
+index value as a function of age and metallicity. Particularly because
+the dynamic range in index values also decreases at low ages (where
+our instrumental resolution is highest), we bring the models forward
+to the data instead of correcting the data to some fiducial (e.g.,
+Lick) resolution. This maximizes the rendered information content of
+the indices.
+
+In paper II we demonstrate that the location of a galaxy in both age
+and metallicity index planes is highly sensitive to the assumed star
+formation history. Furthermore, we find that a $\tau$ model for star
+formation is likely not representative of our data from NGC
+891. Despite these shortcomings, our fiducial grid is still useful for
+assessing relative trends in metallicity and age, but we caution the
+reader not to strictly interpret the absolute values of these
+quantities because they are predicated on specific star-formation
+models. 
+
+\subsection{Age Gradients}
+\label{sec:age_grad}
+
+We use \Hda and $D_n(4000)$ as our primary age indicators. As noted by
+\citet{Hamilton85} these two indices are generally anti-correlated and
+are useful, when combined, as an estimator of population age because
+of their sensitivity to different star-formation time-scales.
+Historically, \Hda has been used with $B-R$ color (e.g., Couch \&
+Sharples 1987) to discriminate between different star-formation
+scenarios involving bursts, but \citet{Balogh99} has shown that
+$D_n(4000)$ works as a suitable alternative to color, as one might
+expect based on the correlations shown in \citet{Hamilton85}. In
+essence, $D_n(4000)$ is a narrow-band color intermediate in the
+wavelength range spanned by $U-B$. Because of its relatively narrow
+band-pass it is more immune from extinction effects, say, than
+broad-band colors.
+
+Figure \ref{fig:D4000_cuts} shows these measurements grouped into
+three radial and three vertical bins. The radial bins are chosen to
+sample the region within the inner truncation of the super-thin disk
+($|r| < \val{3}{kpc}$), the super-thin disk itself ($\val{3}{kpc}\leq
+|r| < \val{8}{kpc}$), and beyond the outer super-thing disk truncation
+($\val{8}{kpc} \leq |r|$) \citep{Schechtman-Rook13}. Vertical bins
+were chosen to illustrate the stratification seen in stellar
+populations: below \val{0.4}{kpc} stellar light is dominated by young
+populations with strong Balmer absorption, but above this height we
+see old populations with weak Balmer absorption and a correspondingly
+strong $D_n(4000)$ break.
+
+Again, as we saw in the comparison of Figures \ref{fig:MW_heating} and
+\ref{fig:mab_data}, the results in Figure \ref{fig:D4000_cuts} for
+the vertical age gradients are qualitatively consistent with the basic
+heating model tuned to the MW solar cylinder presented in
+\S\ref{sec:introduction}. Our MW heating model predicts this
+transition to occur at roughly the scale-height of the old, thin
+disk. The exact value depends on the assumed star-formation history
+and how the scale-height is measured (e.g., band-pass and number of
+components). We can begin by assuming the star-formation histories are
+comparable for the two galaxies. In NGC 891 we find a sharp transition
+from young to old stellar populations at \val{0.4}{kpc}. This is very
+close to the vertical exponential scale-height for a single component
+stellar disk fit to the broad-band light profile; \citet{Xilouris99}
+find values of ranging from 0.34 to 0.43 kpc from the $K$ to $B$
+bands, accounting for attenuation. For comparison, the super-thin and
+thin disk components measured in the near-infrared $K$ band are 0.16
+and 0.47 kpc, respectively. It is reasonable to presume that the
+super-thin and thin components correspond to the young and old thin
+disks in NGC 891.
+
+Radial age gradients are minimal at low heights, but above the
+midplane we see evidence for younger stars at larger radii,
+particularly on the approaching side where there is an excess of
+H$\alpha$, as discussed in Section \ref{sec:obs}. This gradient is
+most pronounced for $\val{0.4}{kpc} \leq |z| < \val{1}{kpc}$ but is
+visible even at the largest heights.
+
+Discounting the azimuthal asymmetry for a moment (here projected onto
+radius on either side of the center), this radial trend is indicative
+of inside-out disk formation combined with disk flaring as seen in
+simulations of MW-like disks \citep[e.g.,][]{Martig14a}. There is
+ample evidence in today's massive disk galaxies that such a scenario
+may indeed be viable. For example, in the MW and NGC 891 there is
+evidence for gas flaring in atomic and molecular gas \citep[e.g.,][for
+  NGC 891]{Scoville93, Yim11}. There also is recent evidence for
+stellar flaring in the MW \citep{Ness16} as seen for age-dated giant
+stars from APOGEE \citep{Majewski15}. In the $z\sim1$ galaxy
+population there is also ample evidence of inside-out disk formation
+based on Hubble Space Telescope studies \citep[e.g.,][]{Nelson15},
+even for MW-like masses \citep[e.g.,][]{vanDokkum13}. This growth
+pattern appears to be part of a broader trend (in time and galaxy
+type) of size evolution \citep[e.g.,][]{Shibuya15}, although the
+interpretation is challenging given the complexity of present day
+mass-size relations seen, e.g., by \citet{Lange15} in the GAMA survey.
+Nonetheless, spatially resolved spectroscopic maps of nearby galaxies
+clearly show age gradients in disks, with the outer parts of disks
+being younger in a light-weighted sense
+\citep{Sanchez-Blazquez14,Gonzalez-Delgado15}. What we are able to
+resolve here, for the first time in a massive spiral galaxy external
+to the MW, is the {\it vertical} structure of these radial gradients.
+
+Now considering the azimuthal asymmetry in star-formation and spiral
+arm projection, it is clear that this asymmetry is reflected in the
+vertical and radial gradients in the mean stellar age as reckoned in a
+ligh-weighted sense with the indices in Figure \ref{fig:D4000_cuts}.
+At the very least this should provide a cautionary reminder that
+interpreting the radial and vertical gradients of spectral indices in
+terms of specific scenarios (e.g., disk flaring and inside-out growth)
+is necessary but perhaps not sufficient proof of the scenario's
+plausibility. In particular, the role of projection, especially in the
+context of the spiral arms and extinction, needs to be accounted for
+as well \citep[cf the relative excess of H$\alpha$ vs 24$\mu$
+  emission, as discussed in][]{Kamphuis07b}. We will show elsewhere
+that differential SFH as a function of radius (where the outer
+portions of disks are younger but not thicker) can also lead to {\it
+  apparent} flaring in integrated star-light of a constant-thickness
+disk. While star counts can certainly distinguish between flaring and
+radially modulating SFH scenarios, for galaxies beyond the reach of
+resolved stellar populations, stellar kinematics is likely the only
+recourse to resolve different physical scenarios.
+
+% see ALT TEXT above
+
+% The radial gradients are consistent with an inside-out view of
+% galaxy disk formation {\bf OG inside out ref}. Studies of high
+% redshift galaxies \citep{Nelson12,Nelson13,Nelson15} {\bf we could
+% go crazy with refs here} have shown that many disk galaxies exhibit
+% a higher specific star formation rate and larger \Ha equivalent
+% widths at large radii. This is often attributed to quenching in the
+% inner regions caused by AGN and feedback after the initial burst of
+% star formation, and there is evidence that is phenomenon is only
+% observed in higher mass galaxies ($M_{\ast} > 10^{10.5}M_{\odot}$)
+% \citep{Pan15,others?}. Regardless of whether these high-redshift
+% disk are progenitors of disks at $z=0$ there is still evidence for
+% similar trends in the local universe
+% \citep{Sanchez-Blazquez07,Sanchez-Blazquez14} {\bf again, many more
+% refs available}; disk galaxies show a larger proportion of young
+% vs. old stars at larger radii, compared to the central regions.
+
+The model grid in Figure \ref{fig:D4000_cuts} also highlights the
+degeneracy between age and metallicity. Each colored line corresponds
+to an isochrone of a given mean light-weighted age with varying values
+of metallicity. As age increases the metallicity dependence in \Hda
+and $D_n(4000)$ also increases. At an age of \val{\asim 11}{Gyr} these
+indices can vary by almost the entire dynamic range of our data just
+by assuming a different value for metallicity.  This age-metallicity
+degeneracy is somewhat ameliorated by considering a reduced range of
+metallicity (between 0.2 and 2.5 \Zsol), which we will show next is
+plausible. Moreover, despite these degeneracies there is still a clear
+distinction between ``young'' and ``old'' populations across the
+vertical cut at \val{0.4}{kpc}; it is the actual age of this cutoff
+that depends on metallicity.
+
+\subsection{Metallicity and Abundance Gradients}
+
+Figure \ref{fig:MgFe_cuts} shows how metallicity (traced by [MgFe])
+varies in the same bins defined in \S\ref{sec:age_grad} and Figure
+\ref{fig:D4000_cuts}. Since [MgFe] is also age sensitive, we plot it
+versus \Hda.  Guided by the fiducial grid described in
+\S\ref{sec:fidgrid} we do not see significant trends in metallicity
+with radius or height. The preponderance of apertures are well
+described by metallicities in the range of $0.2 < Z/Z_\odot < 2.5$.
+
+The lack of discernable gradients is perhaps unsurprising given the
+precision of the measurements and the small dynamic range of the
+indices, particularly for young ages. There are also line-of-sight
+effects to consider as well. For example, there is a weak trend toward
+slightly higher metallicities at intermediate heightes. This may
+appear counter-intuitive, but it may well reflect the confluence of
+negative vertical and radial metallicity gradients and the fact that
+as we move above the mid-plane the deprojected radii become smaller as
+extinction diminishes.  In other words, all else being equal, young
+formed near the center of a galaxy have higher metallicity than
+young stars forming at large radii. Thus, at low heights where we
+cannot see far into the disk we expect to find young populations with
+low metallicity, but as height increases we can detect light from
+smaller radii where the metallicity is on average higher.
+
+While age gradients are again apparent in height Figure
+\ref{fig:MgFe_cuts}, as too is the possible flaring of young stars
+in the outer disk particularlyl on the approaching side, what is
+also readilly apparent is an asymmetry in the metallicity on the two
+sides of the galaxy at intermediate radii. The receding side of the
+galaxy, where there is less evidence for flaring, appears to be more
+metal rich. This enhancement is most evident at intermediate and large
+heights, i.e., for the older stars. This may also be a line-of-sight
+depth effect in the sense that we are seeing farther in to the disk on
+the receding side where, for a given height, metallicity is higher.
+
+% We suspect our results stem from a combination of high optical depth
+% at radial metallicity gradients. NGC 891 is known to be optically
+% thick at optical wavelengths to heights of XXXX
+% \citep{Xilouris99,Shcechtman-Rook12,?} so at low heights we can only
+% observe populations at large radii. Furthermore, numerous studies of
+% the Milky Way \citep{Hayden15,?,?} and external galaxies
+% \citep{Ferguson98, vanZee98, ?} have shown that the metallicity of
+% the ISM is anticorrelated with radius.
+
+In Figure \ref{fig:Mgb_cuts} we examine how abundance changes in our
+data with radius and height. Based on the results of \citet{Thomas03}
+(specifically their Figure 4) we note that populations with different
+abundance will occupy different loci in the Mg$b$ vs
+$\left<\mathrm{Fe}\right>$ plane, with higher abundance populations at
+smaller values of $\left<\mathrm{Fe}\right>$ and slightly larger
+values of Mg$b$. In general, increasing overall metallicity moves
+points diagonally upward in this plot.
+
+The differences in metallicity seen at intermedate radii and larger
+heights in Figure \ref{fig:MgFe_cuts} appear to not have associated
+abundance gradients.  There is some evidence for enhanced abundances
+at low heights, and again at the largest heights. At intermediate
+heights, where the errors are also the smallest, the abundances appear
+to be very close to solar.
+
+% The slope of the dashed lines in Figure \ref{fig:Mgb_cuts} is based on
+% the distinction between high and low abundance models shown in
+% \citet{Thomas03}.
+
+%% The fiducial grid in this figure shows the Mg$b$ vs. <Fe>
+%% plane is weakly sensitive to metallicity, but we caution that this
+%% might be a result of a constant abundance {\bf WHAT IS IT?} across the
+%% model galaxies used to construct it.
+%% At low and intermediate heights
+%% the abundance is remains constant while the age increases. Above
+%% \val{1}{kpc}, however the age is relatively constant while the
+%% abundance increases. This trend is especially prevelant at radii
+%% beyond the inner portion of the galaxy.
+
+% Below \val{1}{kpc} there is very little change in abundance with
+% either radius or height, but above \val{1}{kpc} there is a clear
+% transition to populations with a higher level of
+% $\alpha$-enhancement. This is consistent with our claim of older
+% populations at larger heights, but the fact that the transition in
+% abundance occurs above the transition detected in Dn400 and \Hda
+% indicates some mixing of populations between 0.4 and \val{1}{kpc}.
+
+% Our conclusions that total metallicity and abundance respectively
+% decrease and increase with height are generally consistent with
+% detailed observations of the solar neighborhood
+% \citep{Bovy12,Hayden15} and nearby galaxy disks
+% \citep{Sanchez-Blazquez07}.
+
+% \begin{figure*}
+%   \centering
+%   \includegraphics[width=\textwidth]{figs/index_height.pdf}
+%   \caption{\label{fig:index_height}Each of the indices described in
+%     \S\ref{sec:index_defn} plotted as a function of height above the
+%     midplane. Vertical lines mark the borders of the vertical bins
+%     shown in Figures \ref{fig:D4000_cuts} - \ref{fig:Mgb_cuts} and the
+%     three radial bins used in the same figures are shown in different
+%     colors. The transition from young to old populations at
+%     \val{0.4}{kpc} is clear in the \Hda and $D_n4000$ panels. The three
+%     lower panels show that abundance increases with height.}
+% \end{figure*}
+%
+% [THIS IS THE TEXT THAT WENT WITH THE ABOVE FIGURE]
+% Figure \ref{fig:index_height} shows the five indices measured above as
+% a function of height above the midplane, where the transition from
+% young to old populations is clearly visible at \val{0.4}{kpc} as
+% measured in \Hda and $D_n4000$. Our primary abundance indicator,
+% Mg$b$, also increases with height, but, interestingly, there is not as
+% clear a break between high and low Mg$b$ values as there is with
+% either $D_n4000$ or \Hda. However, coupled with a break to lower
+% values of $\left<\mathrm{Fe}\right>$ above \val{1}{kpc} there is
+% evidence of a high abundance population at these large heights,
+% consistent with the results shown in Figure
+% \ref{fig:Mgb_cuts}. Finally, we caution that, while it may appear the
+% total metallicity increases with height, the [MgFe] index is highly
+% dependent on age, as seen in Figure \ref{fig:MgFe_cuts}.
+
+% \begin{figure*}
+%   \centering
+%   \includegraphics[width=\textwidth]{figs/repspec.pdf}
+%   \caption{\label{fig:repspec}Binned spectra as a function of
+%     projected radius and height. For each bin the spectrum is an
+%     average of all apertures within the ($r,z$) limits shown, weighted
+%     by the S/N of each aperture (see Table \ref{tab:data_ap}). At low
+%     heights the spectra have strong \Hd absorption indicative of young
+%     stellar populations, while larger heights show almost no \Hd
+%     absorption but have a large break across \val{4000}{\AA}. The
+%     results are qualitatively consistent with the heating referenced
+%     in Figure \ref{fig:MW_heating}. Furthermore, at low heights there
+%     is variation with radius, while at large heights the populations
+%     seem to get slightly younger with increasing radius, perhaps
+%     indicative of a flared disk.}
+% \end{figure*}
+
+
