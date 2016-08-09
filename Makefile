@@ -8,6 +8,7 @@ all:
 	$(TEX) $(FILENAME).tex
 	cd FRD && $(BIB) FRD
 	cd Pak_build && $(BIB) Pak_build
+	cd 891_1 && $(BIB) 891_1
 	$(TEX) $(FILENAME).tex
 	$(TEX) $(FILENAME).tex
 	$(TEX) $(FILENAME).tex
