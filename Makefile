@@ -14,7 +14,6 @@ all:
 	cd 891_1 && $(BIB) 891_1
 	$(TEX) $(FILENAME).tex
 	$(TEX) $(FILENAME).tex
-	$(TEX) $(FILENAME).tex
 
 intro::
 	$(TEX) '\includeonly{$(INTRO)}\input{$(FILENAME)}'
@@ -27,19 +26,16 @@ FRD::
 	cd FRD && $(BIB) FRD
 	$(TEX) '\includeonly{$(FRD)}\input{$(FILENAME)}'
 	$(TEX) '\includeonly{$(FRD)}\input{$(FILENAME)}'
-	$(TEX) '\includeonly{$(FRD)}\input{$(FILENAME)}'
 
 Pak::
 	$(TEX) '\includeonly{$(GPB)}\input{$(FILENAME)}'
 	cd Pak_build && $(BIB) Pak_build
 	$(TEX) '\includeonly{$(GPB)}\input{$(FILENAME)}'
 	$(TEX) '\includeonly{$(GPB)}\input{$(FILENAME)}'
-	$(TEX) '\includeonly{$(GPB)}\input{$(FILENAME)}'
 
 8911::
 	$(TEX) '\includeonly{$(8911)}\input{$(FILENAME)}'
 	cd 891_1 && $(BIB) 891_1
-	$(TEX) '\includeonly{$(8911)}\input{$(FILENAME)}'
 	$(TEX) '\includeonly{$(8911)}\input{$(FILENAME)}'
 	$(TEX) '\includeonly{$(8911)}\input{$(FILENAME)}'	
 
