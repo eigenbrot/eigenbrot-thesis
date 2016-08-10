@@ -46,6 +46,12 @@ conclusion::
 	$(TEX) '\includeonly{$(CONC)}\input{$(FILENAME)}'
 	$(TEX) '\includeonly{$(CONC)}\input{$(FILENAME)}'
 
+new::
+	$(TEX) '\includeonly{$(INTRO),$(CONC)}\input{$(FILENAME)}'
+	cd Introduction && $(BIB) Introduction
+	$(TEX) '\includeonly{$(INTRO),$(CONC)}\input{$(FILENAME)}'
+	$(TEX) '\includeonly{$(INTRO),$(CONC)}\input{$(FILENAME)}'
+
 clean::
 	rm -fv *.aux *.log *.bbl *.blg *.toc *.lof *.lot *.out
 	rm -fv */*.aux */*.log */*.bbl */*.blg */*.toc */*.lof */*.lot */*.out
