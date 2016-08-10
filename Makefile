@@ -5,6 +5,7 @@ INTRO=Introduction/Introduction
 FRD = FRD/FRD
 GPB = Pak_build/Pak_build
 8911 = 891_1/891_1
+CONC = Conclusion/Conclusion
 
 all: 
 	$(TEX) $(FILENAME).tex
@@ -38,6 +39,12 @@ Pak::
 	cd 891_1 && $(BIB) 891_1
 	$(TEX) '\includeonly{$(8911)}\input{$(FILENAME)}'
 	$(TEX) '\includeonly{$(8911)}\input{$(FILENAME)}'	
+
+conclusion::
+	$(TEX) '\includeonly{$(CONC)}\input{$(FILENAME)}'
+#	cd Conclusion && $(BIB) Conclusion
+	$(TEX) '\includeonly{$(CONC)}\input{$(FILENAME)}'
+	$(TEX) '\includeonly{$(CONC)}\input{$(FILENAME)}'
 
 clean::
 	rm -fv *.aux *.log *.bbl *.blg *.toc *.lof *.lot *.out
