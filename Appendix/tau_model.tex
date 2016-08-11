@@ -1,0 +1,79 @@
+\chapter{$\tau$ Model of Star Formation}
+\label{chap:tau_model}
+Our galaxy models are constructed from the simple stellar population
+(SSP) library of \citet{Bruzual03} with an initial mass function from
+\citet{Chabrier03}. These SSPs rely on the STELIB stellar library
+\citep{LeBorgne03}. The goal of any regularized galaxy model is to
+assign individual SSP weights based on a modeled star formation
+history (SFH). Our SSP basis set is normalized to \val{1}{M_{\odot}}
+and thus the SSP weights will be the total mass of stars in a give
+population. We let the mass of a model galaxy at lookback time, $t$,
+be
+\begin{equation}
+\label{TM:eq:M(t)}
+M(t) = \int_{t_{\rm form}}^t \psi(t') dt',
+\end{equation}
+where $\psi(t)$ is the amount of mass in stars produced at loockback time
+$t$. Equation \ref{TM:eq:M(t)} is generally true for any star formation
+history. For a $\tau$ model we use
+\begin{equation}
+\label{TM:eq:taumodel}
+\psi(t) = \psi_0 e^{-t/\tau_{SF}}.
+\end{equation}
+
+Taking the above, our galaxy flux, $G(\lambda)$, is constructed by weighting
+individual SSPs, $f_i(\lambda)$, by the mass formed during their formation age:
+\begin{equation}
+G(\lambda) = \sum_i^N f_i(\lambda) M_i,
+\end{equation}
+where
+\begin{equation}
+M_i = \int_{t_2}^{t_1} \psi(t') dt'.
+\end{equation}
+
+In practice our SSP ages are discreet and we need to choose a range of time
+($t_2 - t_1$) over which SSP contributes to star formation. We set these
+limits of integration such that an equal amount of mass is formed in each half
+of a logarithmically-spaced SSP age bin. In other words, given an SSP of age
+$t_i$, the limits of integration are
+\begin{equation}
+t_{2,i} = \frac{\log (t_{i+1}) - \log (t_i)}{2} = t_{1,i+1}.
+\end{equation}
+We set the end points $t_{1,0} = 0$ and $t_{2,N} = t_{\rm form}$.
+
+In the situation where $t_{\rm form}$ is less than the oldest SSP in
+our library the SSP mass bins will be unevenly spaced in age. To fix
+this problem we assign each SSP an age that is weighted by the amount
+of mass formed during the time assigned to its bin. In other words,
+the weighted age of an SSP with age $t_i$ is the midpoint of mass bin
+$M_i$. This weighted age, $t_{i,w}$, is defined such that
+\begin{equation}
+\int_{t_1}^{t_{i,w}} \psi(t') dt' = \int_{t_{i,w}}^{t_2} \psi(t') dt'.
+\end{equation}
+If we assume the $\tau$ model described in Eq. \ref{TM:eq:taumodel} the weighted age is
+\begin{equation}
+t_{i,w} = \tau_{SF} \log\left( 0.5 \left( e^{t_1/\tau_{SF}} + e^{t_2/\tau_{SF}} \right)\right).
+\end{equation}
+
+Finally, we adopt the extinction law of \citet{Charlot00} with a value
+of $A_V=1.63$, which defines a reddening term that is constant across all SSPs, 
+\begin{equation}
+R(\lambda) = e^{-\frac{A_V}{1.086} \left(\lambda/\val{5500}{\AA}\right)^{-0.7}},
+\end{equation}
+ so our final galaxy is given by
+\begin{equation}
+G(\lambda) = R(\lambda)\sum_i^N f_i(\lambda) M_i.
+\end{equation}
+
+As a proxy for star formation history we define the mean light-weighted age as
+\begin{equation}
+\label{TM:eq:MLWA}
+\tau_L = \frac{\sum_k\left[S(\lambda_K) R(\lambda_k) \sum_i f_i(\lambda_k) M_i t_i\right]}{\sum_{k}\left[S(\lambda_k) R(\lambda_k) \sum_i f_i(\lambda_k) M_i\right]}
+%% \tau_L = \frac{\sum_k S(\lambda_k)\left(\frac{\sum_{i,j} \psi(t_i,Z_j) f(\lambda, t_i,Z_j) t_i}{\sum_{i,j} \psi(t_i,Z_j) f(\lambda, t_i, Z_j)} \right)}{\sum_k S(\lambda_k)},
+\end{equation}
+where $S(\lambda_j)$ defines the bandpass over which the age is computed. We
+set $S(\lambda_j)$ to be flat over \val{5450}{\AA} $\leq\lambda\leq$
+\val{5550}{\AA} and zero everywhere else.
+
+\bibliographystyle{thesis}
+\bibliography{ms_n891_paper}

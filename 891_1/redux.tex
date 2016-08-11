@@ -61,7 +61,7 @@ wavelength.
   \centering
   \includegraphics[width=\columnwidth]{891_1/figs/Wave_Err_comb.pdf}
   \caption[Accuracy and precision of wavelength
-  calibration]{\label{fig:wave_err}\fixspacing Estimated accuracy and
+  calibration]{\label{891_1:fig:wave_err}\fixspacing Estimated accuracy and
     precision of the wavelength solution in the blue region of the
     spectrum based on measurements of known foreground features (HgI
     emission at 4047, 4358 and 5461 \AA\ from terrestrial light
@@ -74,7 +74,7 @@ wavelength.
     across all \GP fibers.}
 \end{figure}
 
-Accordingly, Figure \ref{fig:wave_err} shows the estimated accuracy
+Accordingly, Figure \ref{891_1:fig:wave_err} shows the estimated accuracy
 and precision for each of the 10 nights of NGC 891 observations.  At
 wavelengths $>\val{\asim 4000}{\AA}$ our wavelength solution is both
 accurate and precise to within \val{\asim 50}{km/s}. Below
@@ -107,7 +107,7 @@ data.
 \begin{figure}
   \centering
   \includegraphics[width=\columnwidth]{891_1/figs/skysub_comp.pdf}
-  \caption[Sky subtraction example]{\label{fig:skysub_comp}\fixspacing Example of large
+  \caption[Sky subtraction example]{\label{891_1:fig:skysub_comp}\fixspacing Example of large
     sky-subtraction residuals from November 21st, 2014. The red
     spectrum shows fiber 80 after sky subtraction using a sky spectrum
     that is the average across the whole night. The blue spectrum
@@ -169,11 +169,11 @@ across all fibers and is thus removed during flux calibration.
 \label{891_1:sec:skysub}
 
 Each fiber size in \GP has 4 dedicated sky fibers, as illustrated in
-Figure \ref{fig:GradPak}.  Sky subtraction was performed on a
+Figure \ref{891_1:fig:GradPak}.  Sky subtraction was performed on a
 fiber-size basis using different beam numbers for each fiber size in
 HYDRA's SKYSUB routine.  Since there are multiple sky fibers rejection
 of contaminated sky fibers was possible, as indeed was required (see
-Figure \ref{fig:pointings} for P6, P4, P1).
+Figure \ref{891_1:fig:pointings} for P6, P4, P1).
 
 The data from the night of November 21st, 2014 (P1) showed strong
 variation in sky intensity across the course of the night. This
@@ -186,14 +186,14 @@ achieved by computing the average sky spectrum on an
 exposure-by-exposure basis and combining individual object exposures
 \emph{after} sky subtraction. For consistency across the observing
 program the data for all nights was sky subtracted in this way. Figure
-\ref{fig:skysub_comp} shows representative before-and-after spectra
+\ref{891_1:fig:skysub_comp} shows representative before-and-after spectra
 illustrating this issue.
 
 \begin{figure}
   \centering
   \includegraphics[width=\columnwidth]{891_1/figs/flux_cal_test.pdf}
   \caption[Comparison of flux calibration across multiple fibe
-  sizes]{ \label{fig:sky_flux_comp}\fixspacing Flux calibration test
+  sizes]{ \label{891_1:fig:sky_flux_comp}\fixspacing Flux calibration test
     for all fiber sizes when using standard star data from only 5.62''
     fibers. Data are taken from a single galaxy exposure reduced
     through flux calibration, but not sky-subtracted. Each line
@@ -232,7 +232,7 @@ ONEDSTDS\footnote{http://stsdas.stsci.edu/cgi-bin/gethelp.cgi?onedstds}.
   \includegraphics[width=\columnwidth]{891_1/figs/disp_paper.pdf}
 
   \caption[Variation of instrumental resolution in \GP
-  fibers]{\label{fig:dispfunc}\fixspacing Instrumental resolution as
+  fibers]{\label{891_1:fig:dispfunc}\fixspacing Instrumental resolution as
     measured from CuAr arc-lamps (see text) are plotted as points; the
     interpolated and extrapolated dispersion functions used in
     spectral modeling is shown by the dotted lines.}
@@ -257,11 +257,11 @@ remove all of these relative variations.
 To assess the effects of using flux standards taken in a single fiber
 size to calibrate the entire \GP IFU we compared flux calibrated sky
 spectra for all fiber sizes. The data came from a single exposure of
-P3 (see Figure \ref{fig:pointings}) where none of they sky spectra
+P3 (see Figure \ref{891_1:fig:pointings}) where none of they sky spectra
 appeared to be outliers due to source contamination from foreground
 stars or background galaxies.  All sky fibers were flux calibrated
 using data from the 5.62'' fibers, and then the 4 sky fibers of each
-size were averaged together. Figure \ref{fig:sky_flux_comp} shows the
+size were averaged together. Figure \ref{891_1:fig:sky_flux_comp} shows the
 average spectrum for each fiber size, normalized to the mean of
 \emph{all} sky fibers. At wavelengths greater than \val{4000}{\AA} the
 sky spectra are consistent between fiber sizes to within 5\%. Below
@@ -317,7 +317,7 @@ blue and red ends of the region covered by arc lines
 (\val{4130}{\AA}$<\lambda <$ \val{7300}{\AA}) the dispersion functions
 are extended with linear extrapolation. The line-width data and
 resulting instrumental dispersion functions can be found in Figure
-\ref{fig:dispfunc}. Note the hat-shaped profile seen for the smallest
+\ref{891_1:fig:dispfunc}. Note the hat-shaped profile seen for the smallest
 fibers, characteristic of the typical compromise focus value chosen
 for the all refractive Bench Spectrograph system. For larger fiber
 sizes the resolution is dominated by the geometric fiber diameter and

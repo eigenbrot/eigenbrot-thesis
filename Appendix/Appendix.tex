@@ -1,15 +1,8 @@
-\begin{appendices}
-
-\setcounter{table}{0}
-\renewcommand{\thetable}{\Alph{section}\arabic{table}}
-\setcounter{figure}{0}
-\renewcommand{\thefigure}{\Alph{section}\arabic{figure}}
-
 %\section*{Appendix A \\ \GP Performance Testing}
-\section{\GP Performance Testing}
-\label{sec:GPtesting}
+\chapter{\GP Performance Testing}
+\label{chap:GPtesting}
 
-\input{891_1/gradpak_cal_table}
+\input{Appendix/gradpak_cal_table}
 
 Before installation all of the \GP fibers were tested for throughput
 performance using the Wisconsin Test Stand
@@ -53,7 +46,7 @@ optical design (in terms of aberrations) is optimized for f/5.
 To characterize the impact of FRD on the the delivered throughput we
 define the quantity
 \begin{equation}
-\label{eq:T_FRD}
+\label{GPtesting:eq:T_FRD}
   T_{\mathrm{4}} = \frac{F_{\mathrm{out}}(f<f/4)}{F_{\mathrm{in}}(f<f/6.3)},
 \end{equation}
 where $F_\mathrm{in}$ and $F_\mathrm{out}$ represent flux from the the
@@ -62,44 +55,46 @@ throughput measurement that accounts for the impact of FRD, and should
 be representative of how the fibers will perform as part of the
 WIYN/Bench system.  We compute comparable quantities for output
 f-ratios of f/4.5 and f/5.  The throughput in each of these apertures,
-as well as the total throughput are included in Table \ref{tab:GP_cal}
+as well as the total throughput are included in Table \ref{GPtesting:tab:GP_cal}
 as $T_{\rm tot}$, $T_4$, $T_{4.4}$, $T_{5}$.
 
 \begin{figure*}[htb]
   \centering
-  \includegraphics[width=0.4\textwidth]{891_1/figs/gradpak_map.pdf}
-  \includegraphics[width=0.4\textwidth]{891_1/figs/gradpak_L_map.pdf}
+  \includegraphics[width=0.4\textwidth]{Appendix/figs/gradpak_map.pdf}
+  \includegraphics[width=0.4\textwidth]{Appendix/figs/gradpak_L_map.pdf}
 \vskip -0.25in
 \caption[\GP throughput and and FRD
-losses]{\label{fig:TL_FRD}\fixspacing Maps of laboratory measurements
-  of the \GP IFU performance. Throughput ($T_{\mathrm{FRD}}$, Equation
-  \ref{eq:T_FRD}) is shown in the left-hand panel, while throughput
-  losses ($L_{\mathrm{FRD}}$, Equation \ref{eq:L_FRD}), is shown in
-  the right-hand panel. Performance values are given in the color
-  scale at the top of each panel.}
+losses]{\label{GPtesting:fig:TL_FRD}\fixspacing Maps of laboratory
+  measurements of the \GP IFU performance. Throughput
+  ($T_{\mathrm{FRD}}$, Equation \ref{GPtesting:eq:T_FRD}) is shown in
+  the left-hand panel, while throughput losses ($L_{\mathrm{FRD}}$,
+  Equation \ref{GPtesting:eq:L_FRD}), is shown in the right-hand
+  panel. Performance values are given in the color scale at the top of
+  each panel.}
 \end{figure*}
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.8\textwidth]{891_1/figs/gradpak_facefig.pdf}
+  \includegraphics[width=0.8\textwidth]{Appendix/figs/gradpak_facefig.pdf}
   \caption[\GP face and polishing
-  detail]{\label{fig:gradpak_face}\fixspacing Detail of \GP fiber face
+  detail]{\label{GPtesting:fig:gradpak_face}\fixspacing Detail of \GP
+    fiber face
     after polishing. The \val{25.4}{\mu m} (0.24'') shims between each
     block fiber-size group are visible in the central array. The hole
     in the 5th fiber row from the bottom is a fiber that was broken
     during polishing. The two sky-fiber groups, not shown to scale,
-    have locations marked in Figure \ref{fig:GradPak}.  The
+    have locations marked in Figure \ref{891_1:fig:GradPak}.  The
     \val{200}{\mu m} (1.87'') sky fibers are not visible in this image
     due to imperfect illumination conditions at the slit end when this
     picture was taken.}
 \end{figure}
 
-Figure \ref{fig:TL_FRD} contains throughput measurements for all of
+Figure \ref{GPtesting:fig:TL_FRD} contains throughput measurements for all of
 the active \GP fibers. Throughput losses caused by FRD are spatially
 coherent and are larger on the top and left (North and East) side of
 the IFU. This is likely due to surface scattering at the IFU face
 \citep{Eigenbrot12} caused by an uneven polish. Figure
-\ref{fig:gradpak_face} shows evidence of this variable polish in the
+\ref{GPtesting:fig:gradpak_face} shows evidence of this variable polish in the
 two sky fiber groups; the SW sky group show significantly worse polish
 than the NE group and has a correspondingly lower throughput. It is
 important to note that the FRD losses do \emph{not} appear to be
@@ -112,22 +107,23 @@ be caused by detritus from the aluminum fixture.
 
 As a check on the lab measurements of $T_4$ we also compare total
 fiber transmission recorded during the observing program described in
-\S\ref{sec:obs}. For these measurements a stiched dome flat (see
-\S\ref{sec:flats} was used as a good approximation of a uniform
+\S\ref{891_1:sec:obs}. For these measurements a stiched dome flat (see
+\S\ref{891_1:sec:flats} was used as a good approximation of a uniform
 illumination at the fiber input. The total light transmitted by each
 fiber is computed by adding together all wavelength channels for each
 fiber after the data were spectrally extracted. Figure
-\ref{fig:count_tput} shows are comparison between lab ($T_4$) and
-on-telescope performance. ``Counts'' in this figure are from
-dome-flats combined as described in \S\ref{sec:flats}), and are the
-sum across all wavelengths of the extracted fiber traces.  As expected
-from Figure \ref{fig:TL_FRD} the highest throughputs are found in the
-middle of the array, with a gradual drop off in performance towards
-the end of the slit. The right panel of Figure \ref{fig:count_tput}
-shows a tight correlation between our lab measurements and the on-sky
-performance. This shows that stresses during installation and the
-performance of the Bench Spectrograph only cause a $\pm$5\% rms
-modulation in the throughput compared to what was measured in the lab.
+\ref{GPtesting:fig:count_tput} shows are comparison between lab
+($T_4$) and on-telescope performance. ``Counts'' in this figure are
+from dome-flats combined as described in \S\ref{891_1:sec:flats}), and
+are the sum across all wavelengths of the extracted fiber traces.  As
+expected from Figure \ref{GPtesting:fig:TL_FRD} the highest
+throughputs are found in the middle of the array, with a gradual drop
+off in performance towards the end of the slit. The right panel of
+Figure \ref{GPtesting:fig:count_tput} shows a tight correlation
+between our lab measurements and the on-sky performance. This shows
+that stresses during installation and the performance of the Bench
+Spectrograph only cause a $\pm$5\% rms modulation in the throughput
+compared to what was measured in the lab.
 
 We also measure the magnitude of FRD experienced by each
 fiber. Because FRD represents a scattering of input light to larger
@@ -135,7 +131,7 @@ output angles a comparison between throughput at two different output
 $f$-ratios gives an approximation of the severity of FRD in each
 fiber. We define
 \begin{equation}
-\label{eq:L_FRD}
+\label{GPtesting:eq:L_FRD}
   L_\mathrm{FRD} = 1 - \frac{T_5}{T_4},
 \end{equation}
 which quantifies the amount of light scattered to smaller $f$-ratios
@@ -144,9 +140,10 @@ experienced by each fiber.
 
 \begin{figure*}
   \centering
-  \includegraphics[width=\textwidth]{891_1/figs/gradpak_count_plots.pdf}
+  \includegraphics[width=\textwidth]{Appendix/figs/gradpak_count_plots.pdf}
   \caption[\GP on-bench throughput
-  performance]{\label{fig:count_tput}\fixspacing Left: Relative fiber
+  performance]{\label{GPtesting:fig:count_tput}\fixspacing Left:
+    Relative fiber
     transmission measured \emph{in-situ} on the WIYN Bench
     Spectrograph. Vertical lines demark transition between different
     fiber sizes, as labeled. Right: Comparison between the
@@ -159,28 +156,29 @@ experienced by each fiber.
 
 \begin{figure*}
   \centering
-  \includegraphics[width=\textwidth]{891_1/figs/gradpak_Lplots.pdf}
-  \caption[\GP on-bench FRD losses]{\label{fig:FRD_loss}\fixspacing
-    Performance metrics for \GP. $L_\mathrm{FRD}$ (Equation
-    \ref{eq:L_FRD}) as a function of slit location (right) and $T_4$
-    (transmission through an f/4 aperture). Points are color-coded by
-    fiber number (slit position), and sky fibers are marked with black
-    squares.}
+  \includegraphics[width=\textwidth]{Appendix/figs/gradpak_Lplots.pdf}
+  \caption[\GP on-bench FRD
+  losses]{\label{GPtesting:fig:FRD_loss}\fixspacing Performance
+    metrics for \GP. $L_\mathrm{FRD}$ (Equation
+    \ref{GPtesting:eq:L_FRD}) as a function of slit location (right)
+    and $T_4$ (transmission through an f/4 aperture). Points are
+    color-coded by fiber number (slit position), and sky fibers are
+    marked with black squares.}
 \end{figure*}
 
-Table \ref{tab:GP_cal} contains measurements and Figure
-\ref{fig:TL_FRD} shows a map of $L_\mathrm{FRD}$ for each \GP
-fiber. Figure \ref{fig:FRD_loss} compares this quantity with $T_4$. We
-find that fibers with low $T_4$ also tend to have high FRD losses
-($L_\mathrm{FRD}$), which indicates that FRD is a significant source
-of throughput loss in the \GP and Bench Spectrogtraph system.  However
-this is relatively more pronounced for smaller fiber sizes, as seen in
-the bifrucation in the right-hand panel of Figure
-\ref{fig:FRD_loss}. Smaller fibers tend to suffer from larger amounts
-of FRD, which may have been caused in \GP due to handling-induced
-stresses; these fibers were more likely to bend and tangle during
-construction.  The corollary is that lower throughput in larger fibers
-isn't always the result of increased FRD.
+Table \ref{GPtesting:tab:GP_cal} contains measurements and Figure
+\ref{GPtesting:fig:TL_FRD} shows a map of $L_\mathrm{FRD}$ for each
+\GP fiber. Figure \ref{GPtesting:fig:FRD_loss} compares this quantity
+with $T_4$. We find that fibers with low $T_4$ also tend to have high
+FRD losses ($L_\mathrm{FRD}$), which indicates that FRD is a
+significant source of throughput loss in the \GP and Bench
+Spectrogtraph system.  However this is relatively more pronounced for
+smaller fiber sizes, as seen in the bifrucation in the right-hand
+panel of Figure \ref{GPtesting:fig:FRD_loss}. Smaller fibers tend to
+suffer from larger amounts of FRD, which may have been caused in \GP
+due to handling-induced stresses; these fibers were more likely to
+bend and tangle during construction.  The corollary is that lower
+throughput in larger fibers isn't always the result of increased FRD.
 
 A complete set of measurements showing FRD losses as a function of
 output $f$-ratio for each fiber can be found in the supplemental
@@ -191,13 +189,16 @@ materials online. {\bf [can they? I'm thinking this would basically be
 
 % \input{gradpak_lab_table}
 
-\section{Grating Optimization}
+\bibliographystyle{thesis}
+\bibliography{ms_n891_paper}
+
+\chapter{Grating Optimization}
 \label{sec:grating}
 
 \begin{figure*}[htb]
 \centering
 \vskip -1.25in
-  \includegraphics[width=\textwidth]{891_1/figs/blaze_comp_land.pdf}
+  \includegraphics[width=\textwidth]{Appendix/figs/blaze_comp_land.pdf}
 \vskip -1.25in
 \caption[NGC 891 observing program grating
 optimization]{\label{fig:grating_comp}\fixspacing Efficiency
@@ -286,7 +287,7 @@ wavelengths than the idealized case.
 \begin{figure*}[htb]
   \centering
 \vskip -1.25in
-  \includegraphics[width=\textwidth]{891_1/figs/blaze_plot_land.pdf}
+  \includegraphics[width=\textwidth]{Appendix/figs/blaze_plot_land.pdf}
 \vskip -1.25in
 \caption[Comparison of coverage and blaze for 400 and 600 l/mm
 gratings]{\label{fig:spec_config}\fixspacing Wavelength blaze and
@@ -323,82 +324,3 @@ spectral coverage. The excercise does conclude that a larger
 camera-collimator angle of roughly 40$^{\circ}$ would be preferable
 for the 600@10.1 grating, but its performance in the far blue would
 still fall short of the 400@4.2 grating.
-
-\section{$\tau$ Model of Star Formation}
-\label{sec:tau_model}
-Our galaxy models are constructed from the simple stellar population
-(SSP) library of \citet{Bruzual03} with an initial mass function from
-\citet{Chabrier03}. These SSPs rely on the STELIB stellar library
-\citep{LeBorgne03}. The goal of any regularized galaxy model is to
-assign individual SSP weights based on a modeled star formation
-history (SFH). Our SSP basis set is normalized to \val{1}{M_{\odot}}
-and thus the SSP weights will be the total mass of stars in a give
-population. We let the mass of a model galaxy at lookback time, $t$,
-be
-\begin{equation}
-\label{eq:M(t)}
-M(t) = \int_{t_{\rm form}}^t \psi(t') dt',
-\end{equation}
-where $\psi(t)$ is the amount of mass in stars produced at loockback time
-$t$. Equation \ref{eq:M(t)} is generally true for any star formation
-history. For a $\tau$ model we use
-\begin{equation}
-\label{eq:taumodel}
-\psi(t) = \psi_0 e^{-t/\tau_{SF}}.
-\end{equation}
-
-Taking the above, our galaxy flux, $G(\lambda)$, is constructed by weighting
-individual SSPs, $f_i(\lambda)$, by the mass formed during their formation age:
-\begin{equation}
-G(\lambda) = \sum_i^N f_i(\lambda) M_i,
-\end{equation}
-where
-\begin{equation}
-M_i = \int_{t_2}^{t_1} \psi(t') dt'.
-\end{equation}
-
-In practice our SSP ages are discreet and we need to choose a range of time
-($t_2 - t_1$) over which SSP contributes to star formation. We set these
-limits of integration such that an equal amount of mass is formed in each half
-of a logarithmically-spaced SSP age bin. In other words, given an SSP of age
-$t_i$, the limits of integration are
-\begin{equation}
-t_{2,i} = \frac{\log (t_{i+1}) - \log (t_i)}{2} = t_{1,i+1}.
-\end{equation}
-We set the end points $t_{1,0} = 0$ and $t_{2,N} = t_{\rm form}$.
-
-In the situation where $t_{\rm form}$ is less than the oldest SSP in
-our library the SSP mass bins will be unevenly spaced in age. To fix
-this problem we assign each SSP an age that is weighted by the amount
-of mass formed during the time assigned to its bin. In other words,
-the weighted age of an SSP with age $t_i$ is the midpoint of mass bin
-$M_i$. This weighted age, $t_{i,w}$, is defined such that
-\begin{equation}
-\int_{t_1}^{t_{i,w}} \psi(t') dt' = \int_{t_{i,w}}^{t_2} \psi(t') dt'.
-\end{equation}
-If we assume the $\tau$ model described in Eq. \ref{eq:taumodel} the weighted age is
-\begin{equation}
-t_{i,w} = \tau_{SF} \log\left( 0.5 \left( e^{t_1/\tau_{SF}} + e^{t_2/\tau_{SF}} \right)\right).
-\end{equation}
-
-Finally, we adopt the extinction law of \citet{Charlot00} with a value
-of $A_V=1.63$, which defines a reddening term that is constant across all SSPs, 
-\begin{equation}
-R(\lambda) = e^{-\frac{A_V}{1.086} \left(\lambda/\val{5500}{\AA}\right)^{-0.7}},
-\end{equation}
- so our final galaxy is given by
-\begin{equation}
-G(\lambda) = R(\lambda)\sum_i^N f_i(\lambda) M_i.
-\end{equation}
-
-As a proxy for star formation history we define the mean light-weighted age as
-\begin{equation}
-\label{eq:MLWA}
-\tau_L = \frac{\sum_k\left[S(\lambda_K) R(\lambda_k) \sum_i f_i(\lambda_k) M_i t_i\right]}{\sum_{k}\left[S(\lambda_k) R(\lambda_k) \sum_i f_i(\lambda_k) M_i\right]}
-%% \tau_L = \frac{\sum_k S(\lambda_k)\left(\frac{\sum_{i,j} \psi(t_i,Z_j) f(\lambda, t_i,Z_j) t_i}{\sum_{i,j} \psi(t_i,Z_j) f(\lambda, t_i, Z_j)} \right)}{\sum_k S(\lambda_k)},
-\end{equation}
-where $S(\lambda_j)$ defines the bandpass over which the age is computed. We
-set $S(\lambda_j)$ to be flat over \val{5450}{\AA} $\leq\lambda\leq$
-\val{5550}{\AA} and zero everywhere else.
-
-\end{appendices}
