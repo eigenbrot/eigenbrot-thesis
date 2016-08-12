@@ -5,6 +5,7 @@ INTRO=Introduction/Introduction
 FRD = FRD/FRD
 GPB = Pak_build/Pak_build
 8911 = 891_1/891_1
+8912 = 891_2/891_2
 CONC = Conclusion/Conclusion
 
 all: 
@@ -13,6 +14,7 @@ all:
 	cd FRD && $(BIB) FRD
 	cd Pak_build && $(BIB) Pak_build
 	cd 891_1 && $(BIB) 891_1
+	cd 891_2 && $(BIB) 891_2
 	cd Appendix && $(BIB) Appendix
 	cd Appendix && $(BIB) tau_model
 	$(TEX) $(FILENAME).tex

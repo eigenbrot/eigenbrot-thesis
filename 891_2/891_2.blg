@@ -1,0 +1,55 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/TeX Live for SUSE Linux)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: 891_2.aux
+The style file: thesis.bst
+Database file #1: ms_n891_paper.bib
+Warning--I'm ignoring More78's extra "year" field
+--line 2334 of file ms_n891_paper.bib
+Warning--I didn't find a database entry for "REFS"
+Warning--I didn't find a database entry for "Schechtman-Rook14"
+Warning--I didn't find a database entry for "Calzetti94"
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Warning--empty publisher in Binney87
+Warning--empty publisher in Osterbrock89
+You've used 63 entries,
+            3088 wiz_defined-function locations,
+            1154 strings with 20055 characters,
+and the built_in function-call counts, 31232 in all, are:
+= -- 2558
+> -- 2304
+< -- 33
++ -- 771
+- -- 826
+* -- 2656
+:= -- 5841
+add.period$ -- 63
+call.type$ -- 63
+change.case$ -- 423
+chr.to.int$ -- 63
+cite$ -- 65
+duplicate$ -- 1259
+empty$ -- 1868
+format.name$ -- 913
+if$ -- 6220
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 56
+newline$ -- 194
+num.names$ -- 256
+pop$ -- 485
+preamble$ -- 1
+purify$ -- 423
+quote$ -- 0
+skip$ -- 1071
+stack$ -- 0
+substring$ -- 1303
+swap$ -- 76
+text.length$ -- 7
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 558
+warning$ -- 2
+while$ -- 241
+width$ -- 0
+write$ -- 632
+(There were 6 warnings)
