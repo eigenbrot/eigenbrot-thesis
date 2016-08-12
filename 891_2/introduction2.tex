@@ -1,6 +1,6 @@
 \section{Introduction}
 
-In \ref{chap:891_1} we used a focused set of spectral line
+In Chapter \ref{chap:891_1} we used a focused set of spectral line
 measurements to show that the signature of disk heating in NGC 891
 matches observations of the Milky Way \citep[e.g.,][]{Bovy12,
   Hayden15} with startling accuracy. Near the midplane of NGC 891
@@ -10,8 +10,8 @@ features, indicative of young stellar populations, while above
 metal abosportion, notably Ca H\&K, MgI, and Fe. Secondary results
 include detection of a negative age gradient with radius, which could
 be the signature of an inside-out formation history similar to that
-seen in the Milky Way \citep{REFS}, and a potential flare in the
-star-forming disk beyond \val{\asim 8}{kpc}.
+seen in the Milky Way \citep{Bovy12, Hayden15}, and a potential flare
+in the star-forming disk beyond \val{\asim 8}{kpc}.
 
 {\bf MAB: In above paragraph I would say features associated Ca H\&K,
   the G band, Mgb and Fe bands 5270 and 5335.}
@@ -28,145 +28,156 @@ described in \ref{chap:891_1} are of sufficiently high
 signal-to-noise (S/N) that using the entire spectrum can yield
 physical insights beyond what can be measured by line indices alone.
 
-In this work we employ full-spectral fitting to measure age,
+In this chapter I use full-spectral fitting to measure age,
 metallicity, and extinction (our three ``quantities of interest'') as
-a function of radius and height in NGC 891. The idea of using an
-entire galaxy spectrum has a long history since \citet{Spinrad71}
-first mixed stars together and modern techniques employ a variety of
-sophisticated methods to extract the maximum about of data from each
-wavelength. Regardless of specific method, all attempts at
-full-spectrum fitting require the same basic ingredients: (i) a
-library of stellar spectra, whether empirical or synthetic, (ii) a set
-of isochrones that encapsulate how stars evolve with time, and (iii)
-an initial mass function (IMF). With these three components
-Astronomers can construct simple stellar populations (SSPs); a set of
-stars of the same age and same metallicity/abundance with a mass
-distribution determined by the IMF. To simulate an entire galaxy
-multiple SSPs of different ages and metallicities are combine together
-to produce a complext stellar population (CSP), which requires
-assuming both a star formation history (SFH) and the
-distribution/properties of dust in the galaxy. An excellent discussion
-of this process can be found in \citet[especially his Figure
-  1]{Conroy13}.
+a function of radius and height in NGC 891. As discussed in Chapter
+\ref{chap:intro} full spectrum fitting requires an SSP basis set,
+which in turn depends on stellar template library, IMF, and stellar
+isochrones. In \S\ref{891_2:sec:SSP_sets} we explore a range of
+different SSP libraries and ....
+ 
+%% We choose to use the SSP templates of \citet{Bruzual03},
+%% which are constructed with the Padova isochrones \citep{Bertelli94,
+%%   Girardi00, Marigo08}, Chabrier IMF \citet{Chabrier03}, and STELIB
+%% library \citep{LeBorgne03}.
 
-Within the general picture painted above there exists a wide range of
-options and data. It is common for SSP libraries to be constructed
-with the Padova isochrones \citep{Bertelli94, Girardi00, Marigo08}
-because these models cover the widest range of stellar age and
-chemical compositions, but other models are often used for their focus
-on specific epochs of stellar evolution, for example high-mass stars
-(Geneva \citep{Schaller92,Meynet00}), low-mass stars ($Y^2$
-\citep{Yi01,Yi03}, or Dartmouth \citep{Dotter08}), and even very
-low-mass stars (Lyon \citep{Chabrier97,Baraffe98}). In this work we
-use exclusively the Padova isochrones because our observations, by
-their very nature, light-weighted and therefore the specific details
-of low mass stars are rather unimportant.
+%% The idea of using an
+%% entire galaxy spectrum has a long history since \citet{Spinrad71}
+%% first mixed stars together and modern techniques employ a variety of
+%% sophisticated methods to extract the maximum about of data from each
+%% wavelength. Regardless of specific method, all attempts at
+%% full-spectrum fitting require the same basic ingredients: (i) a
+%% library of stellar spectra, whether empirical or synthetic, (ii) a set
+%% of isochrones that encapsulate how stars evolve with time, and (iii)
+%% an initial mass function (IMF). With these three components
+%% Astronomers can construct simple stellar populations (SSPs); a set of
+%% stars of the same age and same metallicity/abundance with a mass
+%% distribution determined by the IMF. To simulate an entire galaxy
+%% multiple SSPs of different ages and metallicities are combine together
+%% to produce a complext stellar population (CSP), which requires
+%% assuming both a star formation history (SFH) and the
+%% distribution/properties of dust in the galaxy. An excellent discussion
+%% of this process can be found in \citet[especially his Figure
+%%   1]{Conroy13}.
 
-The choice of IMF can also affect the final modeled galaxy
-spectrum. The canonical IMF of \citet{Salpeter55} was based on
-observations of the Solar Cylinder in the Milky Way, and there is so
-far little evidence that the IMF is appreciably different elsewhere in
-the Universe \citep{Bastian10}. More recent observations have refined
-the specific form of the IMF \citep{Kroupa01, Chabrier03}, but the
-general picture remains the same. We use the IMF of \citet{Chabrier03}
-because it is physically motivated and provides a good fit to low-mass
-and brown dwarf star counts in the Milky Way
-\citep{Bruzual03,Chabrier01,Chabrier03}.
+%% Within the general picture painted above there exists a wide range of
+%% options and data. It is common for SSP libraries to be constructed
+%% with the Padova isochrones \citep{Bertelli94, Girardi00, Marigo08}
+%% because these models cover the widest range of stellar age and
+%% chemical compositions, but other models are often used for their focus
+%% on specific epochs of stellar evolution, for example high-mass stars
+%% (Geneva \citep{Schaller92,Meynet00}), low-mass stars ($Y^2$
+%% \citep{Yi01,Yi03}, or Dartmouth \citep{Dotter08}), and even very
+%% low-mass stars (Lyon \citep{Chabrier97,Baraffe98}). In this work we
+%% use exclusively the Padova isochrones because our observations, by
+%% their very nature, light-weighted and therefore the specific details
+%% of low mass stars are rather unimportant.
 
-Finally, the construction of SSPs depends on the stellar library
-used. In this work we consider only empirical stellar libraries, and
-more specifically on the STELIB \citep{LeBorgne03} and MILES
-\citep{Sanchez-Blazquez06} libraries. The main strength of emperical
-libraries is that the get the chemistry right by default, as indeed
-they must. The cost of this accuracy, however, is a very limit
-sampling of the entire parameter space of stellar evolution. For
-example, as is discussed in \S\ref{891_2:sec:ma11}, the MILES library very
-coarsly samples the metallicty/age plane and doesn't have any spectra
-for ages below \val{6.5}{Myr}. We use the STELIB library because it
-more finely samples stars of different ages, but warn that it still
-lacks a detailed view of how spectra change with metallicity.
+%% The choice of IMF can also affect the final modeled galaxy
+%% spectrum. The canonical IMF of \citet{Salpeter55} was based on
+%% observations of the Solar Cylinder in the Milky Way, and there is so
+%% far little evidence that the IMF is appreciably different elsewhere in
+%% the Universe \citep{Bastian10}. More recent observations have refined
+%% the specific form of the IMF \citep{Kroupa01, Chabrier03}, but the
+%% general picture remains the same. We use the IMF of \citet{Chabrier03}
+%% because it is physically motivated and provides a good fit to low-mass
+%% and brown dwarf star counts in the Milky Way
+%% \citep{Bruzual03,Chabrier01,Chabrier03}.
 
-As discussed in \S\ref{891_2:sec:SSP_sets} we ultimately use the SSPs of
-\citet{Bruzual03}, which are constructed with the Padova isochrones,
-Chabrier IMF, and STELIB library. We note, however, that over the
-wavelength range we consider ($\val{3800}{\AA} \leq\lambda\leq
-\val{6800}{\AA}$) the differences in spectral shape caused by
-different assumptions/models are minimal.
+%% Finally, the construction of SSPs depends on the stellar library
+%% used. In this work we consider only empirical stellar libraries, and
+%% more specifically on the STELIB \citep{LeBorgne03} and MILES
+%% \citep{Sanchez-Blazquez06} libraries. The main strength of emperical
+%% libraries is that the get the chemistry right by default, as indeed
+%% they must. The cost of this accuracy, however, is a very limit
+%% sampling of the entire parameter space of stellar evolution. For
+%% example, as is discussed in \S\ref{891_2:sec:ma11}, the MILES library very
+%% coarsly samples the metallicty/age plane and doesn't have any spectra
+%% for ages below \val{6.5}{Myr}. We use the STELIB library because it
+%% more finely samples stars of different ages, but warn that it still
+%% lacks a detailed view of how spectra change with metallicity.
 
-More directly relevant to our work is the assumption about the SFH
-that is used to construct galaxies (CSPs) from SSPs. A common choice
-for SFH is the so called $\tau$-model where the star formation rate
-(SFR) follows an exponential function with a single scale parameter,
-$\tau_\mathrm{SF}$. This analytic form is based on closed-box models
-where the SFR depends linearly on gas density \citep{Schmidt59} and
-offers an attractive, one parameter, parameterization of the SFH. In
-this work we chose to use a non-parametric SFH (as discussed in
-\S\ref{891_2:sec:SSP_method}) which allows us to reduce the systematics in
-our results that arise from forcing the form of the SFR (systematics
-are not completely eliminated, however, as discussed in
-\S\ref{891_2:sec:sys_err}). Using this method results in a much larger set
-of free parameters and puts more strain on the fitting code, but our
-data have high enough signal to noise (\val{\asim 60}{\AA^{-1}}) to
-make it a viable option.
+%% As discussed in \S\ref{891_2:sec:SSP_sets} we ultimately use the SSPs of
+%% \citet{Bruzual03}, which are constructed with the Padova isochrones,
+%% Chabrier IMF, and STELIB library. We note, however, that over the
+%% wavelength range we consider ($\val{3800}{\AA} \leq\lambda\leq
+%% \val{6800}{\AA}$) the differences in spectral shape caused by
+%% different assumptions/models are minimal.
 
-Once model galaxies are constructed there are a multidue of methods
-available to fit them to our data, for example those of
-\citep{Cappellari04,Tojeiro07,Chen12,CidFernandes05,Ocvirk06,Wilkinson15,Sanchez16}. Regardless
-of the method used these fits face the same common issues; namely how
-to deal with known degeneracies between age, metallicity, and
-extinction \citep{Oconnel76,Aaronson78,Worthey94,dePaz02}. In some
-methods the extinction degeneracy can be mitigated by removing the
-overall continuum from both the data and models before fitting
-\citep[e.g.,][]{Ocvirk06,Wilkinson15} and then recovering an
-extinction estimate either by measurements of gass emission (i.e., the
-Balmer decrement) or separate analysis of the ``best fit'' galaxy
-spectrum. Metallicity and age are more closely entwined and the
-degeneracy between them more difficult to break. In this work we
-attempt to quantify the uncertainties that arise from similarities
-between SSPs that are degenerate with age and metallicity (see
-\S\ref{891_2:sec:fit_err}), but note that we have not addressed systematic
-uncertainties that may arise from our choice of model SSPs.
+%% More directly relevant to our work is the assumption about the SFH
+%% that is used to construct galaxies (CSPs) from SSPs. A common choice
+%% for SFH is the so called $\tau$-model where the star formation rate
+%% (SFR) follows an exponential function with a single scale parameter,
+%% $\tau_\mathrm{SF}$. This analytic form is based on closed-box models
+%% where the SFR depends linearly on gas density \citep{Schmidt59} and
+%% offers an attractive, one parameter, parameterization of the SFH. In
+%% this work we chose to use a non-parametric SFH (as discussed in
+%% \S\ref{891_2:sec:SSP_method}) which allows us to reduce the systematics in
+%% our results that arise from forcing the form of the SFR (systematics
+%% are not completely eliminated, however, as discussed in
+%% \S\ref{891_2:sec:sys_err}). Using this method results in a much larger set
+%% of free parameters and puts more strain on the fitting code, but our
+%% data have high enough signal to noise (\val{\asim 60}{\AA^{-1}}) to
+%% make it a viable option.
 
-% {\bf Discussion of history
-%   of SSP fitting}
+%% Once model galaxies are constructed there are a multidue of methods
+%% available to fit them to our data, for example those of
+%% \citep{Cappellari04,Tojeiro07,Chen12,CidFernandes05,Ocvirk06,Wilkinson15,Sanchez16}. Regardless
+%% of the method used these fits face the same common issues; namely how
+%% to deal with known degeneracies between age, metallicity, and
+%% extinction \citep{Oconnel76,Aaronson78,Worthey94,dePaz02}. In some
+%% methods the extinction degeneracy can be mitigated by removing the
+%% overall continuum from both the data and models before fitting
+%% \citep[e.g.,][]{Ocvirk06,Wilkinson15} and then recovering an
+%% extinction estimate either by measurements of gass emission (i.e., the
+%% Balmer decrement) or separate analysis of the ``best fit'' galaxy
+%% spectrum. Metallicity and age are more closely entwined and the
+%% degeneracy between them more difficult to break. In this work we
+%% attempt to quantify the uncertainties that arise from similarities
+%% between SSPs that are degenerate with age and metallicity (see
+%% \S\ref{891_2:sec:fit_err}), but note that we have not addressed systematic
+%% uncertainties that may arise from our choice of model SSPs.
 
-% o PPXF (Cappelari 2004)
-% o VESPA (Tojeiro 2007)
-% o PCA (Chen 2012)
-% o STARLIGHT (Cid Fernandes 2005)
-% o STECKMAP (Ocvirk 2006)
-% o FIREFLY (Wilkinson 2015?)
+%% % {\bf Discussion of history
+%% %   of SSP fitting}
 
-% {\bf MAB: History of SPS fitting is a big job. You might take a look
-%   at Conroy's relatively recent ARAA article, and think about what you
-%   want to focus on. One key issue is the move away from indices; this
-%   is what folks have been doing for a while now. It might be worth
-%   noting why we used indices in Paper I. The specific issues
-%   associated with SPS and full spectral fitting (FSF) revolve around
+%% % o PPXF (Cappelari 2004)
+%% % o VESPA (Tojeiro 2007)
+%% % o PCA (Chen 2012)
+%% % o STARLIGHT (Cid Fernandes 2005)
+%% % o STECKMAP (Ocvirk 2006)
+%% % o FIREFLY (Wilkinson 2015?)
 
-% (1) completeness of stellar libraries;
+%% % {\bf MAB: History of SPS fitting is a big job. You might take a look
+%% %   at Conroy's relatively recent ARAA article, and think about what you
+%% %   want to focus on. One key issue is the move away from indices; this
+%% %   is what folks have been doing for a while now. It might be worth
+%% %   noting why we used indices in Paper I. The specific issues
+%% %   associated with SPS and full spectral fitting (FSF) revolve around
 
-% (2) stellar evolutionary tracks (isochrones), particularly for late
-% phases of stellar evolution; and
+%% % (1) completeness of stellar libraries;
 
-% (3) fitting methods.
+%% % (2) stellar evolutionary tracks (isochrones), particularly for late
+%% % phases of stellar evolution; and
 
-% Your task here should be to mention (1) and (2), and note that while
-% you will be taking a look at two different set of libraries and tracks
-% (BC03 and Maraston), in the wavelengths of interest there are not
-% likely to be major differences. The more significant issue for you is
-% in the fitting methods. Here I would further break this issue down 
-% in terms of addressing the following question:
+%% % (3) fitting methods.
 
-% How do codes handle the degeneracies in age and metallicity, and, more
-% broadly, age, metallicity and extinction?
+%% % Your task here should be to mention (1) and (2), and note that while
+%% % you will be taking a look at two different set of libraries and tracks
+%% % (BC03 and Maraston), in the wavelengths of interest there are not
+%% % likely to be major differences. The more significant issue for you is
+%% % in the fitting methods. Here I would further break this issue down 
+%% % in terms of addressing the following question:
 
-% We know about Firefly in terms of splitting off extinction. However,
-% what is less clear is how various codes *pre*-select the set of
-% templates to minimize degeneracy, and how they explore possible
-% parameter space.  You are going to need to take some time to look at
-% the literature on this. Pipe3D (Sebastian Sanchez); Starlight (Cid
-% Fernandez); Vespa (Rita Tojeiro); and whatever Patricia Blazquez does.}
+%% % How do codes handle the degeneracies in age and metallicity, and, more
+%% % broadly, age, metallicity and extinction?
+
+%% % We know about Firefly in terms of splitting off extinction. However,
+%% % what is less clear is how various codes *pre*-select the set of
+%% % templates to minimize degeneracy, and how they explore possible
+%% % parameter space.  You are going to need to take some time to look at
+%% % the literature on this. Pipe3D (Sebastian Sanchez); Starlight (Cid
+%% % Fernandez); Vespa (Rita Tojeiro); and whatever Patricia Blazquez does.}
 
 In addition to its importance as a nearby Milky Way analog, NGC 891
 offers a unique perspective as one of the few galaxies close enough
@@ -185,18 +196,18 @@ picture of the that galaxy's line of sight (LOS) structure (what we
 call ``doppler tomography''), but in this work we are restricted by
 spectral resolution to simply measuring line centroids.
 
-%+++++++++++++++++++++++++++++++++
-% {\bf MAB: I'd say more here about your preference for edge-ons for
-%   getting the 3D perspective. For example, the emission density
-%   profile (from stars or gas) along the line of sight, convolved with
-%   the velocity field, produces a line profile shape. This is what we
-%   mean by Doppler tomography; it requires some assumptions about the
-%   velocity field, which we take to be smooth and similar to the atomic
-%   gas, and about the smoothness of the density distribution of the
-%   emisssion, which was problematic for the ionized gas but probably a
-%   better bet for the older stars contributing to the metal-line
-%   absorption.  All that said, i.e., put out the idea, we use the line
-%   centroid only because of our limited resolution.}
+%+++++++++++++++++++++++++++++++++ {\bf MAB: I'd say more here about
+% your preference for edge-ons for getting the 3D perspective. For
+% example, the emission density profile (from stars or gas) along the
+% line of sight, convolved with the velocity field, produces a line
+% profile shape. This is what we mean by Doppler tomography; it
+% requires some assumptions about the velocity field, which we take to
+% be smooth and similar to the atomic gas, and about the smoothness of
+% the density distribution of the emisssion, which was problematic for
+% the ionized gas but probably a better bet for the older stars
+% contributing to the metal-line absorption.  All that said, i.e., put
+% out the idea, we use the line centroid only because of our limited
+% resolution.}
 
 The following paper is organized as follows: in \S\ref{891_2:sec:data} we
 briefly describe the data of \ref{chap:891_1}, which is used
