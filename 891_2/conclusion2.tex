@@ -1,0 +1,294 @@
+\section{Summary}
+\label{891_2:sec:summary}
+
+We have used full-spectrum SSP fitting measure trends in $\tau_L$,
+$Z_L$, and $A_V$ with both radius and height in NGC 891. To mitigate
+the impact of degeneracies between these quantities we downselect the
+full \citetalias{Bruzual03} SSP template library in two ways: limiting
+the range of metallicity values used, and reducing the age resolution
+of the template library. We limit the range of allowed metallicities
+to be $Z \geq 0.2\Zsol$ and show in \S\ref{891_2:sec:multi_metal} that SSPs
+with lower metallicity produce model galaxies that; a) are
+statistically worse than higher metallcities, in a $\chi^2$ sense, and
+b) result in the astrophysically implausible situation of very old
+super-solar metallicity stars combined with very young super metal
+poor stars.
+
+The age resolution of our SSP template libraries is reduced using the
+statistically motivated method of diffusion K-means
+\citepalias{Mosby15}, which accounts for the fact that there is very
+little difference in spectral shape between old SSPs over a range of
+roughly \val{5}{Gyr}. We find that this limited basis set still
+accurately reproduces our observed galaxy spectra
+(\S\ref{891_2:sec:final_SSP}).
+
+While these steps do reduce the magnitude of degeneracies between
+$\tau_L$, $Z_L$, and $A_V$ these degeneracies are still the dominant
+sources of uncertinaty in our fit parameters. However the are
+typically on the order of \asim 10\%, which still allows us to measure
+trends in radius and height. We also find two distinct regimes of
+degeneracy between $\tau_L$ and $Z_L$; for intermediate and old
+populations these two qunatities are negatively correlated (as
+expected from e.g., \citet{Oconnel76,Aaronson78,Worthey94,dePaz02})
+but for young populations $\tau_L$ and $Z_L$ are positively
+correlated, indicating that older populations have heigher
+metallicities. This correlation is caused by the interplay between all
+three of our fit parameters, as discussed in \S\ref{891_2:sec:fit_err},
+underlining the importance of parameter covariance in understanding
+fit uncertainties.
+
+%++++++++++++++++++++
+%% {\bf MAB: In the above two paragraphs I think you want to say a bit
+%%   more about the motivation behind reducing the number of templates
+%% in the context of degeneracies and systematic errors.
+
+%% Specifically, you have reduced the {\it range} of metallicity, and you
+%% have reduced the {\it resolution} in age. You should say that both are
+%% important, that you should specify that you have done both, and give
+%% what that reduction is (metallicities cut; reduction to 4 age bins
+%% with characteristic ages of [t1,...t4] Gyr via DFK). Then you should
+%% say that limiting the metallicity range is crucial because of fitting
+%% degeneracies that lead to astrophysically implausible stellar mixes of
+%% very young and ultra metal-poor stars mixed with very old and super
+%% metal-rich stars. Reducing the age resolution is particularly
+%% important at older ages where there is little to no leverage from the
+%% full spectral fitting to discriminate between 5 Gyr. These reductions
+%% allow you to minimize and quantify the degeneracies between age and
+%% metallicity and quantify the systematic uncertainties in the mean age,
+%% as you will describe in the next paragraph.
+
+%% I would not refer to the two degeneracy regimes by the physical
+%% location in the galaxy, but by the characteristic age of the stellar
+%% populations (see the request to do this earlier in the relevant
+%% section). This is more fundamental and allows other studies to use the
+%% information directly. You then can mention that these characteristic
+%% age regimes happen to correspond to height regimes for NGC 891 given
+%% its edge-on orientation.
+
+%% }
+
+While we use $\tau_L$ as a proxy for star formation history we caution
+that any single metric of age (including $\tau_L$) requires
+assumptions about the underlying star formation that will introduce
+systematic offsets into the results. We quantify the magnitude of this
+systematic uncertinaty and find it to be, in a worst case scenario,
+\asim 20\%. It is important to note, however, than for studies of a
+single galaxy a worst-case scenario (which assigns a completely random
+star formation history to each location in the galaxy) is a large
+overestimation. On time scales greater than one dynamical time we
+expect the the galaxy to be relatively well mixed which causes the
+average SFH to be relatively constant and thus the systematic
+undertainties discussion in \S\ref{891_2:sec:sys_err} will not apply. At
+large radii the dynamical timescale of NGC 891 is roughly 1 Gyr, which
+means the systematic uncertainties in the I2 and O DFK bins are
+greatly mitigated by mixing of stars within the galaxy.
+
+%---------------
+%% {\bf MAB: Again, you should note that the DFK parameterization gives a
+%%   well defined framework for definning the age systematics that
+%%   decouples the age-metallicity fitting degeneracies with the
+%%   uncertainties inherent in age estimates from measurements of the
+%%   integrated light of stellar populations (i.e., we don't measure
+%%   individual stars so there is a limit to the available information in
+%%   the spectra).
+
+%% I know what you are getting at in the discussion of dynamical times
+%% and mixing lengths because we talked about it, but we need to work a
+%% bit more on our thinking and exposition. First, I am thinking that the
+%% dynamical time, for a disk, works to sort out azimuthal variations,
+%% i.e., azimuthal variations will tend to average out for stellar
+%% populations older than that time-scale. I think we mean {\it radial}
+%% mixing length, and this is the part that in my mind is fuzzy -- and
+%% not just because of us. I don't think it is clear how much disks mix
+%% radially, and if they do, how much the mixing depends on
+%% height. Carlos and Elena claim that radial migration is most effective
+%% for dynamically cold stars (small velocity dispersions and near the
+%% mid-plane), so it is not clear how these migrating stars contribute to
+%% the thicker disk component since nobody knows how to make a thick disk
+%% without mergers or early-era turbulence (thick gas disk).
+
+%% I think you are right that the 20\% systematic is an over-estimate,
+%% but there could well be systematic trends in the SFH with radius and
+%% height, and I don't think we can say more than that 20\% is an upper
+%% limit and it is unlikely to apply at even the extrema in R and z in
+%% any given galaxy.
+
+%% }
+
+%% ADE: Isn't that what I said? (I took out the mixing length
+%% sentence, maybe this is a thought for another day).
+
+The light weights shown in Figure \ref{891_2:fig:SFH_cuts} suggest an even
+more optimistic picture, in which the SFH is relatively constant
+across all of NGC 891. While the specific weights do change with $r$
+and $z$, the general trends for each DFK bin are the same at all radii
+and heights. For example, the strength of the I2 population increases
+with radius at all heights and the strength of the O population
+decreases with radius at all heights. It is more difficult to make
+similar statements about the Y and I1 stellar populations because they
+exist only at a narrow range of height and radius, but these
+populations make up a negligible contribution to the total systematic
+uncertainty. In other words the qualitative similarity in the light
+weights (a proxy for the SFH) seen in Figure \ref{891_2:fig:SFH_cuts}
+indicates that the underlying star formation rate does not vary
+\emph{in shape} by large amounts across large regions of NGC 891, thus
+uncertainties that arise from assuming a star formation history (i.e.,
+\S\ref{891_2:sec:sys_err}) only effect systematics on a galactic scale;
+within NGC 891 these systematics contribute neglibigly to the total
+uncertainty.
+
+%---------------
+%% {\bf MAB: This is important: I need to see the SFR as requested for
+%%   alternative versions of Figure \ref{891_2:fig:SFH_cuts}, i.e., once with
+%%   mass-weights and then one with mass-weights divided by the time
+%%   interval (SFR). That said (and with these in hand), I think you
+%%   might have a good argument to make. Actually I think the point that
+%%   is likely robust is not that the SFH is relatively constant with R
+%%   and z, but that it changes smoothly at least in R. The SFR at recent
+%%   times is quite different at different heights, particularly at $R<8$
+%%   kpc. However, Y and I1 are not an issue for age systematics since
+%%   these are dominated by the larger time bins of I2 and O.
+
+%% Noted you have an incomplete sentence.}
+
+Our 3-dimensional view of NGC 891 is enhanced by deprojecting the
+observed, projected radii to cylindical radii based on kinematic
+measurements of stellar populations in each aperture. Thus armed with
+fully 3D information about the location of our stellar populations we
+identify three distinct morphological features in NGC 891:
+
+%+++++++++++++++
+%% {\bf MAB: don't use ``true'' because there are uncertainties. You should
+%% work these out (see earlier request) and summarize here.}
+
+\begin{enumerate}
+  
+\item A ``primary'' disk that exists at all heights (at least to
+  \val{2.6}{kpc}) and radii less than \val{8}{kpc}. In this disk there
+  is clear evidence for the presence of young stellar populations ($<
+  \val{\asim 400}{Myr}$ ago) below \val{0.4}{kpc} and a lack of the
+  same populations above \val{0.4}{kpc}, consistent with the results
+  of \ref{chap:891_1}. Above this transition emission from
+  the disk is dominated by I2 and O stars and the average population
+  age increases with height. This disk also exhibits negative
+  metallicity gradients with both radius and heights, which is
+  consistent with observations of the Milky Way. It is likely that the
+  primary ``disk'' is actually a superposition of multiple disk
+  components like the ones found in \citet{Schechtman-Rook13,
+    Schechtman-Rook14}.
+
+\item A flared extension of the the primary disk at radii beyond
+  \val{8}{kpc}. This flare has the same age and metallicity properties
+  as the main disk, but with a scale height roughly twice that of the
+  main disk (\val{\asim 0.9}{kpc}, compared to a V-band scale height
+  measure at small radii by \citet{Xilouris99} of
+  \val{0.4}{kpc}). This increase in scale height decreases the total
+  surface density of dust at large radii and the extinction is
+  correspondingly lower, especially near the midplane.
+  
+\item A sequence of intermediate-age, super-solar metallicity
+  populations at large heights ($|z|> \val{\asim 0.9}{kpc}$) and radii
+  ($r>\val{8}{kpc}$). Despite their old ages, the populations in this
+  ``third sequence'' appear to come from a fundamentally different
+  undelying distribution from stars at similar heights but smaller
+  radii; within $r=\val{8}{kpc}$ light at large heights is dominated
+  by the oldest staller populations, but in the third sequence these
+  heights are have strong contributions from intermediate-aged
+  populations. Despite an overall higher metallicity this third
+  sequence still shows internal metallicity gradients in $r$, and $z$
+  consistent with the trends seen in the primary disk and flare. The
+  origin of this population is not easily explained, but we suggest
+  that it may be a signature of a flare that is older than the
+  ``flare'' identified above. Simulations of Milky Way-like galaxies
+  do suggest that early epochs of star formation can be highly flared
+  via mergers and (to a lesser extent) radial migration
+  \citep{Martig14b}, but this does not explain the high metallicity in
+  this sequence. Any theories about sequence 3 will need to content
+  with its curious combination of old ages and high metallicities that
+  occur far from the center of the galaxy.
+
+\end{enumerate}
+
+%+++++++++++++++++
+%% {\bf MAB: Good place to note connection to ASR's work. We also need to
+%%   discuss the possible different picture that sequence 3 could be part
+%%   of an older flare (a la Martig), or that the thicker disk is simply
+%%   younger at larger radii, consistent with an inside-out scenario, but
+%%   not necessarily one where flares occur. To be clear: the flare
+%%   scenario has mono-age populations forming in a flared disk, where
+%%   the flare gets larger with time. An alternate scenario is one also
+%%   where the disk grows with time but the stars continue to form in a
+%%   thin disk and are somehow heated. While the former seems to come
+%%   more naturally out of current models the point is that we do not
+%%   have an observational signature that would distinguish between the
+%%   two. I think it is worth saying.}
+
+This work represents an advance in our understand of the detailed
+structure of NGC 891. In \ref{chap:891_1} we calimed that
+vertical heating in NGC 891 appears have a nearly identical signature
+as the Milky Way but with a radial and vertical metallicity gradient
+the opposite of the Milky Way. With the methods outlined above we are
+able to refine this picture; the ``normal'' primary disk of NGC 891
+follows the trends, including metallicity, seen in the Milky Way, but
+the overall picture is muddled by the presence of a intermediate-age,
+super-solar metallicity sequence of populations at $r >$
+\val{8}{kpc}. 
+
+%----------------
+%% {\bf MAB: To what extent do you think seq-3 is an extension of the
+%%   flared thin disk? I would also make the broader point that we are
+%%   setting the stage of studies of edge-on galaxies in integrated light
+%%   to build a statistical picture of 3D stellar population gradients in
+%%   massive spiral galaxies outside the MW. }
+
+Despite the advances presented here there is ample opportunity for
+future studies to improve upon our work and methods. In particular,
+our treament of systematic uncertainties is incomplete and we do not
+address potential sources of systematics in our calculation of either
+$A_V$ or $Z_L$. Our fit values of $A_V$ are dependent on the
+extinction model assumed \citep[i.e.,][]{Charlot00}, but beyond that
+we do not parametrize extinction with separate normalization
+parameters for populations younger and older than \val{\asim 10}{Myr},
+as recommended by \citet{Charlot00}. Furthermore we have not tested
+how our results might change when using other common models
+\citep[e.g.,][]{Calzetti94}.
+
+Systematics in $Z_L$ likely arise from our simplistic treatment of how
+populations with different metallicities mix together (i.e., we take a
+straight average of $Z$). We also note that the specifics of chemical
+evolution are often highly dependent on the SSP template library used
+and we have only used one model \citepalias{Bruzual03} in this work.
+
+%++++++++++++++
+%% {\bf MAB: Can you be specific about you do not think is complete in
+%%   our sys. uncertainty estimates for $A_V$ and $Z_L$? You say
+%%   something about $A_V$ but is there anything else? What about $Z_L$?}
+
+We also note that the use of diffusion k-means to down-select the SSP
+library of \citet{Bruzual03} has not been rigorously tested for
+effects of metallicity (\citetalias{Mosby15} only consider solar
+metallicity SSPs). Furthermore, when the DFK spectra are constructed
+from a weighted average of BC03 SSPs we assume a constant star
+formation across each DFK bin, which very likely introduces
+systematics in the DFK spectra and ultimately our derived
+parameters. Finally, the choice of 4 DFK bins was primarily motivated
+by \citetalias{Mosby15}'s use of very low S/N data. It is possible
+that using only 4 DFK bins underrepresents the full wealth of
+information contained in our relatively high S/N data. Specifically,
+the current I2 DFK bin spans a large range of stellar evolutionary
+time scales and could likely be split into finer bins, which would
+allow one to leverage SSP models that offer sophisticated treatment of
+the late phases of stellar evolution \citepalias[e.g.,][]{Maraston11}
+
+%+++++++++++++++++++
+%% {\bf MAB: I would emphasize again the point about S/N and our
+%%   relatively low time resolution in the 0.4-6 Gyr, which likely should
+%%   be split and take advantage of testing alternative treatments of
+%%   late-phases of stellar evolution (referencing Maraston).}
+
+%% Things we didn't do:
+
+%% o Systematics from DFK averaging
+%% o Systematics on Z_L, A_V
+%% o Multiple extinction normalizations for young, old a la Charlot & Fall
+%% o Different DFK bins?

@@ -8,7 +8,7 @@
 %\vfil\eject\clearpage
 \clearpage It has long been known that stars in the solar neighborhood
 have vertical scale-heights and velocity dispersions that increase
-with age \citep[e.g.,][]{Wielen74}. This phenomenon is reffered to as
+with age \citep[e.g.,][]{Wielen74}. This phenomenon is referred to as
 ``disk heating'', and the origin of this heating process has never
 been settled. Unfortunately, our empirical constraints on disk heating
 come only from the solar cylinder in the Milky Way and a few crude
@@ -88,7 +88,7 @@ specific to the Milky Way?
 \begin{figure}
   \centering
   \includegraphics[width=0.8\textwidth]{Introduction/figs/bird_13.pdf}
-  \caption[Dynamical setteling in a Milky-Way-like galaxy
+  \caption[Dynamical settling in a Milky-Way-like galaxy
   model]{\fixspacing\label{intro:fig:bird}Vertical velocity dispersion
     of stellar populations with different formation ages as a function
     of time. These models are based on hydrodynamical simulations of a
@@ -166,21 +166,20 @@ studies based on integrated starlight.
   \caption[Schematic of full spectrum
   fitting]{\fixspacing\label{intro:fig:conroy}The important components
     of full spectrum fitting. An initial mass function (IMF),
-    isochrones, and spectra are combined to consruct individual
+    isochrones, and spectra are combined to construct individual
     SSPs. Multiple SSPs are then combined, with and assumed star
     formation history and dust properties, to form a model
     galaxy. From \citet{Conroy13}.}
 \end{figure}
 
 In this work we employ full-spectral fitting to measure age,
-metallicity, and extinction (our three ``quantities of interest'') as
-a function of radius and height in NGC 891. The idea of modeling
-integrated starlight (i.e., a spectrum) to measure galaxies properties
-has a long history since \citet{Spinrad71} first manually mixed stars
-together, and modern techniques employ a variety of sophisticated
-methods to extract the maximum about of data from each
-wavelength. Regardless of the specific method, all attempts at
-full-spectrum fitting require the same basic ingredients: (i) a
+metallicity, and extinction as a function of radius and height in NGC
+891. The idea of modeling integrated starlight (i.e., a spectrum) to
+measure galaxies properties has a long history since \citet{Spinrad71}
+first manually mixed stars together, and modern techniques employ a
+variety of sophisticated methods to extract the maximum about of data
+from each wavelength. Regardless of the specific method, all attempts
+at full-spectrum fitting require the same basic ingredients: (i) a
 library of stellar spectra, whether empirical or synthetic, (ii) a set
 of isochrones that encapsulate how stars evolve with time, and (iii)
 an initial mass function (IMF). With these three components
@@ -192,7 +191,7 @@ to produce a complex stellar population (CSP), which requires assuming
 both a star formation history (SFH) and the distribution/properties of
 dust in the galaxy. An excellent discussion of this process can be
 found in \citet[and his diagram shown in Figure
-\ref{intro:fig:conroy}]{Conroy13}.
+  \ref{intro:fig:conroy}]{Conroy13}.
 
 Within the general picture painted above there exists a wide range of
 options and data. It is common for SSP libraries to be constructed
@@ -221,12 +220,12 @@ and brown dwarf star counts in the Milky Way
 Finally, the construction of SSPs depends on the stellar library
 used. In this work we consider only empirical stellar libraries, and
 more specifically the STELIB \citep{LeBorgne03} and MILES
-\citep{Sanchez-Blazquez06} libraries. The main strength of emperical
+\citep{Sanchez-Blazquez06} libraries. The main strength of empirical
 libraries is that they get the chemistry right by default, as indeed
 they must. The cost of this accuracy, however, is a very limit
 sampling of the entire parameter space of stellar evolution. For
 example, as is discussed in \S\ref{891_2:sec:ma11}, the MILES library
-very coarsly samples the metallicty/age plane and doesn't have any
+very coarsely samples the metallicty/age plane and doesn't have any
 spectra for ages below \val{6.5}{Myr}. 
 % Ultimately, we use the STELIB
 % library because it more finely samples stars of different ages, but
@@ -255,7 +254,7 @@ a much larger set of free parameters and puts more strain on the
 fitting code, but our data have high enough signal to noise
 (\val{\asim 30}{px^{-1}}) to make it a viable option.
 
-Once model galaxies are constructed there are a multidue of methods
+Once model galaxies are constructed there are a multitude of methods
 available to fit them to our data, for example those of
 \citep{Cappellari04, Tojeiro07,Chen12, CidFernandes05, Ocvirk06,
   Wilkinson15, Sanchez16}. Regardless of the method used these fits
@@ -265,7 +264,7 @@ degeneracies between age, metallicity, and extinction
 extinction degeneracy can be mitigated by removing the overall
 continuum from both the data and models before fitting
 \citep[e.g.,][]{Ocvirk06,Wilkinson15} and then recovering an
-extinction estimate either by measurements of gass emission (i.e., the
+extinction estimate either by measurements of gas emission (i.e., the
 Balmer decrement) or separate analysis of the ``best fit'' galaxy
 spectrum. Metallicity and age are more closely entwined and the
 degeneracy between them more difficult to break. In this work we
@@ -283,8 +282,8 @@ astronomical benefits of fiber optics are essentially two fold:
 Firstly, they allow instruments to be decoupled from the telescope
 focal plane, which enables the construction of very large and
 sensitive spectrographs that are free from the unstable environmental
-conditions often found on the oberving floor. Secondly, they can be
-easily placed at an arbitrary position on the sky while maintaing a
+conditions often found on the observing floor. Secondly, they can be
+easily placed at an arbitrary position on the sky while maintaining a
 consistent spectrograph input.
 
 A class of fiber optic instruments called integral field units (IFUs)
@@ -295,13 +294,13 @@ one spectral). Some IFUs are designed to efficiently measure the
 spectra of a large field of stars, for example HYDRA {\bf REF? Can't
   find it!}, and can have the location of their fibers changed from
 program to program. Others have a fiber layout that is fixed and
-usually intented for observations of extended objects. SparsePak
+usually intended for observations of extended objects. SparsePak
 \citep{Bershady04,Bershady05} is an excellent example of and IFU of
 this type. The trade off for the lack of reconfigurability in fixed
 IFUs is a generally tighter fiber packing and therefore improved
 spatial coverage.
 
-In the past, difficulties in constuction resulted in a cottage
+In the past, difficulties in construction resulted in a cottage
 industry of IFU builders, but more recently there has been an
 explosion of mass-produced IFUs that have allowed large, resolved
 spectrographic surveys like MaNGA \citep{Bundy15}, SAMI
