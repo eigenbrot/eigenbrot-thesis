@@ -77,20 +77,20 @@ wavelength.
 Accordingly, Figure \ref{891_1:fig:wave_err} shows the estimated accuracy
 and precision for each of the 10 nights of NGC 891 observations.  At
 wavelengths $>\val{\asim 4000}{\AA}$ our wavelength solution is both
-accurate and precise to within \val{\asim 50}{km/s}. Below
+accurate and precise to within \val{\asim 50}{\kms}. Below
 \val{4000}{\AA} (where the wavelength solution is determined via
 extrapolation of the CuAr lamp line data) we measure a systematic
-offset of \val{\asim 120}{km/s} with a comparable value for the random
+offset of \val{\asim 120}{\kms} with a comparable value for the random
 error. We therefore report an upper limit on the uncertainty in our
-wavelength solution to be \val{120}{km/s} at \val{4000}{\AA}, while
+wavelength solution to be \val{120}{\kms} at \val{4000}{\AA}, while
 noting that for most wavelengths this is an overestimation.  The RMS
 uncertainty reported by the wavelength fitting routine is \val{\asim
-  90}{km/s}, which is likely a more accurate estimate of the
+  90}{\kms}, which is likely a more accurate estimate of the
 uncertainty for the wavelength region covered by arc lines
 (\val{4130}{\AA}$<\lambda <$ \val{7300}{\AA}).  Even in the worst case
 we are able to calibrate wavelengths to a higher precision than the
 spectral resolution (see \S\ref{891_1:sec:GPak_dispersion}), which varies
-from 180 to \val{570}{km/s} at \val{4000}{\AA} (depending on fiber
+from 180 to \val{570}{\kms} at \val{4000}{\AA} (depending on fiber
 size). Thus, accurate measurements of velocity based on $\chi^2$
 fitting of absorption lines (as done in Paper II) is possible with our
 data.
@@ -98,9 +98,9 @@ data.
 
 %% The maximum offset from the true values give us an
 %% upper limit on the uncertainty in our wavelength solution. Using this
-%% method we find an upper limit of \val{\asim 100}{km/s} at
+%% method we find an upper limit of \val{\asim 100}{\kms} at
 %% \val{4000}{\AA}, which is consistent with the value of \val{\asim
-%%   90}{km/s} based on the RMS of the wavelength solution fit. {\bf
+%%   90}{\kms} based on the RMS of the wavelength solution fit. {\bf
 %%   [TODO: Let me get this straight: we are not using these features to
 %%     improve the calibration, but just as a cross-check?]}
 
@@ -146,10 +146,10 @@ time.
 
 Once the two flats had their apertures extracted, the resulting
 spectra were scaled to the same exposure time and stitched together
-into a ``master'' flat where the 1.87'' and 2.81'' fibers were taken
-from the \val{4}{s} flat and the 3.75'', 4.69'', and 5.62'' fibers
-were taken from the \val{1}{s} flat. This master flat was used in all
-subsequent reduction of the on-sky data.
+into a ``master'' flat where the 1\farcs87 and 2\farcs81 fibers were
+taken from the \val{4}{s} flat and the 3\farcs75, 4\farcs69, and
+5\farcs62 fibers were taken from the \val{1}{s} flat. This master flat
+was used in all subsequent reduction of the on-sky data.
 
 During the exercise of establishing this pipeline we discovered a lag
 in the shutter time that affects exposures shorter than \val{\asim
@@ -195,7 +195,7 @@ illustrating this issue.
   \caption[Comparison of flux calibration across multiple fiber
     sizes]{ \label{891_1:fig:sky_flux_comp}\fixspacing Flux
     calibration test for all fiber sizes when using standard star data
-    from only 5.62'' fibers. Data are taken from a single galaxy
+    from only 5\farcs62 fibers. Data are taken from a single galaxy
     exposure reduced through flux calibration, but not
     sky-subtracted. Each line represents the average of all 4 sky
     fibers for a given fiber size and all lines are normalized by the
@@ -218,8 +218,8 @@ illustrating this issue.
 %%     \GP instrument description section would be useful.]} 
 
 As discussed in \S\ref{891_1:sec:cal_data} atmospheric refraction limited
-our standard star observations to only the 5.62'' fibers. On each
-night the same two standard stars were observed in multiple 5.62''
+our standard star observations to only the 5\farcs62 fibers. On each
+night the same two standard stars were observed in multiple 5\farcs62
 fibers and a flux calibration was computed using the ONEDSPEC
 package. Time constraints in our observing program limited the range
 of airmasses available for standard star observations and for this
@@ -260,7 +260,7 @@ spectra for all fiber sizes. The data came from a single exposure of
 P3 (see Figure \ref{891_1:fig:pointings}) where none of they sky spectra
 appeared to be outliers due to source contamination from foreground
 stars or background galaxies.  All sky fibers were flux calibrated
-using data from the 5.62'' fibers, and then the 4 sky fibers of each
+using data from the 5\farcs62 fibers, and then the 4 sky fibers of each
 size were averaged together. Figure \ref{891_1:fig:sky_flux_comp} shows the
 average spectrum for each fiber size, normalized to the mean of
 \emph{all} sky fibers. At wavelengths greater than \val{4000}{\AA} the
@@ -297,7 +297,7 @@ dispersion) is a convolution of this distortion with the
 anamorphically demagnified fiber image. Consequently the different
 fiber sizes in \GP cause the spectral line profile to be a different
 function of wavelength for each fiber size. We refer to this value as
-$\sigma_{\rm inst}$, reported in units of km/s.
+$\sigma_{\rm inst}$, reported in units of \kms.
 
 To account for the variations in $\sigma_{\rm inst}$ in our later
 fitting of model spectral energy distributions, we first measured the
