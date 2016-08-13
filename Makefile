@@ -44,6 +44,12 @@ Pak::
 	$(TEX) '\includeonly{$(8911)}\input{$(FILENAME)}'
 	$(TEX) '\includeonly{$(8911)}\input{$(FILENAME)}'	
 
+8912::
+	$(TEX) '\includeonly{$(8912)}\input{$(FILENAME)}'
+	cd 891_2 && $(BIB) 891_2
+	$(TEX) '\includeonly{$(8912)}\input{$(FILENAME)}'
+	$(TEX) '\includeonly{$(8912)}\input{$(FILENAME)}'
+
 conclusion::
 	$(TEX) '\includeonly{$(CONC)}\input{$(FILENAME)}'
 #	cd Conclusion && $(BIB) Conclusion
