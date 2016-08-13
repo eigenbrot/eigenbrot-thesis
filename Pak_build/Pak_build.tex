@@ -20,25 +20,27 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \begin{chabstract}
-  We describe the design, construction, and expected performance of two new
-  fiber integral field units (IFUs) --- HexPak and \GP --- for the WIYN 3.5m
-  Telescope Nasmyth focus and Bench Spectrograph.  These are the first IFUs to
-  provide formatted fiber integral field spectroscopy with simultaneous sampling
-  of varying angular scales.  HexPak and \GP are in a single cable with a
-  dual-head design, permitting easy switching between the two different IFU
-  heads on the telescope without changing the spectrograph feed: the two heads
-  feed a variable-width double-slit.  Each IFU head is comprised of a fixed
-  arrangement of fibers with a range of fiber diameters.  The layout and
-  diameters of the fibers within each array are scientifically-driven for
-  observations of galaxies: HexPak is designed to observe face-on spiral or
-  spheroidal galaxies while \GP is optimized for edge-on studies of galaxy
-  disks.  HexPak is a hexagonal array of 2.9 arcsec fibers subtending a 40.9
-  arcsec diameter, with a high-resolution circular core of 0.94 arcsec fibers
-  subtending 6 arcsec diameter.  \GP is a 39 by 55 arcsec rectangular array
-  with rows of fibers of increasing diameter from angular scales of 1.9 arcsec
-  to 5.6 arcsec across the array.  The variable pitch of these IFU heads allows
-  for adequate sampling of light profile gradients while maintaining the photon
-  limit at different scales.
+  We describe the design, construction, and expected performance of
+  two new fiber integral field units (IFUs) --- HexPak and \GP --- for
+  the WIYN 3.5m Telescope Nasmyth focus and Bench Spectrograph.  These
+  are the first IFUs to provide formatted fiber integral field
+  spectroscopy with simultaneous sampling of varying angular scales.
+  HexPak and \GP are in a single cable with a dual-head design,
+  permitting easy switching between the two different IFU heads on the
+  telescope without changing the spectrograph feed: the two heads feed
+  a variable-width double-slit.  Each IFU head is comprised of a fixed
+  arrangement of fibers with a range of fiber diameters.  The layout
+  and diameters of the fibers within each array are
+  scientifically-driven for observations of galaxies: HexPak is
+  designed to observe face-on spiral or spheroidal galaxies while \GP
+  is optimized for edge-on studies of galaxy disks.  HexPak is a
+  hexagonal array of 2\farcs9 fibers subtending a 40.9 arcsec
+  diameter, with a high-resolution circular core of 0\farcs94 fibers
+  subtending 6'' diameter.  \GP is a 39 by 55 arcsec rectangular
+  array with rows of fibers of increasing diameter from angular scales
+  of 1\farcs9  to 5\farcs6 across the array.  The variable pitch of
+  these IFU heads allows for adequate sampling of light profile
+  gradients while maintaining the photon limit at different scales.
 \end{chabstract}
 \cleardoublepage
 
@@ -211,8 +213,7 @@ plane \citep{Kennedy06}.  \footnotetext{A packing is ``compact'' if, for every
 particularly relevant to the science goals of HexPak.  This packing involves
 replacing one larger circle with an array of seven smaller circles (with a
 diameter ratio of $\sim$0.386) while retaining the hexagonal lattice
-arrangement of the other large circles (see Figure~1.e in
-Ref.~\citenum{Kennedy06}).
+arrangement of the other large circles \citep[see Figure~1.e][]{Kennedy06}.
 
 
 The main flaw in this design as it pertains to our design goals is that the
@@ -239,7 +240,7 @@ densely pack a moderate number of fibers inside this new circular aperture.
 In order to determine an efficient packing within this aperture, we once again
 turned to the study of circle packing.  A sub-field of circle packing
 investigates the most efficient methods for packing circles of a given
-diameter into one circle of a larger diameter.  Ref.~\citenum{Kravitz67}
+diameter into one circle of a larger diameter. \citet{Kravitz67}
 presents empirically-derived optimal packings of circles into a circular
 container.  For a diameter ratio of $\sim$0.206, it is possible to pack 19
 small circles into one larger circle.  This final design of all the HexPak
@@ -285,7 +286,7 @@ desired diameter.
 \end{figure}
 
 
-Although the results from Ref.~\citenum{Kravitz67} are empirical (and
+Although the results from \citet{Kravitz67} are empirical (and
 therefore may not be compact) and our chosen fibers are slightly undersized,
 the amount of extra space in the packing arrangement is at an appropriate
 level to allow for mechanical tolerances.  We have successfully assembled two
@@ -315,7 +316,7 @@ earlier revision in sky fiber arrangement and contains no small fibers in the
 core of the array.
 
 
-Ref.~\citenum{Bershady04} found that focal ratio
+\citet{Bershady04} found that focal ratio
 degradation\footnotemark\ (FRD) increases at the edge of the SparsePak array.
 \footnotetext{Focal ratio degradation is a decrease in focal ratio of a beam
   as it passes through a fiber.}  They suggest several possible causes,
@@ -447,7 +448,7 @@ sit nicely into the grooves.
 
 We have set the fiber core edge-to-edge spacing at $291\mu$m to minimize
 cross-talk while maximizing the number of fibers in the slit.
-Ref.~\citenum{Bershady04} found that 400$\mu$m was the ideal edge-to-edge
+\citet{Bershady04} found that 400$\mu$m was the ideal edge-to-edge
 spacing of fiber cores in the slit in terms of the trade-off between
 cross-talk and packing density (i.e.\ total number of fibers).  However, this
 determination was made using the old Bench Spectrograph system which was
@@ -479,7 +480,7 @@ blocking filters, slit masks, and a back-illumination mirror.  These chambers
 each have an aperture through which the exit beam must pass in order to reach
 the spectrograph collimator.  We performed a vignetting analysis to determine
 the maximum fiber slit width and slit length that could pass unvignetted
-through the toes.  Ref.~\citenum{Bershady04} shows that, due to FRD, 99\% of
+through the toes. \citet{Bershady04} show that, due to FRD, 99\% of
 the energy in an \f6.3 input beam (the WIYN focal ratio) exiting the fibers is
 contained within an \f4 output beam.  Therefore, as long as an \f4 beam could
 pass through the toes without being blocked, we could consider light losses
@@ -525,7 +526,7 @@ center is $927\mu$m.
 
 The design and construction of the SparsePak cable served as the starting
 point for this instrument.  Technical details of SparsePak fabrication are
-available in the Appendix section of Ref.~\citenum{Bershady04}.  In this
+available in the Appendix section of \citet{Bershady04}.  In this
 section we focus primarily on detailing the important features unique to this
 instrument and noting significant departures from the SparsePak design.
 
@@ -540,7 +541,7 @@ conclude in June--August 2012.
 The 91 2\farcs8\ fibers that compose the hexagonal region and its associated
 sky fibers are re-purposed from the DensePak IFU.  They have a specified
 active core diameter of $310\mu$m and a measured total O.D.\ (including
-cladding and buffer) of approximately $405\mu$m.  Ref.~\citenum{Barden98}
+cladding and buffer) of approximately $405\mu$m. \citet{Barden98}
 states that the DensePak fibers are similar to the Hydra FIP-type
 ``red-optimized'' fibers.  The 23 0\farcs94\ fibers forming the
 high-resolution core and associated sky fibers were purchased new from
