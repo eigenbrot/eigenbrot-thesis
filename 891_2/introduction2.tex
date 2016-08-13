@@ -28,14 +28,51 @@ described in \ref{chap:891_1} are of sufficiently high
 signal-to-noise (S/N) that using the entire spectrum can yield
 physical insights beyond what can be measured by line indices alone.
 
-In this chapter I use full-spectral fitting to measure age,
-metallicity, and extinction (our three ``quantities of interest'') as
-a function of radius and height in NGC 891. As discussed in Chapter
-\ref{chap:intro} full spectrum fitting requires an SSP basis set,
-which in turn depends on stellar template library, IMF, and stellar
-isochrones. In \S\ref{891_2:sec:SSP_sets} we explore a range of
-different SSP libraries and ....
- 
+In this chapter we extend our previous results by using full-spectral
+fitting to measure age, metallicity, and extinction (our three
+``quantities of interest'') as a function of radius and height in NGC
+891. As discussed in Chapter \ref{chap:intro} full spectrum fitting
+requires an SSP basis set, which in turn depends on stellar template
+library, IMF, and stellar isochrones. In \S\ref{891_2:sec:SSP_sets} we
+explore a range of different SSP libraries and methods for mixing them
+together to form a full model galaxy.
+
+The primary reason for this exploration of different SSPs and methods
+is a desire to understand and quantify uncertainties that arise from
+astrophysical degeneracies in the SSP libraries. It is well known
+\citep{Oconnel76,Aaronson78,Worthey94,dePaz02} that stars of different
+metallicities and ages can have spectral shapes that are very similar,
+and this similarity poses a challenge to interpreting the results of a
+full spectrum fit to a mix of SSPs; it is very difficult to know which
+of the many similar SSPs represents the ``correct'' astrophysical
+reality. Confounding this issue further is the fact that the presence
+of dust also affects the final galaxy spectrum. The result is a
+complex covariance between age, metallicity, and extinction (i.e.,
+dust).
+
+Some modern fitting codes, like FIREFLY \citep{Wilkinson15} or STEKMAP
+\citep{Ocvirk06}, attempt to circumvent the impact of dust by first
+removing low-order information from both the model SSPs and galaxy
+data. The advantage of this method is that, by effectively removing
+the continuum shape, the goodness-of-fit is driven primarily by the
+strength of stellar absorption lines\footnote{ In
+  \S\ref{891_2:sec:smart_chi} we make our own attempt to increase the
+  power contained in strong spectral lines, with limited
+  success.}. Ironically this is a step towards focused spectral index
+measurements like those employed in Chapter \ref{chap:891_1}, albiet
+one with a much larger set of lines and all the advances of modern
+computing behind it. However, this increased focus on absorption lines
+requires sacrificing information contained in the continuum shape and,
+perhaps more importantly, ignores degeneracies that exist between,
+e.g., extinction and age.
+
+In this chapter we use a somewhat simple method to perform the galaxy
+fits (see \S\ref{891_2:sec:SSP_method}). The strength of our
+astrophysical interpretation comes from our relatively high S/N data
+(see Chapter \ref{chap:891_1}) and our understanding and
+quantification of the uncertainties in our fits
+(\S\ref{891_2:sec:uncertainty}).
+
 %% We choose to use the SSP templates of \citet{Bruzual03},
 %% which are constructed with the Padova isochrones \citep{Bertelli94,
 %%   Girardi00, Marigo08}, Chabrier IMF \citet{Chabrier03}, and STELIB
@@ -209,17 +246,18 @@ spectral resolution to simply measuring line centroids.
 % out the idea, we use the line centroid only because of our limited
 % resolution.}
 
-The following paper is organized as follows: in \S\ref{891_2:sec:data} we
-briefly describe the data of \ref{chap:891_1}, which is used
-in this work. \S\ref{891_2:sec:anal} details further analysis needed to
-ready the data for SSP fitting, along with our general fitting
-methodology. In \S\ref{891_2:sec:LOS} we use velocity information to
-determine the true, 3D location of our data in NGC 891, and in
-\S\ref{891_2:sec:SSP_sets} we discuss a range of different SSP libraries and
-motivate our final choice of library used for fitting. An attempt to
-improve the precision of our fits by modifying $\chi^2$ is shown in
-\S\ref{891_2:sec:smart_chi} while in \S\ref{891_2:sec:uncertainty} we quantify
-both fitting and systematic uncertainties present in our
-analysis. Finally, \S\ref{891_2:sec:results} presents a new view of the
-phase-space of NGC 891 as revealed through our full spectrum fits and
-we summarize this work in \S\ref{891_2:sec:summary}.
+The following chapter is organized as follows: in
+\S\ref{891_2:sec:data} we briefly describe the data of
+\ref{chap:891_1}, which is used in this work. \S\ref{891_2:sec:anal}
+details further analysis needed to ready the data for SSP fitting,
+along with our general fitting methodology. In \S\ref{891_2:sec:LOS}
+we use velocity information to determine the true, 3D location of our
+data in NGC 891, and in \S\ref{891_2:sec:SSP_sets} we discuss a range
+of different SSP libraries and motivate our final choice of library
+used for fitting. An attempt to improve the precision of our fits by
+modifying $\chi^2$ is shown in \S\ref{891_2:sec:smart_chi} while in
+\S\ref{891_2:sec:uncertainty} we quantify both fitting and systematic
+uncertainties present in our analysis. Finally,
+\S\ref{891_2:sec:results} presents a new view of the phase-space of
+NGC 891 as revealed through our full spectrum fits and we summarize
+this work in \S\ref{891_2:sec:summary}.
