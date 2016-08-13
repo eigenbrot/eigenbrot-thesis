@@ -70,11 +70,11 @@ Secondary degeneracies exist between extinction and both age and
 metallicity, the amplitudes of which are dependent on the overall age
 of the model spectrum. In models with a high fraction of young SSPs
 extinction is strongly correlated with age. This is due to the fact
-that the stars that make up these populations are so hot that any
-metals present will be fully ionized and therefore won't appreciably
-contribute to the total opacity. Thus the only way to change the slope
-of the continuum is through wavelength dependent attenuation (i.e.,
-classical reddening, $A_V$). 
+that the stars dominating the blue-visible portion of the spectrum in
+these populations are so hot that any metals present will be
+sufficiently ionized that their contribution to stellar atmospheric
+opacity is negligible. Thus the only way to change the slope of the
+continuum is to either vary age or attenuation.
 
 %% Furthermore, in the absence of extinction
 %% older populations are redder due to cooler temperatures and increased
@@ -91,11 +91,12 @@ In intermediate-aged populations metal absorption lines make up a key
 component of the opacity in stellar atmospheres and a higher
 concentration of metals absorption lines will ``redden'' the spectrum
 through increased line-blanketing at bluer wavelengths in the stellar
-photospheres. In this regime there is a strong negative correlation
-between metallicity and extinction because the model spectrum can be
-reddened by increasing the strength of these metal lines. The left
-panel of Figure \ref{891_2:fig:MC_covar} shows this effect in the ($A_V$,
-$Z_L$) plane. As we will see in \S\ref{891_2:sec:SFH}, below \val{0.4}{kpc}
+photospheres \citep[see, e.g., Figure 4 in ][]{Vazdekis10}. In this
+regime there is a strong negative correlation between metallicity and
+extinction because the model spectrum can be reddened by increasing
+the strength of these metal lines. The left panel of Figure
+\ref{891_2:fig:MC_covar} shows this effect in the ($A_V$, $Z_L$)
+plane. As we will see in \S\ref{891_2:sec:SFH}, below \val{0.4}{kpc}
 most of the measured light comes from intermediate populations where
 the correlation between $A_V$ and $Z_L$ is strongest.
 
@@ -194,27 +195,30 @@ sources of uncertainty that affect the final fits.
 %%   Spanish Armada....I think there is a reference to Sanchez who does
 %%   the same. We must reference if so.}
 
-Figure \ref{891_2:fig:MC_covar} shows the result of the Monte Carlo runs. In
-the majority of apertures our quantities of interest show the expected
-degeneracies discussed above (negative age/metallicity correlation,
-negative age/extinction correlation, and negative
+Figure \ref{891_2:fig:MC_covar} shows the result of the Monte Carlo
+runs. In the majority of apertures our quantities of interest show the
+expected degeneracies discussed above (negative age/metallicity
+correlation, negative age/extinction correlation, and negative
 metallicity/extinction correlation) however there are large group of
 apertures that exhibit a \emph{positive} correlation between age and
 metallicity (i.e., increasing the metallicity leads to fits that have
 older ages). This seemingly backward trend is reasonable (and
 expected) in the context of how the reddening affects different aged
 populations. Apertures with a positive age/metallicity relation are
-concentrated below the age break at \val{0.4}{kpc}
-\citepalias{Eigenbrot16a} and thus have a high fraction of total flux
-contributed by young SSPs. As discussed above young SSPs have a
+concentrated below the age break at \val{0.4}{kpc} (Chapter
+\ref{chap:891_1}) and therefore have a high fraction of total flux
+contributed by young SSPs (although, importantly, I2 and Old
+populations still contribute the majority of the light, a la
+\S\ref{891_2:sec:SFH}). As discussed above, young SSPs have a
 continuum shape that is only weakly dependent on metallicity, so
 reddening is achieved by increasing $A_V$. Thus, as the fraction of
-Young SSPs increases more extinction is needed to match the data. This
-increase in total extinction (for a given aperture) then requires the
-I2 and Old SSPs to have lower metallicities to counteract the
-extinction-induced reddening. This decreases the total metallicity,
-$Z_L$, because (as shown in \S\ref{891_2:sec:SFH}) I2 and Old SSPs dominate
-the light fraction at all points in the galaxy. Thus, the positive
+Young SSPs increases more extinction is needed to redden the models to
+the level of the data. This increase in total extinction (for a given
+aperture) then requires the I2 and Old SSPs to have lower
+metallicities to counteract the extinction-induced reddening. This
+decreases the total metallicity, $Z_L$, because (as shown in
+\S\ref{891_2:sec:SFH}) I2 and Old SSPs still contribute the majority
+of the light at all points in the galaxy. Thus, the positive
 age/metallicity correlation at small heights is the result of the fact
 that metallicity is a weighted average that is mostly dominated by
 older SSPs, and that a single extinction value, $A_V$, is applied to
@@ -306,8 +310,9 @@ The fact that a purely random perturbation of our data results in fits
 that clearly show the expected astrophysical degeneracies indicates
 that these degeneracies are primary source of fitting uncertainty. In
 other words, uncertainty in our SSP fits is driven mainly by
-similarities between different model SSPs; uncertainty in the shape of
-our galaxy spectra are only a secondary source of fitting uncertainty.
+similarities between different model SSPs; random flux errors in a
+given wavelength channel are only a secondary source of fitting
+uncertainty.
 
 %% {\bf MAB: The hard question then is why did we bin to such high
 %% S/N?}  
@@ -398,17 +403,22 @@ systematic uncertainties in $\tau_L$. In the majority of our apertures
 this uncertainty is \asim 20\%, but there is a tail with high
 fractional uncertainties that extends up to 50\%, which, as shown in
 the bottom panel, comes from apertures with $\tau_L < \val{\asim
-  5}{Gyr}$. As we will see in \S\ref{891_2:sec:SFH} I2 and O populations
-make up the largest contributions to the total light in all apertures,
-even those with a significant fraction of younger populations and it
-is these older populations that have the largest systematic
-uncertainty due the large range of ages they represent. Thus in all
-apertures the systematic uncertainty is dominated by the presence of
-old populations. Figure \ref{891_2:fig:MLWA_sys_err} shows these
-uncertainties in the context of the age gradients presented in
-\S\ref{891_2:sec:rz}; given the magnitude of these uncertainties it is
-difficult to make strong statements on the detailed structure and
-trends in age or any other measured quantity.
+  5}{Gyr}$. As we will see in \S\ref{891_2:sec:SFH} I2 and O
+populations make up the largest contributions to the total light in
+all apertures, even those with a significant fraction of younger
+populations and it is these older populations that have the largest
+systematic uncertainty due the large range of ages they
+represent. Thus in all apertures the systematic uncertainty is
+dominated by the presence of old populations. Figure
+\ref{891_2:fig:MLWA_sys_err} shows these uncertainties in the context
+of the age gradients presented in \S\ref{891_2:sec:rz}; the magnitude
+of these uncertainties still allows us to determine broad, smooth
+trends over large ranges in height, but it becomes difficult to make
+statements about the detailed age structure of NGC 891.
+
+%% given the magnitude of these uncertainties it is
+%% difficult to make strong statements on the detailed structure and
+%% trends in age or any other measured quantity.
 
 %++++++++++++++
 %% {\bf MAB: Spell out the computation for me. You have 100 sets
