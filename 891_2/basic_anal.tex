@@ -4,7 +4,7 @@
 To quantify uncertainties in our full spectrum fitting methods we will
 test different methods of fitting spectra and interpreting the
 results. In this section we describe the basic, high-level methodology
-that is common to all fitting methods. We also detail prepatory
+that is common to all fitting methods. We also detail preparatory
 analysis that is required before these methods can be applied to our
 data, namely determining the velocity of each aperture and correcting
 for Balmer emission.
@@ -132,7 +132,7 @@ specific mix of SSPs (but does depend on the overall extinction).
     with a constant offset to minimize median difference between gas
     and stars.}
 \end{figure*}
-The systemtic velocities of our model spectra do not depend on the
+The systemic velocities of our model spectra do not depend on the
 shape of the spectra (i.e., the SSP mix) and thus we can reduce the
 number of free parameters in our SSP fits by measuring the velocities
 once and then keeping them fixed for all subsequent analysis. The
@@ -443,7 +443,7 @@ made from different sized \GP fibers having different widths.
 \begin{figure}
   \centering
   \includegraphics[width=\columnwidth]{891_2/figs/TauV_balm.pdf}
-  \caption[Height dependendence of
+  \caption[Height dependence of
     \tauVB]{\fixspacing\label{891_2:fig:tauVB_height}Measured values
     of \tauVB as a function of distance from the midplane. The error
     bars show the uncertainties reported by IRAF from 100 Monte Carlo
@@ -496,11 +496,11 @@ corrected by subtracting the corresponding emission model. Figure
 emission before and after subtracting the Balmer emission model. In
 many apertures the blending of the \Ha/[NII] complex causes imperfect
 subtraction in this region (as it should, our emission model does not
-contain [NII] emssion), and in subsequent analysis we do not fit
+contain [NII] emission), and in subsequent analysis we do not fit
 (i.e., mask) data within \val{\pm 500}{\kms} of \Ha (which includes
 both [NII] lines).
 
-In addtion to \Ha/[NII] we mask other strong sources of nebular
+In addition to \Ha/[NII] we mask other strong sources of nebular
 emission ([OIII]$_{4959}$, [OIII]$_{5007}$, and S2) and sky lines with
 strong residuals ([OI]$_{6300}$, NaD, and OI$_{5577}$).
 
