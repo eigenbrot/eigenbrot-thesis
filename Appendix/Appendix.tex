@@ -14,11 +14,11 @@ the collimated fiber output. During the entire process the stability
 of the filtered input beam is monitored with a photo diode.
 
 Tests were performed in the Johnson $V$ band with an input beam set to
-match the WIYN input beam of $f$/6.3 without the 17\% central
+match the WIYN input beam of \f6.3 without the 17\% central
 obstruction of the telescope. The total throughput ($T_{\rm tot}$) is
 defined as all of the fiber-output light captured by the CCD (roughly
-corresponding to $f$/2.2, compared with the fiber numerical aperture
-of $f$/2.3)
+corresponding to \f2.2, compared with the fiber numerical aperture
+of \f2.3)
 %From 54mm L3 / 1024px * 0.024mm/px. NA = 0.22 and N = (2*arctan(NA))^-1
 divided by the all of the light from the input beam captured by the
 same CCD. This gives a good indication of the total transmission
@@ -36,22 +36,22 @@ of sufficient size that the limiting stop is from the collimator. The
 camera objective does begin to vignette for off-axis fields point in
 wavelength and pseudo-slit position, but for operational purposes we
 consider the on-axis field point for defining throughput losses due
-to FRD.  The collimator accepts light up to $f$/4 with only minimal
-obstruction, and is completely unobstructed at $f$/4.4, while the
-optical design (in terms of aberrations) is optimized for f/5.
+to FRD.  The collimator accepts light up to \f4 with only minimal
+obstruction, and is completely unobstructed at \f4.4, while the
+optical design (in terms of aberrations) is optimized for \f5.
 
 To characterize the impact of FRD on the the delivered throughput we
 define the quantity
 \begin{equation}
 \label{GPtesting:eq:T_FRD}
-  T_{\mathrm{4}} = \frac{F_{\mathrm{out}}(f<f/4)}{F_{\mathrm{in}}(f<f/6.3)},
+  T_{\mathrm{4}} = \frac{F_{\mathrm{out}}(f<\f4)}{F_{\mathrm{in}}(f<\f6.3)},
 \end{equation}
 where $F_\mathrm{in}$ and $F_\mathrm{out}$ represent flux from the the
 input and fiber output beams, respectively. $T_4$ is essentially a
 throughput measurement that accounts for the impact of FRD, and should
 be representative of how the fibers will perform as part of the
 WIYN/Bench system.  We compute comparable quantities for output
-f-ratios of f/4.5 and f/5.  The throughput in each of these apertures,
+f-ratios of \f4.5 and \f5.  The throughput in each of these apertures,
 as well as the total throughput are included in Table
 \ref{GPtesting:tab:GP_cal_full} as $T_{\rm tot}$, $T_4$, $T_{4.4}$,
 $T_{5}$.
@@ -77,12 +77,12 @@ losses]{\label{GPtesting:fig:TL_FRD}\fixspacing Maps of laboratory
   \caption[\GP face and polishing
   detail]{\label{GPtesting:fig:gradpak_face}\fixspacing Detail of \GP
     fiber face
-    after polishing. The \val{25.4}{\mu m} (0.24'') shims between each
+    after polishing. The \val{25.4}{\mu m} (0\farcs24) shims between each
     block fiber-size group are visible in the central array. The hole
     in the 5th fiber row from the bottom is a fiber that was broken
     during polishing. The two sky-fiber groups, not shown to scale,
     have locations marked in Figure \ref{891_1:fig:GradPak}.  The
-    \val{200}{\mu m} (1.87'') sky fibers are not visible in this image
+    \val{200}{\mu m} (1\farcs87) sky fibers are not visible in this image
     due to imperfect illumination conditions at the slit end when this
     picture was taken.}
 \end{figure}
@@ -133,7 +133,7 @@ fiber. We define
   L_\mathrm{FRD} = 1 - \frac{T_5}{T_4},
 \end{equation}
 which quantifies the amount of light scattered to smaller $f$-ratios
-(larger angles) than $f/5$ as a measure of the severity of FRD
+(larger angles) than \f5 as a measure of the severity of FRD
 experienced by each fiber.
 
 \begin{figure*}
@@ -159,7 +159,7 @@ experienced by each fiber.
   losses]{\label{GPtesting:fig:FRD_loss}\fixspacing Performance
     metrics for \GP. $L_\mathrm{FRD}$ (Equation
     \ref{GPtesting:eq:L_FRD}) as a function of slit location (right)
-    and $T_4$ (transmission through an f/4 aperture). Points are
+    and $T_4$ (transmission through an \f4 aperture). Points are
     color-coded by fiber number (slit position), and sky fibers are
     marked with black squares.}
 \end{figure*}
