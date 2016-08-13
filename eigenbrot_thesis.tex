@@ -41,11 +41,6 @@
 %\usepackage[draft]{hyperref}
 \usepackage{hyperref}
 \usepackage{epigraph}
-\hypersetup{
-    pdftex,
-    pdftitle={3D Populations in NGC 891, a thesis},
-    pdfauthor={Arthur Eigenbrot}
-}
 %\usepackage{tabularx}
 %\usepackage{subfig}
 %\usepackage[FIGTOPCAP]{subfigure}
@@ -67,6 +62,25 @@
 
 %\makenomenclature
 %\makeindex
+
+%%% Define some cool hyperref stuff.
+% from http://tex.stackexchange.com/questions/100905/best-practice-for-hyperref-link-colours
+\usepackage[dvipsnames]{xcolor}
+\newcommand\myshade{70}
+\colorlet{mylinkcolor}{violet}
+\colorlet{mycitecolor}{YellowOrange}
+\colorlet{myurlcolor}{Aquamarine}
+\hypersetup{
+    pdftex,
+    pdftitle={3D Populations in NGC 891, a thesis},
+    pdfauthor={Arthur Eigenbrot},
+    pdfsubject={Astronomy},
+    colorlinks=true,
+    linkcolor  = mylinkcolor!\myshade!black,
+    citecolor  = mycitecolor!\myshade!black,
+    urlcolor   = myurlcolor!\myshade!black
+}
+
 
 %\makeatletter
 %\g@addto@macro\TPT@defaults{\footnotesize}
