@@ -14,7 +14,6 @@ all:
 	cd FRD && $(BIB) FRD
 	cd Pak_build && $(BIB) Pak_build
 	cd 891_1 && $(BIB) 891_1
-	cd 891_2 && $(BIB) 891_2
 	cd Appendix && $(BIB) Appendix
 	cd Appendix && $(BIB) tau_model
 	$(TEX) $(FILENAME).tex
