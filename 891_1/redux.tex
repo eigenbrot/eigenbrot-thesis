@@ -3,7 +3,7 @@
 
 \subsection{Image processing and spectral extraction}
 
-Basic reduction (overscan correction, bias/dark subtraction) were done
+Basic reduction (overscan correction, bias/dark subtraction) was done
 with IRAF's CCDPROC package. Cosmic rays were cleaned with the CRUTIL
 package. Spectral extraction, wavelength calibration, and flux
 calibration were done with the HYDRA package. The multiple fiber sizes
@@ -19,10 +19,10 @@ important points below.
 Uncertainties in the wavelength solution in the blue
 ($<$\val{4500}{\AA}) are the dominant source of uncertainty in
 determining the line-of-sight doppler shift of the observed
-spectra. As shown in Paper II, these velocities are important for
-determining the line-of-sight depth of our spectroscopic observations,
-which requires velocity precision better than the spectral resolution
-of our data.
+spectra. As shown in Chapter \ref{chap:891_2}, these velocities are
+important for determining the line-of-sight depth of our spectroscopic
+observations, which requires velocity precision better than the
+spectral resolution of our data.
 %% {\bf [QUESTION: for the purpose of velocities, why not
 %%     just use the wavelengths longward of 4000? I think that would have
 %%     been the right thing to do, but the broader point is that for
@@ -41,11 +41,11 @@ spectral lines that can be fit from the available arc-lamps between
 To characterize the uncertainties in the wavelength calibration, we
 measure the centers of Solar Ca H\&K absorption (from zodiacal or
 atmospheric scattering) and three HgI emission lines (atmospheric
-scattering from terrestrial sources, e.g., Tucson) in our data before
-sky subtraction. In all of our data exposures the foreground (zodiacal
-plus atmospheric) signal dominated over the flux from NGC 891 to the
-point where discrimination between Solar Ca H\&K and Ca H\&K in NGC
-891 was not necessary.
+scattering from terrestrial sources, e.g., Tucson) present in our data
+(before sky subtraction). In all of our data exposures the foreground
+(zodiacal plus atmospheric) signal dominated over the flux from NGC
+891 to the point where discrimination between Solar Ca H\&K and Ca
+H\&K in NGC 891 was not necessary.
 
 For each night of observation all wavelength-calibrated object frames
 are combined to improve S/N (especially relevant for measurements of
@@ -74,26 +74,27 @@ wavelength.
     across all \GP fibers.}
 \end{figure}
 
-Accordingly, Figure \ref{891_1:fig:wave_err} shows the estimated accuracy
-and precision for each of the 10 nights of NGC 891 observations.  At
-wavelengths $>\val{\asim 4000}{\AA}$ our wavelength solution is both
-accurate and precise to within \val{\asim 50}{\kms}. Below
-\val{4000}{\AA} (where the wavelength solution is determined via
-extrapolation of the CuAr lamp line data) we measure a systematic
-offset of \val{\asim 120}{\kms} with a comparable value for the random
-error. We therefore report an upper limit on the uncertainty in our
-wavelength solution to be \val{120}{\kms} at \val{4000}{\AA}, while
-noting that for most wavelengths this is an overestimation.  The RMS
-uncertainty reported by the wavelength fitting routine is \val{\asim
-  90}{\kms}, which is likely a more accurate estimate of the
-uncertainty for the wavelength region covered by arc lines
-(\val{4130}{\AA}$<\lambda <$ \val{7300}{\AA}).  Even in the worst case
-we are able to calibrate wavelengths to a higher precision than the
-spectral resolution (see \S\ref{891_1:sec:GPak_dispersion}), which varies
-from 180 to \val{570}{\kms} at \val{4000}{\AA} (depending on fiber
-size). Thus, accurate measurements of velocity based on $\chi^2$
-fitting of absorption lines (as done in Paper II) is possible with our
-data.
+Accordingly, Figure \ref{891_1:fig:wave_err} shows the estimated
+accuracy and precision for each of the 10 nights of NGC 891
+observations.  At wavelengths $>\val{\asim 4000}{\AA}$ our wavelength
+solution is both accurate and precise to within \val{\asim
+  50}{\kms}. Below \val{4000}{\AA} (where the wavelength solution is
+determined via extrapolation of the CuAr lamp line data) we measure a
+systematic offset of \val{\asim 120}{\kms} with a comparable value for
+the random error. We therefore report an upper limit on the
+uncertainty in our wavelength solution to be \val{120}{\kms} at
+\val{4000}{\AA}, while noting that for most wavelengths this is an
+overestimation.  The RMS uncertainty reported by the wavelength
+fitting routine is \val{\asim 90}{\kms}, which is likely a more
+accurate estimate of the uncertainty for the wavelength region covered
+by arc lines (\val{4130}{\AA}$<\lambda <$ \val{7300}{\AA}).  Even in
+the worst case we are able to calibrate wavelengths to a higher
+precision than the spectral resolution (see
+\S\ref{891_1:sec:GPak_dispersion}), which varies from 180 to
+\val{570}{\kms} at \val{4000}{\AA} (depending on fiber size). Thus,
+accurate measurements of velocity based on $\chi^2$ fitting of
+absorption lines (as done in Chapter \ref{chap:891_2}) is possible
+with our data.
 
 
 %% The maximum offset from the true values give us an
@@ -112,9 +113,7 @@ data.
     spectrum shows fiber 80 after sky subtraction using a sky spectrum
     that is the average across the whole night. The blue spectrum
     shows the same fiber using after sky subtraction using only the
-    sky fibers from the same exposure. The large residuals around
-    \val{6000}{\AA} (a broad high-pressure sodium feature) have been
-    eliminated along with a number of strong, narrow emission lines.}
+    sky fibers from the same exposure.}
 \end{figure}
 
 \subsubsection{Flat Fields}
@@ -139,7 +138,7 @@ that saturated large fibers in the \val{4}{s} flats introduced errors
 in the extraction process while the low signal in small fibers at
 \val{1}{s} was still adequate for tracing purposes. In practice,
 traces using the \val{4}{s} or \val{1}{s} are very similar, as
-confirmed with the intermediate-size fibers that have good signal
+confirmed by the intermediate-size fibers that have good signal
 without being saturated. This is expected given the fact that the two
 exposure sets were taken right after each other over a short period of
 time.
@@ -171,9 +170,9 @@ across all fibers and is thus removed during flux calibration.
 Each fiber size in \GP has 4 dedicated sky fibers, as illustrated in
 Figure \ref{891_1:fig:GradPak}.  Sky subtraction was performed on a
 fiber-size basis using different beam numbers for each fiber size in
-HYDRA's SKYSUB routine.  Since there are multiple sky fibers rejection
-of contaminated sky fibers was possible, as indeed was required (see
-Figure \ref{891_1:fig:pointings} for P6, P4, P1).
+HYDRA's SKYSUB routine.  Since there are multiple sky fibers,
+rejection of contaminated sky fibers was possible, as indeed was
+required (see Figure \ref{891_1:fig:pointings} for P6, P4, P1).
 
 The data from the night of November 21st, 2014 (P1) showed strong
 variation in sky intensity across the course of the night. This
@@ -200,10 +199,7 @@ illustrating this issue.
     sky-subtracted. Each line represents the average of all 4 sky
     fibers for a given fiber size and all lines are normalized by the
     mean of all sky fibers. The dashed and dotted lines show
-    deviations at the 5\% and 10\% level, respectively. All fiber
-    sizes show an absolute flux calibration consistent within 5\% for
-    wavelengths $>$ \val{4000}{\AA}. At \val{4000}{\AA} the 2 arcsec
-    and 3 arcsec fibers deviate by up to 20\%.}
+    deviations at the 5\% and 10\% level, respectively.}
 \end{figure}
 
 \subsection{Flux Calibration}
@@ -227,17 +223,6 @@ reason we could not compute an extinction curve for our data. We
 instead used the KPNO extinction curve provided in
 ONEDSTDS\footnote{http://stsdas.stsci.edu/cgi-bin/gethelp.cgi?onedstds}.
 
-\begin{figure}
-  \centering
-  \includegraphics[width=\columnwidth]{891_1/figs/disp_paper.pdf}
-
-  \caption[Variation of instrumental resolution in \GP
-  fibers]{\label{891_1:fig:dispfunc}\fixspacing Instrumental resolution as
-    measured from CuAr arc-lamps (see text) are plotted as points; the
-    interpolated and extrapolated dispersion functions used in
-    spectral modeling is shown by the dotted lines.}
-\end{figure}
-
 To zeroth order we expect the spectral response of all the \GP fibers
 to be the same because they are made of the same material and are all
 from the same foundry run \citep{Wood12}. In reality the \GP fibers
@@ -245,14 +230,14 @@ come from different draws, were handled differently during
 construction, and have different degrees of termination quality.
 Consequently, there are throughput variations not only between fiber
 sizes, but also within fiber sizes, as illustrated in Figure
-\ref{GPtesting:fig:TL_FRD}.  Throughput characteristics vary across the \GP
-array. In particular, the total throughput and focal ratio degradation
-are worse for the smallest fibers. The throughput variations are
-expected to relatively grey (wavelength independent), but since there
-are variations in FRD, this can lead to different, wave-length
-dependent losses within the spectrograph. Since the flat-field screen
-uniformly illuminates the array, the flat-fielding process should
-remove all of these relative variations.
+\ref{GPtesting:fig:TL_FRD}.  Throughput characteristics vary across
+the \GP array. In particular, the total throughput and focal ratio
+degradation are worse for the smallest fibers. The throughput
+variations are expected to be relatively grey (wavelength
+independent), but variations in FRD can lead to different, wavelength
+dependent losses within the spectrograph. Because the flat-field
+screen uniformly illuminates the array, the flat-fielding process
+should remove all of these relative variations.
 
 To assess the effects of using flux standards taken in a single fiber
 size to calibrate the entire \GP IFU we compared flux calibrated sky
@@ -288,8 +273,18 @@ deviation from the mean pointing flux in the range $\val{4500}{\AA}
 
 \subsection{Instrumental Line Profile}
 \label{891_1:sec:GPak_dispersion}
+\begin{figure}
+  \centering
+  \includegraphics[width=\columnwidth]{891_1/figs/disp_paper.pdf}
 
-The optical distortions of the WIYN Bench Spectrograph result in an
+  \caption[Variation of instrumental resolution in \GP
+  fibers]{\label{891_1:fig:dispfunc}\fixspacing Instrumental
+    resolution as measured from CuAr arc-lamps are plotted as points;
+    the interpolated and extrapolated dispersion functions used in
+    spectral modeling is shown by the dotted lines.}
+\end{figure}
+
+The optical distortions of the WIYN Bench Spectrograph results in an
 instrumental line profile that varies with wavelength and field
 location along the fiber slit for a fiber of a given size. The
 delivered line profile in the spectral dimension (the instrumental

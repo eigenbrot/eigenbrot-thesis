@@ -27,83 +27,22 @@ geometry of \GP is optimized for observations of edge-on galaxies;
 five different fiber sizes are arranged in a rectangular gradient
 pattern that allows for efficient observations of objects with
 significant surface brightness gradients on scales of roughly an
-arcminute (Figure \ref{891_1:fig:GradPak}).  A list of fiber diameters can
-be found in Table \ref{891_1:tab:GradPak}. The increase in fiber size across
-the array corresponds to equal signal-to-noise (S/N) per unit
-wavelength in the source or background-limit for light distributions
-with e-folding scales of 26 to 50 arcsec. This corresponds to vertical
-scale-heights of 1.3 to 2.4 kpc at a distance of 10 Mpc, comparable to
-the thickest possible disk components in NGC 891.  In practice, the
-complex vertical structure of stars and dust in galaxy disks such NGC
-891's make the S/N optimization imperfect. This instrument design, by
-attempting to achieve similar signal-to-noise per exposure in all
-fibers, maximizes mapping efficiency at the cost of reduced spatial
-and spectral resolution in the larger fibers at larger
-scale-heights. This trade-off is sensible given the increased
-e-folding scale of the disk away from the mid-plane, and the
-commensurate expectation of large velocity dispersions.
-
-The physical layout of \GP consists of a main array and two groups of
-offset sky fibers. The main array is a 55 arcsec high stack of pseudo
-slits with increasing slit-width and fiber diameters (Figure
-\ref{891_1:fig:GradPak}). The fibers used are broad spectrum, stepped index,
-fused silica fibers (Polymicro FBP) with core diameters between
-\val{200}{\mu m} and \val{600}{\mu m} (corresponding to 1\farcs87
-to 5\farcs62 at the WIYN \f6.3 focal plane). The non-active
-(i.e., cladding and buffer) portion of each fiber takes up an
-additional 20\% of each fiber's physical diameter. The pseudo-slits
-are grouped into blocks that contain all the fibers of the same
-size. The blocks were assembled sequentially from small to large fiber
-sizes to build up the entire stack. Each block is mechanically bounded
-by precision layers of aluminum, located with pins. The smallest
-fibers have only one row (or pseudo-slit) that is 33.2 arcsec in
-length; the two largest fibers sizes have three rows each, with a
-maximum pseudo-slit length of 38.9 arcsec; while the intermediate
-sizes have two rows. After a block has been assembled, glued and
-cured, it is separated from the next block by a plastic shim that is
-\val{25.4}{\mu m} (0\farcs24) thick; this separation is a key
-component of the assembly and curing process.  While the scientific
-design of \GP required a non-optimal fiber packing arrangement, the
-total packing efficiency (defined as light-gathering area divided by
-total area) of the main array is roughly 55\%.
-
-The sky fibers of \GP occupy two sub arrays that are offset
-26\farcs3 vertically and 28\farcs6 horizontally on either
-side of the main array. On NGC 891 this places the sky fibers
-\val{1.3}{kpc} above the top of \GP and \val{\sim 3.8}{kpc} from the
-plane of the galaxy, far above measurable flux from the galaxy
-\citep{Rand11}. The sky fibers were assembled separately in machined
-blocks that are mechanically attached to the main array. This assembly
-was polished as a single, assembled unit. The polishing process was
-similar to what was undertaken for SparsePak \citep{Bershady04}.
-
-\GP does not have any packing fibers. Instead, the physical layout is
-established with a custom-built aluminum fixture, as described above
-and in \citep{Wood12}. Based on the results of
-\S\ref{891_1:sec:gradpak_performance} we do not think the lack of
-buffering fibers causes a significant loss of performance. However,
-the use of aluminum, and in particular the aluminum shim material
-comprising the walls of the pseudo-slit layers is not optimal for
-optical polishing, with deleterious effects noted in
-\S\ref{891_1:sec:gradpak_performance}. A lesson learned is that the
-fabrication ease, efficiency and low machining cost of aluminum does
-not out-weigh the superior performance of suitable stainless steel,
-invar or ceramics, which we would recommend for future builds. In
-contrast, for example, the stainless steel ferrules used in MaNGA in
-SDSS-IV provided outstanding fixturing for obtaining good optical
-finish on the polished fibers (Drory et al. 2014).  We note that the
-challenges with the aluminum fixture for \GP is was not an issues for
-HexPak which, like its predecessors DensePak \citep{Barden94} and
-SparsePak \citep{Bershady04} consisted of an entirely fused-silica
-array.
-
-Further details of the design and construction of HexPak/\GP,
-including cable design, fabrication and commercial product
-descriptions for specific components can be found in \citet{Wood12}.
-Notable are the dual-slit assembly that sits inside a standard Bench
-Spectrograph fiber ``foot,'' as well as the rotation couplers that
-ease handling will minimizing stress-inducing torsion on the fibers
-during telescope rotator motion.
+arcminute (Figure \ref{891_1:fig:GradPak}).  A list of fiber diameters
+can be found in Table \ref{891_1:tab:GradPak}. The increase in fiber
+size across the array corresponds to equal signal-to-noise (S/N) per
+unit wavelength in the source or background-limit for light
+distributions with e-folding scales of 26 to 50 arcsec. This
+corresponds to vertical scale-heights of 1.3 to 2.4 kpc at a distance
+of 10 Mpc, comparable to the thickest possible disk components in NGC
+891.  In practice, the complex vertical structure of stars and dust in
+galaxy disks such as NGC 891's make the S/N optimization
+imperfect. This instrument design, by attempting to achieve similar
+signal-to-noise per exposure in all fibers, maximizes mapping
+efficiency at the cost of reduced spatial and spectral resolution in
+the larger fibers at larger scale-heights. This trade-off is sensible
+given the increased e-folding scale of the disk away from the
+mid-plane, and the commensurate expectation of large velocity
+dispersions.
 
 \begin{deluxetable}{ccccc}
 \tablewidth{0pt}
@@ -131,6 +70,69 @@ during telescope rotator motion.
 \tablenotetext{b}{\fixspacing Assuming a distance of \val{10}{Mpc} to NGC 891.}
 \end{deluxetable}
 
+The physical layout of \GP consists of a main array and two groups of
+offset sky fibers. The main array is a 55 arcsec high stack of pseudo
+slits with increasing slit-width and fiber diameters (Figure
+\ref{891_1:fig:GradPak}). The fibers used are broad spectrum, stepped index,
+fused silica fibers (Polymicro FBP) with core diameters between
+\val{200}{\mu m} and \val{600}{\mu m} (corresponding to 1\farcs87
+to 5\farcs62 at the WIYN \f6.3 focal plane). The non-active
+(i.e., cladding and buffer) portion of each fiber takes up an
+additional 20\% of each fiber's physical diameter. The pseudo-slits
+are grouped into blocks that contain all the fibers of the same
+size. The blocks were assembled sequentially from small to large fiber
+sizes to build up the entire stack. Each block is mechanically bounded
+by precision layers of aluminum and located with pins. The smallest
+fibers have only one row (or pseudo-slit) that is 33.2 arcsec in
+length; the two largest fibers sizes have three rows each, with a
+maximum pseudo-slit length of 38.9 arcsec; while the intermediate
+sizes have two rows. After a block has been assembled, glued and
+cured, it is separated from the next block by a plastic shim that is
+\val{25.4}{\mu m} (0\farcs24) thick; this separation is a key
+component of the assembly and curing process.  While the scientific
+design of \GP required a non-optimal fiber packing arrangement, the
+total packing efficiency (defined as light-gathering area divided by
+total area) of the main array is roughly 55\%.
+
+The sky fibers of \GP occupy two sub arrays that are offset 26\farcs3
+vertically and 28\farcs6 horizontally on either side of the main
+array. On NGC 891 this places the sky fibers \val{1.3}{kpc} above the
+top of \GP and \val{\sim 3.8}{kpc} from the plane of the galaxy, far
+above measurable flux from the galaxy \citep{Rand11}. The sky fibers
+were assembled separately in machined blocks that are mechanically
+attached to the main array. The entire IFU was polished as a single,
+assembled unit. The polishing process was similar to what was
+undertaken for SparsePak \citep{Bershady04}.
+
+\GP does not have any packing fibers. Instead, the physical layout is
+established with a custom-built aluminum fixture, as described above
+and in \citep{Wood12}. Based on the results of
+\S\ref{891_1:sec:gradpak_performance} we do not think the lack of
+buffering fibers causes a significant loss of performance. However,
+the use of aluminum, and in particular the aluminum shim material
+comprising the walls of the pseudo-slit layers is not optimal for
+optical polishing, with deleterious effects noted in
+\S\ref{891_1:sec:gradpak_performance}. A lesson learned is that the
+fabrication ease, efficiency, and low machining cost of aluminum does
+not out-weigh the superior performance of suitable stainless steel,
+invar or ceramics, which we would recommend for future builds. In
+contrast, for example, the stainless steel ferrules used in MaNGA in
+SDSS-IV \citep{Bundy15} provided outstanding fixturing for obtaining
+good optical finish on the polished fibers \citep{Drory15}.  We note
+that the challenges with the aluminum fixture for \GP was not an
+issues for HexPak which, like its predecessors DensePak
+\citep{Barden94} and SparsePak \citep{Bershady04} consisted of an
+entirely fused-silica array.
+
+Further details of the design and construction of HexPak/\GP,
+including cable design, fabrication and commercial product
+descriptions for specific components can be found in Chapter
+\ref{chap:pak_build} \citep[a reprint of ][]{Wood12}.  Notable are the
+dual-slit assembly that sits inside a standard Bench Spectrograph
+fiber ``foot,'' as well as the rotation couplers that ease handling
+will minimizing stress-inducing torsion on the fibers during telescope
+rotator motion.
+
 \subsection{Mechanical Performance}
 
 Despite best effort and extensive testing to develop best practices,
@@ -138,17 +140,17 @@ the mechanical alignment of the \GP fibers has some noticeable
 imperfections. In Appendix \ref{chap:GPtesting} we provide a
 high-resolution image (Figure \ref{GPtesting:fig:gradpak_face}) of the
 as-built fiber array to document this. The irregularities are
-particularly notable for the 400 $\mu$m (3.75 arcsec) fiber
-pseudo-slits for which some fibers have offsets from their idealized
-location (Figure \ref{891_1:fig:GradPak}) by as much as 0.5
-arcsec. The other pseudo-slits have internal and relative alignment to
-other pseudo-slits that we estimate are accurate at the 0.l-0.2 arcsec
-level. Table \ref{GPtesting:tab:GP_cal_full} in the Appendix provides
-the idealized fiber locations corresponding to Figure
-\ref{891_1:fig:GradPak}. These should suffice for almost all
-applications except the most demanding that for whatever reason
-require very high precision relative astrometry. Overall, the final
-IFU has good-to-excellent mechanical regularity.
+particularly notable for the 400 $\mu$m (3\farcs75) fiber pseudo-slits
+for which some fibers have offsets from their idealized location
+(Figure \ref{891_1:fig:GradPak}) by as much as 0\farcs5. The other
+pseudo-slits have internal and relative alignment to other
+pseudo-slits that we estimate are accurate at the 0\farcs1 - 0\farcs2
+level. Table \ref{GPtesting:tab:GP_cal_full} provides the idealized
+fiber locations corresponding to Figure \ref{891_1:fig:GradPak}. These
+should suffice for almost all applications except the most demanding
+that for whatever reason require very high precision relative
+astrometry. Overall, the final IFU has good-to-excellent mechanical
+regularity.
 
 \subsection{Optical Performance}
 
@@ -161,29 +163,30 @@ form deposits on the fiber faces, with some performance degradation
 that we summarize here and detail in Appendix \ref{chap:GPtesting}.
 
 Laboratory measurements of throughput and focal-ratio degradation
-(FRD) in the Johnson $V$ revealed distinct performance gradients
+(FRD) in the Johnson $V$ band revealed distinct performance gradients
 across the array. Some of the throughput variations are likely due to
 polish imperfections from aluminum residue. However, we find FRD
 systematically decreases with larger fiber size, with a small upturn
 for the largest fibers. Unfortunately we cannot separate systematic
 performance differences for different fiber core sizes from
-differences in handling and assembly process. We also find, not
+differences in the handling and assembly process. We also find, not
 surprisingly, that FRD correlates to first order with throughput, but
 that there is a bimodal distribution in transmission and FRD which
 indicates several processes at work in determining fiber performance.
 
-Overall, the throughput defined for $f$/6.3 fiber input from the
+Overall, the throughput, defined for an $f$/6.3 fiber input from the
 telescope and the $f$/4 out speed matching the Bench Spectrograph
-collimator has a maximum of 90\% and a minimum of 50\% at 550 nm. The
-mean throughput for all fibers is 80\%, with means by fiber size of
-70, 81,84, 83, 79\%, from small to large. Means for sky fibers are
-comparable, within a percent. We compared our lab measurements to the
-relative throughput from dome-flats measurements once \GP was
-installed on the telescope. This comparison shows that the
-on-telescope {\it relative} performance is the same, indicating
-throughput variations are intrinsic to the cable and not the
-spectrograph, consistent with expectations for the performance of the
-upgraded Bench Spectrograph \citep{Bershady08,Knezek10}.
+collimator, has a maximum of 90\% and a minimum of 50\% at
+\val{5500}{\AA}. The mean throughput for all fibers is 80\%, with
+means by fiber size of 70, 81, 84, 83, and 79\%, from small to
+large. Means for sky fibers are comparable, within a percent. We
+compared our lab measurements to the relative throughput from
+dome-flats measurements once \GP was installed on the telescope. This
+comparison shows that the on-telescope {\it relative} performance is
+the same, indicating throughput variations are intrinsic to the cable
+and not the spectrograph, consistent with expectations for the
+performance of the upgraded Bench Spectrograph
+\citep{Bershady08,Knezek10}.
 
 One of the 3\farcs75 fibers (between fibers 58 and 59 as marked in Figure
 \ref{891_1:fig:GradPak}) fractured during polishing. The fracture is

@@ -5,11 +5,11 @@
   \centering
   \includegraphics[width=\columnwidth]{891_1/figs/noise_vec.pdf}
   \caption[Characteristic noise
-  spectrum]{\label{891_1:fig:noise_vec}\fixspacing Characteristic noise
-    vector used to construct noisy galaxy models, as described in the
-    text, here normalized between \val{5450}{\AA} $\leq \lambda \leq$
-    \val{5550}{\AA}. Vertical dashed lines correspond to used spectral
-    range in analysis.}
+  spectrum]{\label{891_1:fig:noise_vec}\fixspacing Characteristic
+    noise vector used to construct noisy galaxy models, as described
+    in \S\ref{891_1:sec:maps}, here normalized between \val{5450}{\AA}
+    $\leq \lambda \leq$ \val{5550}{\AA}. Vertical dashed lines
+    correspond to used spectral range in analysis.}
 \end{figure}
 
 \subsection{Signal-to-Noise threshold for spectral bins}
@@ -24,24 +24,24 @@ resolution. We have attempted to optimize the spectral binning by
 defining a critical S/N threshold to achieve a {\it precision} of 10\%
 in age and metallicity. In the absence of other mitigating effects,
 this precision is ample to detect the vertical age break in a MW-like
-heating model and to determine the break height to within 50 pc since
-the predicted gradient in light-weighted mean age is very steep near
-the mid-plane. At this level of precision, systematic effects in the
-interpretation of the break height, e.g., due to inaccuracies of our
-estimated line-of-sight depth or model assumptions about star-forming
-history become dominant. In what follows we define S/N in pixel units,
-where each pixel samples roughly 2\AA.
+heating model and to determine the break height to within 50 pc
+because the predicted gradient in light-weighted mean age is very
+steep near the mid-plane. At this level of precision, systematic
+effects in the interpretation of the break height, e.g., due to
+inaccuracies of our estimated line-of-sight depth or model assumptions
+about star-forming history become dominant. In what follows we define
+S/N in pixel units, where each pixel samples roughly \val{2}{\AA}.
 
 Accordingly, the critical S/N threshold was determined using an
 idealized Monte Carlo simulation of model galaxy spectral energy
 distributions (SED) with known star formation histories and
-chemistries and therefore known ages and metallicities.  We have
+chemistries (and therefore known ages and metallicities).  We have
 ignored systematic errors in, e.g., flux calibration or between the
-model libraries and stellar evolutionary tracks and actuality,
-although we address issues with stellar libraries and evolutionary
-tracks in Paper II. While other studies have undertaken similar
+model libraries and stellar evolutionary tracks and reality, although
+we address issues with stellar libraries and evolutionary tracks in
+Chapter \ref{chap:891_2}. While other studies have undertaken similar
 analyses we stress the importance of this modeling exercise to be
-undertaken to any data set distinct in wavelength range and error
+undertaken on any data set distinct in wavelength range and error
 vector.
 
 \begin{figure}
@@ -75,7 +75,7 @@ vector.
     the root-mean-square deviation of the fitted values from the mean
     of the 30 Monte Carlo noise realizations. Colored lines correspond
     to results for model spectra described in Figure \ref{891_1:fig:SN_sys},
-    as indicate in the key. Model values of $\tau_L$ for each
+    as indicated in the key. Model values of $\tau_L$ for each
     $\tau_{SF}$ assuming a formation epoch 12 Gyr in the past are also
     specified. Vertical dashed lines at S/N = 30 pix$^{-1}$ indicate
     our precision criterion largely driven by $\tau_L$.}
@@ -85,14 +85,15 @@ vector.
 \label{891_1:sec:sims}
 
 Model galaxy spectra were constructed using the method outlined in
-Appendix \ref{891_1:sec:tau_model} with star-formation e-folding
-time-scales, $\tau_{SF}$ = 0.1, 1, 2, 4, and 10 Gyr for a total age of
-12 Gyr.  All model galaxies were constructed from mono-metallicity
-SSPs with a metallicity of \val{0.4}{\Zsol} and had extinction
-dictated by the model of \citet{Charlot00} with $A_V=1.63$ (an optical
-depth $\tau_V$ of 1.5, close to the median we in in Paper II from full
+Appendix \ref{chap:tau_model} with star-formation e-folding
+time-scales $\tau_{SF}$ = 0.1, 1, 2, 4, and 10 Gyr and a total age of
+$\tau_\mathrm{form} = \val{12}{Gyr}$.  All model galaxies were
+constructed from mono-metallicity SSPs with a metallicity of
+\val{0.4}{\Zsol} and had extinction dictated by the model of
+\citet{Charlot00} with $A_V=1.63$ (an optical depth $\tau_V$ of 1.5,
+close to the median we find in Chapter \ref{chap:891_2} from full
 spectral fitting). The spectral resolution of the models was set to
-210 km s${^-1}$ to match the characteristic resolution of the data at
+\val{210}{\kms} to match the characteristic resolution of the data at
 5500 \AA. For each model galaxy noise was added to produce spectra
 with S/N = 3, 5, 7, 10, 15, 20, 30, 40, and 60. We define S/N for both
 our galaxy observations and Monte Carlo models as S/N =
@@ -108,13 +109,14 @@ bin the data the specific choice of bandpass is irrelevant.
 
 For observed galaxy data the quantities $f_\lambda$ and
 $\epsilon_\lambda$ are the result of the reduction described in
-section \ref{891_1:sec:data_reduction}. For the model galaxies the shape of
-$\epsilon_\lambda$ was based on the spectral noise structure of our
-data.  To compute $\epsilon_\lambda$ we average together the error
-vectors from \emph{all} fibers across all pointings. We then fit a
-smooth function to this average to remove high-frequency noise. The
-result in Figure \ref{891_1:fig:noise_vec} captures the general trend of how
-$\epsilon_\lambda$ varies with wavelength in our data.
+section \ref{891_1:sec:data_reduction}. For the model galaxies the
+shape of $\epsilon_\lambda$ was based on the spectral noise structure
+of our data.  To compute $\epsilon_\lambda$ we average together the
+error vectors from \emph{all} fibers across all pointings. We then fit
+a smooth function to this average to remove high-frequency
+variations. The result in Figure \ref{891_1:fig:noise_vec} captures
+the general trend of how $\epsilon_\lambda$ varies with wavelength in
+our data.
 
 % {\bf [TODO: A little more discussion and description in the next paragraph 
 % is needed. 
@@ -133,19 +135,20 @@ $\epsilon_\lambda$ varies with wavelength in our data.
 
 For each combination of $\tau_{SF}$ and S/N we generate 30 Monte Carlo
 noise realizations (while still maintaining the same S/N) which
-produce 30 version of the same galaxy that differ only by stochastic
+produce 30 versions of the same galaxy that differ only by stochastic
 variations. Once the model galaxies are constructed they are fit using
-the same method described in Paper II. In short, a Levenberg-Marquardt
-minimization routine is used to fit a superposition of SSPs taken from
-the models of \citet{Bruzual03} in the same 10 age bins used by
-\citet{Tremonti04} (in Gyr: 0.005, 0.025, 0.1, 0.286, 0.64, 0.904,
-1.434.2.5, 5, and 10). The result of each fit is a set of SSP weights
-and a single value for extinction $A_V$, assuming the extinction model
-of \citet{Charlot00} (i.e., the same extinction model used to
-construct the model galaxies). In both the models and the fitting, we
-have made the simplifying condition that the same value for the
-extinction and the extinction law is applicable to all age stellar
-populations; to do otherwise is beyond the scope of this analysis.
+the same method described in Chapter \ref{chap:891_2}. In short, a
+Levenberg-Marquardt minimization routine is used to fit a
+superposition of SSPs taken from the models of \citet{Bruzual03} in
+the same 10 age bins used by \citet{Tremonti04} (in Gyr: 0.005, 0.025,
+0.1, 0.286, 0.64, 0.904, 1.434.2.5, 5, and 10). The result of each fit
+is a set of SSP weights and a single value for extinction $A_V$,
+assuming the extinction model of \citet{Charlot00} (i.e., the same
+extinction model used to construct the model galaxies). In both the
+models and the fitting, we have made the simplifying condition that
+the same value for the extinction and the extinction law is applicable
+to all age stellar populations; to do otherwise is beyond the scope of
+this analysis.
 
 When assessing the accuracy and precision of each S/N level we
 directly compare the known model $A_V$ to the fit $A_V$, and we use
@@ -158,7 +161,7 @@ $\leq\lambda\leq$ \val{5550}{\AA})\footnote{ This band-pass for
   relevant.}  as a proxy for the SSP weights. This substitution allows
 us make a quantitative assessment of the {\it precision} of our fits
 but comes with some important caveats concerning {\it accuracy} that
-we consider in detail in Paper II, and summarize here.
+we consider in detail in Chapter \ref{chap:891_2}, and summarize here.
 
 In the broadest terms $\tau_L$ is known to be degenerate with the
 detailed star formation history (SFH); in our models we assume a
@@ -170,25 +173,24 @@ are likely to be systematically offset from the input model values.
 
 More specifically, we find that any model with a smoothly varying
 prescription of the SFH (specifically the $\tau_{SF}$ model outlined
-in Appendix \ref{chap:tau_model}) gives a generally poor description of
-our galaxy spectra and also yield estimates of SFH (via $\tau_L$) that
-are offset from the best fitting models with unconstrained star
-formation histories. We highlight these systematics in Figure
+in Appendix \ref{chap:tau_model}) gives a generally poor description
+of our galaxy spectra and also yield measurements of $\tau_L$ that are
+offset from the best fitting models with unconstrained star formation
+histories. We highlight these systematics in Figure
 \ref{891_1:fig:SN_sys}.
 
 Fits with unconstrained SFH report values of $\tau_L$ that are offset
 by as much as 40\% from the true values of $\tau_{SF}$ model
 galaxies. The maximum offsets occur at the largest values of
 $\tau_{SF}$, i.e., approaching a constant star-formation rate where
-all age SSPs are well represented in the integrated spectrum.  This
+all SSP ages are well represented in the integrated spectrum.  This
 suggests systematics may be driven by degeneracies caused by
-similarities between the 10 SSPs used during fitting.  In Paper II we
-explore methods to reduce the number of SSPs used (and therefore the
-number of free parameters) using the statistical methods presented by
-\citet{Mosby15}.
+similarities between the 10 SSPs used during fitting.  In Chapter
+\ref{chap:891_2} we explore methods to reduce the number of SSPs used
+(and therefore the number of free parameters) using the statistical
+methods presented by \citet{Mosby15}.
 
-\input{891_1/aperture_table.tex}
-
+%\input{891_1/aperture_table.tex}
 Despite these caveats $\tau_L$ can still provide a useful diagnostic
 for the purpose of assessing S/N. The assumption of a particular star
 formation history (or lack thereof) in both model creation and
@@ -248,16 +250,16 @@ quantities begin to asymptote; any further increase in S/N yields only
 marginal gains in precision at the cost of real losses in spatial
 resolution.
 
-For subsequent analysis we bin individual \GP fibers to a yield S/N
-$\geq 30$. To ensure at least one bin at all heights and to avoid
-mixing fibers of different spectral resolutions (i.e., different
-sizes) we construct bins starting at the left-most (NE) fiber in each
-row and adding fibers to the bin until the S/N $\geq 30$ or there are
-no more fibers left in the row. The flux in each bin is the average of
-all fibers in that bin, weighted by the individual S/N$^2$. This
-method can produce bins with S/N $\leq$ 30 (e.g., if there are not
-enough fibers left in a row to achieve S/N $\geq 30$), but in practice
-the number of underfilled bins is \asim 2 per pointing. In most cases
+For subsequent analysis we bin individual \GP fibers to S/N $\geq
+30$. To ensure at least one bin at all heights and to avoid mixing
+fibers of different spectral resolutions (i.e., different sizes) we
+construct bins starting at the left-most (NE) fiber in each row and
+adding fibers to the bin until the S/N $\geq 30$ or there are no more
+fibers left in the row. The flux in each bin is the average of all
+fibers in that bin, weighted by the individual S/N$^2$. This method
+can produce bins with S/N $\leq$ 30 (e.g., if there are not enough
+fibers left in a row to achieve S/N $\geq 30$), but in practice the
+number of underfilled bins is \asim 2 per pointing. In most cases
 these underfilled bins have S/N $\geq 25$.
 
 %% \subsection{Spectral Data}
@@ -283,13 +285,13 @@ these underfilled bins have S/N $\geq 25$.
 
 
 A complete list of our data apertures (i.e., the final spectra) can be
-found in Table \ref{891_1:tab:data_ap}. The ``notes'' column identifies
+found in Table \ref{tab:data_ap_full}. The ``notes'' column identifies
 apertures that are excluded from further analysis for various,
 data-quality reasons. The ``bad'' flag indicates that the wavelength
 solution appears to be wrong by more than \val{\asim 100}{\kms},
-usually at the extreme blue end of the spectrum and generally, and
-some spectra features do not match their known locations. The ``ugly''
-flag is applied to spectra that, despite an adequate S/N, appear to be
-overly noisy and of poor quality. Both the ``bad'' and ``ugly'' flags
-are applied manually examining each individual spectrum.
+usually at the extreme blue end of the spectrum, and some spectra
+features do not match their known locations. The ``ugly'' flag is
+applied to spectra that, despite an adequate S/N, appear to be overly
+noisy and of poor quality. Both the ``bad'' and ``ugly'' flags are
+applied manually examining each individual spectrum.
 
