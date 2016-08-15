@@ -177,14 +177,14 @@ studies based on integrated starlight.
 In this work we employ full-spectral fitting to measure age,
 metallicity, and extinction as a function of radius and height in NGC
 891. The idea of modeling integrated starlight (i.e., a spectrum) to
-measure galaxies properties has a long history since \citet{Spinrad71}
-first manually mixed stars together, and modern techniques employ a
-variety of sophisticated methods to extract the maximum about of data
-from each wavelength. Regardless of the specific method, all attempts
-at full-spectrum fitting require the same basic ingredients: (i) a
-library of stellar spectra, whether empirical or synthetic, (ii) a set
-of isochrones that encapsulate how stars evolve with time, and (iii)
-an initial mass function (IMF). With these three components
+measure galaxies properties has a long history since the pioneering
+work of \citet{Tinsley68} and \citet{Spinrad71}, and modern techniques
+employ a variety of sophisticated methods to extract the maximum about
+of data from each wavelength. Regardless of the specific method, all
+attempts at full-spectrum fitting require the same basic ingredients:
+(i) a library of stellar spectra, whether empirical or synthetic, (ii)
+a set of isochrones that encapsulate how stars evolve with time, and
+(iii) an initial mass function (IMF). With these three components
 Astronomers can construct simple stellar populations (SSPs); a set of
 stars of the same age and same metallicity/abundance with a mass
 distribution determined by the IMF. To simulate an entire galaxy
@@ -193,7 +193,7 @@ to produce a complex stellar population (CSP), which requires assuming
 both a star formation history (SFH) and the distribution/properties of
 dust in the galaxy. An excellent discussion of this process can be
 found in \citet[and his diagram shown in Figure
-  \ref{intro:fig:conroy}]{Conroy13}.
+\ref{intro:fig:conroy}]{Conroy13}.
 
 Within the general picture painted above there exists a wide range of
 options and data. It is common for SSP libraries to be constructed
@@ -293,10 +293,10 @@ make great use of this second point. IFUs are a collection of fibers
 that are placed in some two-dimensional configuration on the sky and
 therefore produce data that exist in three dimensions (two spatial and
 one spectral). Some IFUs are designed to efficiently measure the
-spectra of a large field of stars, for example HYDRA {\bf REF? Can't
-  find it!}, and can have the location of their fibers changed from
-program to program. Others have a fiber layout that is fixed and
-usually intended for observations of extended objects. SparsePak
+spectra of a large field of stars, for example HYDRA \citep{Barden93},
+and can have the location of their fibers changed from program to
+program. Others have a fiber layout that is fixed and usually intended
+for observations of extended objects. SparsePak
 \citep{Bershady04,Bershady05} is an excellent example of and IFU of
 this type. The trade off for the lack of reconfigurability in fixed
 IFUs is a generally tighter fiber packing and therefore improved
@@ -315,10 +315,11 @@ sizes, each configured to serve a specific scientific purpose.
   \centering
   \includegraphics[width=\textwidth]{Introduction/figs/FRDude.pdf}
   \caption[Face on FRD]{\fixspacing\label{intro:fig:FRDude}The effects
-    of fiber optics on an input signal. The face in (a) is smeared
+    of fiber optics on an input signal. Both images are of a far-field
+    (i.e., collimated) beam profile. The face in (a) is smeared both
     azimuthally and radially during its journey through an optical
-    fiber. The red circle corresponds to the same angle at the
-    input/output of the fiber.}
+    fiber. The radial smearing is reffered to as FRD. The red circle
+    corresponds to the same angle at the input/output of the fiber.}
 \end{figure}
 
 With great power comes great responsibility, however, and fiber optics
@@ -326,19 +327,20 @@ affect the light passing through them in ways that have profound
 implications for data quality and instrument design. In particular,
 fiber optics not only attenuate precious astronomical light, but also
 increase the entropy in the beam. The latter effect is referred to as
-focal ratio degradation (FRD), whereby light injected into a fiber at
-a particular angle emerges from the fiber at a larger angle. An
-example of this is seen in Figure \ref{intro:fig:FRDude}; the light
-coming out of the fiber (b) has been smeared to angles outside of the
-maximum input angle (red circle). This increase in entropy creates a
-need for larger (and more expensive) spectrograph optics and can
-decrease the total system throughput if not properly accounted for. An
-understanding of the causes of FRD can help mitigate its effects and
-the first theories placed the blame on microbends along the length of
-the fiber \citep{Gloge72,Carrasco94}. Recent studies have suggested
-however, that most FRD is caused by scattering at the surface of the
-fiber \citep{Avila98,Haynes11,Eigenbrot12}. In the latter scenario it
-is likely that surface treatments (i.e., anti-reflective coatings) can
+focal ratio degradation \citep[FRD, see, e.g., ][]{Ramsey88}, whereby
+light injected into a fiber at a particular angle emerges from the
+fiber at a larger angle. An example of this is seen in Figure
+\ref{intro:fig:FRDude}; the light coming out of the fiber (b) has been
+smeared to angles outside of the maximum input angle (red
+circle). This increase in entropy creates a need for larger (and more
+expensive) spectrograph optics and can decrease the total system
+throughput if not properly accounted for. An understanding of the
+causes of FRD can help mitigate its effects and the first theories
+placed the blame on microbends along the length of the fiber
+\citep{Gloge72,Carrasco94}. Recent studies have suggested however,
+that most FRD is caused by scattering at the surface of the fiber
+\citep{Avila98,Haynes11,Eigenbrot12}. In the latter scenario it is
+likely that surface treatments (i.e., anti-reflective coatings) can
 mitigate the effects of FRD.
 
 \clearpage
