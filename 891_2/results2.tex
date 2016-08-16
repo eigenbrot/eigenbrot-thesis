@@ -22,29 +22,31 @@ $Z_L$ as a function of galactic radius and height. This parameter
 space can yield powerful insights into the history and formation of
 NGC 891, but first it is useful to examine the distribution of these
 parameters on a galactic scale, as shown in Figure
-\ref{891_2:fig:tauZ_hist}. In the left panel we see a multi-modal
-distribution of $\tau_L$ that suggests multiple epochs of star
-formation in NGC 891. We assign these epochs 4 rough age bins: the
-most recent epoch of star formation at $\tau_L < \val{4.3}{Gyr}$, a
-somewhat quiescent and relatively constant era of star formation from
-$\val{4.3}{Gyr}\leq\tau_L < \val{6.6}{Gyr}$, and two distinct bursts
-at $\val{6.6}{Gyr}\leq\tau_L < \val{8}{Gyr}$ and
+\ref{891_2:fig:tauZ_hist}. In the left panel we see a roughly
+tri-modal distribution of $\tau_L$ that suggests multiple epochs of
+star formation in NGC 891. These epochs are centered near 3.5, 5.5,
+and \val{8.5}{Gyr} and we assign age bins to capture these different
+eras. We choose to split the oldest age bin in two so that our bins
+are $\tau_L < \val{4.3}{Gyr}$, $\val{4.3}{Gyr}\leq\tau_L <
+\val{6}{Gyr}$, $\val{6}{Gyr}\leq\tau_L < \val{8}{Gyr}$ and
 $\val{8}{Gyr}\leq\tau_L$.
 
 The distribution of $Z_L$ shown in the right panel of Figure
-\ref{891_2:fig:tauZ_hist} also reveals multiple populations: the main
-peak can be split into two sub-peaks that occupy $\val{0.5}{\Zsol}\leq
-Z_L < \val{0.75}{\Zsol}$ and $\val{0.75}{\Zsol}\leq Z_L <
-\val{0.95}{\Zsol}$. A higher metallicity tail extends the distribution
-out to $\val{0.95}{\Zsol}\leq Z_L < \val{1.3}{\Zsol}$ with a distinct
-super-metal-rich population at $Z_L \geq\val{1.3}{\Zsol}$.
+\ref{891_2:fig:tauZ_hist} also reveals multiple
+populations. Metallicity is peaked at \val{0.75}{\Zsol}, and we choose to
+break this peak into two bins. Additionally, we define a bin that
+sample the low-metallicity tail, and two bins that probe the extended,
+high-metallicity tail. Thus our metallicity bins are
+$\val{0.5}{\Zsol}\leq Z_L < \val{0.75}{\Zsol}$, $\val{0.75}{\Zsol}\leq
+Z_L < \val{0.95}{\Zsol}$, $\val{0.95}{\Zsol}\leq Z_L <
+\val{1.3}{\Zsol}$, and $Z_L \geq\val{1.3}{\Zsol}$.
 
 Armed with the global distribution of stellar populations in $\tau_L$
 and $Z_L$ we can now examine where the different ranges defined above
 exist in NGC 891. Figure \ref{891_2:fig:rz_tZ} shows both $\tau_L$ and
 $Z_L$ as a function of radius and height. In the left panel the trends
 identified in Chapter \ref{chap:891_1} are immediately obvious: below
-\val{0.4}{kpc} all of the populations are young (\val{< 6.6}{Gyr}),
+\val{0.4}{kpc} all of the populations are young (\val{< 6}{Gyr}),
 the region where $0.4 < |z| \leq \val{1}{kpc}$ is a transition zone
 where the age generally increases, and above \val{1}{kpc} the light is
 dominated by the oldest populations.
@@ -76,7 +78,9 @@ galaxy disk as a whole can be thought of as a superposition of flared
 disks that formed at different times. These results are remarkably
 consistent with those of \citet{Martig14a}, who suggest this pattern can
 be caused by minor interactions with small satellites and/or radial
-migration \citep{Minchev12}.
+migration \citep{Minchev12}. It is worth noting, however, that other
+studies argue the radial migration does not appreciably affect the
+vertical structure of galaxy disks \citep{Vera-Ciro14}.
 
 Trends in $Z_L$ shown in the right panel of Figure
 \ref{891_2:fig:rz_tZ} complement the trends in $\tau_L$. Firstly, the
@@ -104,33 +108,52 @@ inflow-dominated metallicity suppression.
 
 This transition can be seen in the left panel of Figure
 \ref{891_2:fig:MLWZ_rz_cut}, which reveals two distinct trends in
-metallicity with height. For populations with $\tau_L >
-\val{6.6}{Gyr}$ metallicity decreases with height, as expected from
-the simple view that old stars are made from pristine gas and exist at
-large heights. Populations younger that \val{\asim 6.6}{Gyr} show the
-opposite trend; here metallicity sharply increases as a function of
-height. If we consider height to broadly correspond to age (see Figure
+metallicity with height. For populations with $\tau_L > \val{6}{Gyr}$
+metallicity decreases with height, as expected from the simple view
+that old stars are made from pristine gas and exist at large
+heights. Populations younger that \val{\asim 6}{Gyr} show the opposite
+trend; here metallicity sharply increases as a function of height. If
+we consider height to broadly correspond to age (see Figure
 \ref{891_2:fig:MLWA_rz_cut}) then the following picture emerges:
 during the first few Gyr of its history NGC 891 was essentially a
 closed-box; each generation of stars was enriched by the chemical
 processing of gas by the generations that preceded it. Around
-\val{6.6}{Gyr} ago, however, low-metallicity gas from outside the
-galaxy started to infall onto the disk, and as the amount of pristine
-gas increased the average metallicity of subsequent populations
+\val{6}{Gyr} ago, however, low-metallicity gas from outside the galaxy
+started to infall onto the disk, and as the amount of pristine gas
+increased the average metallicity of subsequent populations
 decreased. Thus, the ``peak metallicity'' of NGC 891 occurred roughly
-\val{6.6}{Gyr} ago. The right panel of Figure
-\ref{891_2:fig:MLWZ_rz_cut} confirms this: at all radii the largest
-values of $Z_L$ occur in populations where $\tau_L \approx
-\val{6.6}{Gyr}$.
+\val{6}{Gyr} ago. Figure \ref{891_2:fig:tau_Z} confirms this. At all
+radii and heights there are two distinct epochs of the enrichment
+rate, $dZ_L/dt$: before \val{6}{Gyr} the disk of NGC 891 was enriched
+at a rate of roughly \val{0.15}{\Zsol/Gyr}, but since \val{6}{Gyr} the
+infall of pristine gas onto the galaxy has been decreasing the
+metallicity at about \val{-0.18}{\Zsol/Gyr}.
+% The right panel of Figure
+% \ref{891_2:fig:MLWZ_rz_cut} confirms this: at all radii the largest
+% values of $Z_L$ occur in populations where $\tau_L \approx
+% \val{6}{Gyr}$.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{891_2/figs/tau_Z.pdf}
+  \caption[Enrichment history in NGC
+  891]{\fixspacing\label{891_2:fig:tau_Z}Metallicity as a function of
+    population age across all regions of NGC 891. The vertical dotted
+    line denotes ``peak metallicity'' at \val{6}{Gyr}. The solid lines
+    are linear fits to each epoch of enrichment. Note that $\tau_L$
+    corresponds to population age, while $dt$ represents the time
+    \emph{since the formation of the galaxy}.}
+\end{figure}
 
 In addition to the locus of metal-poor stars at large radii and small
-heights (i.e., the most recent star formation) we identify a second
-locus of metal-poor stars at small radii and intermediate heights. In
-the context of the history proposed above, this second population
-likely corresponds to the oldest portion of the disk or
-pseudo-bulge. This view is strengthened by Figure
-\ref{891_2:fig:MLWA_rz_cut}, which clearly shows two very different
-physical locations of populations with $Z_L < \val{0.5}{\Zsol}$.
+heights (i.e., the most recent star formation) in Figure
+\ref{891_2:fig:MLWZ_rz_cut} we identify a second locus of metal-poor
+stars at small radii and intermediate heights. In the context of the
+history proposed above, this second population likely corresponds to
+the oldest portion of the inner thick disk or pseudo-bulge. This view
+is strengthened by Figure \ref{891_2:fig:MLWA_rz_cut}, which clearly
+shows two very different physical locations of populations with $Z_L <
+\val{0.5}{\Zsol}$.
 
 \begin{figure}
   \centering
@@ -143,21 +166,21 @@ physical locations of populations with $Z_L < \val{0.5}{\Zsol}$.
     vertical and radial cuts made in Chapter \ref{chap:891_1}.}
 \end{figure}
 
-Figure \ref{891_2:fig:MLWA_rz_cut} offers another view of the scenario
-presented above. To first order, age increases with height, as
-expected from Chapter \ref{chap:891_1}, and above \val{1}{kpc} the
-average population age asymptotes to the oldest age (\val{\asim
-  10}{Gyr}). As described in \S\ref{891_2:sec:sys_err} the specific
-value of $\tau_L$ at the largest heights is dependent on the physical
-assumptions made when constructing the models (i.e., the first stars
-in the Universe formed \val{\asim 12}{Gyr} ago), but these assumptions
-only modulate the actual value; the conclusion that the integrated
-light is dominated by the oldest possible populations above
+Figure \ref{891_2:fig:MLWA_rz_cut} also offers another view of the
+entire scenario presented above. To first order, age increases with
+height, as expected from Chapter \ref{chap:891_1}, and above
+\val{1}{kpc} the average population age asymptotes to the oldest age
+(\val{\asim 10}{Gyr}). As described in \S\ref{891_2:sec:sys_err} the
+specific value of $\tau_L$ at the largest heights is dependent on the
+physical assumptions made when constructing the models (i.e., the
+first stars in the Universe formed \val{\asim 12}{Gyr} ago), but these
+assumptions only modulate the actual value; the conclusion that the
+integrated light is dominated by the oldest possible populations above
 \val{1}{kpc} is valid regardless of the specific population age.
 
 The enrichment history of NGC 891 is also visible in Figure
 \ref{891_2:fig:MLWA_rz_cut}. The highest metallicity populations have
-ages narrowly scattered around $\tau_L \approx \val{6.6}{Gyr}$ (bottom
+ages narrowly scattered around $\tau_L \approx \val{6}{Gyr}$ (bottom
 panels), which is exactly the age of ``peak metallicity'' identified
 above. As metallicity decreases there is an increasing level of
 bifurcation in age, representing the two epochs of metal-poor star
@@ -165,7 +188,7 @@ formation: the first, at large heights and small radii, corresponds to
 the first stars formed in NGC 891. The second, at small heights and
 large radii, corresponds to recent star formation that is drawing from
 metal-poor gas that has been infalling onto the disk for the last
-\val{6.6}{Gyr}.
+\val{6}{Gyr}.
 
 \subsection{Features in Phase Space}
 \label{891_2:sec:rz}
@@ -448,7 +471,7 @@ Sequence 3 does not stand out very much in the $A_V(r,z)$ planes. It
 shows extinction values that are generally consistent with the other
 morphological features that exist at smaller radii, albeit with more
 scatter (bottom right panel of Figure \ref{891_2:fig:AV_rz}). This is
-a clue that squence 3 might not be a separate entity from the primary
+a clue that sequence 3 might not be a separate entity from the primary
 disk, but rather an extension along a different axis of parameter
 space of the same populations seen in the disk.
 
@@ -507,13 +530,13 @@ the $Z_L(r,z)$ volume, as shown in the bottom row of Figure
 that has larger values of $Z_L$ than either the primary disk or the
 flare (which are the same in terms of metallicity). With this view it
 is possible that sequence 3 is in fact the portion of NGC 891's disk
-that formed during ``peak metallicity'' around \val{6.6}{Gyr} ago (see
+that formed during ``peak metallicity'' around \val{6}{Gyr} ago (see
 \S\ref{891_2:sec:tZ}). In this context the results of Figure
 \ref{891_2:fig:MLWA_rz} take on new meaning; sequence 3 has ages
 mostly between 6 and \val{8}{Gyr}, which is exactly when NGC 891 was
 at its maximum level of enrichment. Thus sequence 3 is not a distinct
 population of stars, but instead a snapshot of the disk from the era
-just before extragalactic gas began to supress metallicity in NGC 891.
+just before extragalactic gas began to suppress metallicity in NGC 891.
 
 %% These results, coupled with those shown in Figure \ref{891_2:fig:MLWA_rz}
 %% yield a possible explanation for the presence of sequence 3. This
@@ -586,24 +609,31 @@ requires an assumed SFH for the models used to fit our galaxy data. To
 avoid these assumptions we can examine the integral of the SFH
 multiplied by the flux of each SSP, which is identical to the
 light-weights found during SSP fitting (see
-\S\ref{891_2:sec:SSP_method} and Equation \ref{891_2:eq:MLWA}). Figure
-\ref{891_2:fig:SFH_cuts} shows these values in the same grid of radius
-and height used in \ref{chap:891_1} (although now the radius values
-are the true, cylindrical values a la \S\ref{891_2:sec:LOS}). From
-these data we can see the same general trend found in \ref{chap:891_1}
-and above: younger populations predominantly exist below
-\val{0.4}{kpc}. There are also small contributions from young
-populations above \val{0.4}{kpc} at the largest radii, which confirms
-the idea that NGC 891 built up from a superposition of flared disks
-with increasing ``flare radii''.
+\S\ref{891_2:sec:SSP_method} and Equation \ref{891_2:eq:MLWA}).
+
+By examining trends in this pseudo-SFH space we are able to completely
+free our interpretation from the systematic uncertainties discussed in
+\S\ref{891_2:sec:sys_err}. In other words, the only uncertainty in the
+results presented below merely stem from degeneracies inherent in the
+SSP template library and fitting process.
+
+Figure \ref{891_2:fig:SFH_cuts} shows these values in the same grid of
+radius and height used in Chapter \ref{chap:891_1} (although now the
+radius values are the true, cylindrical values a la
+\S\ref{891_2:sec:LOS}). From these data we can see the same general
+trend found in Chapter \ref{chap:891_1} and above: younger populations
+predominantly exist below \val{0.4}{kpc}. There are also small
+contributions from young populations above \val{0.4}{kpc} at the
+largest radii, which confirms the idea that NGC 891 built up from a
+superposition of flared disks with increasing ``flare radii''.
 
 Above \val{0.4}{kpc} (and even below this for $r < \val{8}{kpc}$) the
 I2 populations contribute more to the total light at larger radii,
 with a corresponding decrease in the contribution from Old
 populations. This trend is broadly consistent with an inside-out view
 of star formation in NGC 891. Such a formation scenario (which we also
-see in \ref{chap:891_1}) predicts a higher fraction of young and
-intermediate aged stars at large radii, exactly as seen in Figure
+see in Chapter \ref{chap:891_1}) predicts a higher fraction of young
+and intermediate aged stars at large radii, exactly as seen in Figure
 \ref{891_2:fig:SFH_cuts}.
 
 %% Further evidence for a flare can be seen in the fact that I2
@@ -639,7 +669,7 @@ intermediate aged stars at large radii, exactly as seen in Figure
 Finally, the metallicity color-coding in Figure
 \ref{891_2:fig:SFH_cuts} is consistent with the enrichment history
 presented in \S\ref{891_2:sec:tZ}. The youngest populations (which
-only contribute appreciable light at low heights) are very metal poor
+only contribute appreciable light at low heights) are metal poor
 because they are formed from pristine material that has recently
 fallen onto the disk of NGC 891 (see also Figure
 \ref{891_2:fig:MLWZ_rz_cut}). At these low heights the most metal-rich
@@ -655,7 +685,7 @@ increases with height. Once again, this beautifully illustrates the
 enrichment history presented above; the Old population formed during
 the ``closed-box'' period in NGC 891's history, where older stars
 (i.e., stars at larger heights) formed from pristine gas. Star
-formation more recent that \val{6.6}{Gyr} (i.e., anything besides the
+formation more recent that \val{6}{Gyr} (i.e., anything besides the
 Old population), however, occurred during a time when metal-poor gas
 from outside of NGC 891 caused \emph{younger} stars (i.e., those at
 lower heights) to have decreased values of metallicity.
