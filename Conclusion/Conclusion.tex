@@ -40,8 +40,8 @@ are:
 
 \item \GP is roughly rectangular in shape and has five different fiber
   sizes ranging from 1\farcs87 - 5\farcs62. The regions of different
-  size are arranged in a gradient that is optimized for to measure
-  roughly exponentially decreasing surface brightness at roughly
+  size are arranged in a gradient that is optimized to measure roughly
+  exponentially decreasing surface brightness at roughly
   \val{10}{Mpc}; a similar S/N per fiber can be achieved in a single
   exposure. \GP is ideally suited for observations of objects with a
   large dynamic range in brightness where spectral resolution can be
@@ -53,7 +53,7 @@ are:
 
 \item The head fixtures of HexPak and \GP, while physically separate,
   share a common focal plane in the WIYN IAS. This further eases the
-  transition between the two IFUs. In practice an observer can switch
+  transition between the two IFUs; in practice an observer can switch
   between HexPak and \GP during an observing run in roughly 10
   minutes.
 
@@ -137,7 +137,7 @@ individual SSPs with little thought to the astrophysical similarities
 that exist over a wide range of age and metallicity values. In other
 words, most SSP template libraries have many SSPs that, while assigned
 different age or metallicity values, have very similar spectra. To
-mitigate these degeneracies I use diffusion k-means to create a new
+mitigate these degeneracies I employ diffusion k-means to create a new
 SSP basis set that greatly reduces the number of SSP templates while
 still preserving important astrophysical features. With this new SSP
 basis set I estimate the uncertainty in fit parameters caused by
@@ -149,7 +149,7 @@ assuming a star formation history during the interpretation of the
 fitting results. In the worst case these uncertainties are \asim 20\%,
 but I argue that the worst case (totally random star formation on
 small physical scales) is unrealistically pessimistic for our
-data. NGC 891 is a coherent galaxy and over long timescales (\asim 1
+data. NGC 891 is a coherent galaxy, and over long timescales (\asim 1
 Gyr) the star formation history should be relatively the same across
 the entire galaxy. Thus the systematic uncertainties do not apply when
 comparing detailed structure within NGC 891; they are only important
@@ -157,8 +157,7 @@ when comparing NGC 891 to other galaxies that may have different star
 formation histories.
 
 With an understanding of uncertainties in my results I identify
-further details about the structure and formation history of NGC
-891. Namely,
+details in the structure and formation history of NGC 891. Namely,
 \begin{enumerate}
 
 \item The picture of inside-out galaxy formation seen in Chapter
@@ -185,12 +184,12 @@ further details about the structure and formation history of NGC
   flared disks that increase in radius with galactic age. The
   ``flare'' at large radii is corresponds to the most recent batch of
   star formation. The third sequence is the portion of the disk that
-  formed during peak metallicity, \val{\asim 6}{Gyr} ago.
+  formed during peak metallicity \val{\asim 6}{Gyr} ago.
 
 \end{enumerate}
 
 This work constitutes one of the first detailed, resolved studies of
-stellar populations in a nearby galaxy and as such lays the groundwork
+stellar populations in a nearby galaxy, and as such lays the groundwork
 for future studies. In particular, the methods outlined here could
 easily be applied to other nearby, edge-on galaxies. This thesis
 provides a robust set of tools, from instruments to data reduction and
