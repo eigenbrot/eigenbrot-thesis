@@ -3,7 +3,7 @@
 
 The algorithms used for full-spectrum fitting are designed to minimize
 the $\chi^2$ difference between some model spectrum and our
-observational data, and in the $\chi^2$ calculation each wavelength
+observational data. In this $\chi^2$ calculation each wavelength
 channel is given a weight equal to the inverse of the poisson noise
 propagation described in section \ref{891_2:sec:data}. This type of
 weighting benefits from historical momentum and ease of implementation
@@ -23,17 +23,18 @@ in models than others.
 To capture this astrophysical importance we compute a weighting
 spectrum that is applied to $\chi^2$ during full-spectrum
 fitting. These weights are computed as the root-means-square (RMS)
-difference of the model basis SSPs and therefore capture how much each
-wavelength channel changes with different models. For this calculation
-we use the \val{0.2}{\Zsol}, \val{0.4}{\Zsol}, \val{1}{\Zsol}, and
-\val{2.5}{\Zsol} metallicity \citetalias{Bruzual03} diffusion k-means
-SSPs (see section \ref{891_2:sec:bc03_dfk}).
+difference between the model basis SSPs and therefore capture how much
+each wavelength channel changes with different SSPs. For this
+calculation we use the \val{0.2}{\Zsol}, \val{0.4}{\Zsol},
+\val{1}{\Zsol}, and \val{2.5}{\Zsol} mono-metallicity
+\citetalias{Bruzual03} diffusion k-means SSPs (see section
+\ref{891_2:sec:bc03_dfk}).
 
 %++++++++++++++++
 %% {\bf MAB: by ``additional weights'' you should clarify that they are
 %%   in addition to the error weights.}
 
-Before computing the RMS each SSP is normalized to have a flat
+Before computing the RMS, each SSP is normalized to have a flat
 continuum to remove any low-order continuum shape effects from the
 final weights. This step is important because the continuum shape
 changes significantly with different metallicities and ages and also
@@ -41,7 +42,7 @@ because the overall continuum shape in the full-spectrum fits is
 controlled largely by the extinction parameter, \tauV. The average
 spectrum across all ages and metallicities is then computed and set as
 the zero point for computing the final RMS spectrum. This attempt to
-remove the affects of low-order spectral shape is similar to the
+remove the effects of low-order spectral shape is similar to the
 method of FIREFLY \citep{Wilkinson15}.
 
 %+++++++++++
@@ -49,39 +50,6 @@ method of FIREFLY \citep{Wilkinson15}.
 %%   essence we are looking to acheieve what they did but w/o filter the
 %%   data. The only concern with saying this might be the referee asking
 %%   why we didn't use FIREFLY.}
-
-Figure \ref{891_2:fig:RMS_spec} shows the resulting RMS spectrum along with
-important spectral features. In addition to computing the RMS across
-all ages and metallicities we also compute RMS spectra across all ages
-at each metallicity and vice versa. The ``total'' RMS closely matches
-the RMS across age, which suggests that age variations are cause the
-majority of the difference between different SSPs. There are also few
-spectral features that are have a high RMS value in \emph{only} age or
-metallicity, which suggests these weights will struggle to break the
-age/metallicity degeneracy.
-
-The total RMS spectrum modifies the traditional $\chi^2$ by
-\begin{equation}
-\label{891_2:eq:smart_chi}
-\chi^2 = \sum_{\lambda}\left(\frac{f(\lambda) -
-  g(\lambda)}{\sigma(\lambda)}R(\lambda)\right)^2,
-\end{equation}
-where $f(\lambda)$ and $g(\lambda)$ are the data and model spectra,
-respectively, $\sigma(\lambda)$ is the poisson errors on $f(\lambda)$, and
-$R(\lambda)$ is the RMS spectrum.
-
-%+++++++++++++
-%% {\bf MAB: Discuss how to read the figure since it is almost impossible
-%%   to make out the $RMS_{age}$ line. I think you want to say that is is
-%%   easiest to make out the ``total'' (green) and Z (orange) curves
-%%   which demonsrates that in most cases where there are strong peaks
-%%   age variations dominates, particularly below 4500 \AA\. Redward
-%%   there are weaker features where Z dominates. However, at every
-%%   location where there is a strong peak in RMS both age and Z increase
-%%   (except perhaps for Ca HK, which is weird), which already
-%%   foreshadows that this weighting scheme is not going to bust the
-%%   age-Z degeneracy.}
-
 
 \begin{figure}
   \centering
@@ -104,6 +72,39 @@ $R(\lambda)$ is the RMS spectrum.
     %% features.}
 \end{figure}
 
+Figure \ref{891_2:fig:RMS_spec} shows the resulting RMS spectrum along
+with important spectral features. In addition to computing the RMS
+across all ages and metallicities we also compute RMS spectra across
+all ages at each metallicity and vice versa. The ``total'' RMS closely
+matches the RMS across age, which suggests that age variations cause
+the majority of the difference between different SSPs. There are also
+few spectral features that are have a high RMS value in \emph{only}
+age or metallicity, which suggests these weights will struggle to
+break the age/metallicity degeneracy.
+
+The total RMS spectrum modifies the traditional $\chi^2$ by
+\begin{equation}
+\label{891_2:eq:smart_chi}
+\chi^2 = \sum_{\lambda}\left(\frac{f(\lambda) -
+  g(\lambda)}{\sigma(\lambda)}\zeta(\lambda)\right)^2,
+\end{equation}
+where $f(\lambda)$ and $g(\lambda)$ are the data and model spectra,
+respectively, $\sigma(\lambda)$ is the poisson errors on $f(\lambda)$, and
+$\zeta(\lambda)$ is the RMS spectrum.
+
+%+++++++++++++
+%% {\bf MAB: Discuss how to read the figure since it is almost impossible
+%%   to make out the $RMS_{age}$ line. I think you want to say that is is
+%%   easiest to make out the ``total'' (green) and Z (orange) curves
+%%   which demonsrates that in most cases where there are strong peaks
+%%   age variations dominates, particularly below 4500 \AA\. Redward
+%%   there are weaker features where Z dominates. However, at every
+%%   location where there is a strong peak in RMS both age and Z increase
+%%   (except perhaps for Ca HK, which is weird), which already
+%%   foreshadows that this weighting scheme is not going to bust the
+%%   age-Z degeneracy.}
+
+
 In addition to modifying our full-spectrum fits, the results shown in
 Figure \ref{891_2:fig:RMS_spec} provide insight into the statistically
 important differences between model spectra. The Balmer series stands
@@ -115,15 +116,17 @@ higher order lines are less likely to be contaminated. Beyond the
 Balmer series Na, Fe, Mg, and G-band absorption also have powerful
 spikes in the RMS spectrum. Unfortunately the distance to NGC 891
 places Na absorption right on top of the NaD sky emission line so it
-cannot be used in analysis. In many ways the index/equivalent width
-measurements common to Astronomy and used in \ref{chap:891_1}
-can be thought of as $\chi^2$ comparisons that are very highly tuned
-to specific spectral features and therefore are highly dependent on
-the stellar physics that go into producing the models. In this context
-it comes as no surprise that the spectral features that differentiate
-our SSP models are the same features that have been used extensively
-in the LICK system to assign astrophysical parameters to observations
-of galaxy and stars.
+cannot be used in analysis. 
+
+In many ways the index/equivalent width measurements common to
+Astronomy and used in Chapter \ref{chap:891_1} can be thought of as
+$\chi^2$ comparisons that are very highly tuned to specific spectral
+features and therefore are highly dependent on the stellar physics
+that go into producing the models. In this context it comes as no
+surprise that the spectral features that differentiate our SSP models
+are the same features that have been used extensively in the LICK
+system to assign astrophysical parameters to observations of galaxy
+and stars.
 
 %+++++++++++++++++
 %% {\bf MAB: This is a good discussion. I am trying to think whether it

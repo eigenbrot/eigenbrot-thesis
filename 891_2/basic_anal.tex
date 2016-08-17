@@ -1,7 +1,7 @@
 \section{Basic Analysis}
 \label{891_2:sec:anal}
 
-To quantify uncertainties in our full spectrum fitting methods we will
+To quantify uncertainties in our full spectrum galaxy fits we will
 test different methods of fitting spectra and interpreting the
 results. In this section we describe the basic, high-level methodology
 that is common to all fitting methods. We also detail preparatory
@@ -55,12 +55,12 @@ where $\psi(t, Z_j)$ describes the mass of stars formed at time $t$
 with metallicity $Z_j$ (i.e., the star formation rate). In other
 words, $M(\Delta t_i,Z_j)$ is the total mass in stars formed during
 the time interval, $\Delta t_i$, associated with a particular SSP. The
-extinction $R(\lambda, \tau_V)$ is parametrized by a single variable,
-$\tau_V$ and, importantly, does not depend on SSP age ($t_i$) or
-metallicity ($Z_j$). In \S\ref{891_2:sec:extinction} we discuss the details
-of $R(\lambda, \tau_V)$ and the limitations of this
-simplification. During fitting the free parameters are the SSP
-weights, $M(\Delta t_i,Z_j)$, a single extinction term, \tauV, and the
+extinction, $R(\lambda, \tau_V)$, is parametrized by a single
+variable, $\tau_V$ and, importantly, does not depend on SSP age
+($t_i$) or metallicity ($Z_j$). In \S\ref{891_2:sec:extinction} we
+discuss the details of $R(\lambda, \tau_V)$ and the limitations of
+this simplification. During fitting the free parameters are the SSP
+weights ($M(\Delta t_i,Z_j)$) a single extinction term (\tauV), and the
 systematic velocity.
 
 %+++++++++++++++++++++++++++++
@@ -99,18 +99,19 @@ $\leq\lambda\leq$ \val{5550}{\AA} and zero everywhere else. The choice
 of $t_i$ depends on assumptions about the SFH and in this work we make
 the simple assumption that star formation is constant across the
 lifetime of each SSP ($\Delta t_i$) so that $t_i$ is simply the
-midpoint of each $\Delta t_i$. In \S\ref{891_2:sec:sys_err} we discuss and
-quantify the systematics that arise from such an assumption. Similarly
-to $\tau_L$ we also define the mean, light-weighted metallicity as
+midpoint of each $\Delta t_i$. In \S\ref{891_2:sec:sys_err} we discuss
+and quantify the systematics that arise from such an assumption. We
+note that Equation \ref{891_2:eq:light_weight} also describes a
+conversion from mass-weights (i.e., $M(\Delta t_i, Z_j)$) to
+light-weights that is simply a constant that is independent of the
+specific mix of SSPs (but does depend on the overall extinction).
+
+Similarly to $\tau_L$ we also define the mean, light-weighted
+metallicity as
 \begin{equation}
 \label{891_2:eq:MLWZ}
 Z_L = \frac{\sum_{i,j} W_{L,i,j}\times Z_j}{\sum_{i,j} W_{L,i,j}}.
 \end{equation}
-
-We note that Equation \ref{891_2:eq:light_weight} also describes a
-conversion from mass-weights (i.e., $M(\Delta t_i, Z_j)$) to
-light-weights that is simply a constant that is independent of the
-specific mix of SSPs (but does depend on the overall extinction).
 
 %+++++++++++++++++++++++
 %% {\bf MAB: In eqn (4) move M outside of the sum since it does not
@@ -121,23 +122,12 @@ specific mix of SSPs (but does depend on the overall extinction).
 \subsection{Velocities}
 \label{891_2:sec:vel}
 
-\begin{figure*}[t]
-  \centering
-  \includegraphics[width=\textwidth]{891_2/figs/Swat_vel.pdf}
-  \caption[Comparison of measure stellar and gas velocities to HI
-    velocity data]{\fixspacing\label{891_2:fig:Swat_vel}Comparison of
-    HI velocity envelope (from \citet{Swaters97}) to \emph{left:}
-    measured H$\alpha$ centroids, \emph{middle:} best fit velocities
-    from SSP models, and \emph{right:} best fit stellar velocities
-    with a constant offset to minimize median difference between gas
-    and stars.}
-\end{figure*}
-The systemic velocities of our model spectra do not depend on the
+The systemic velocities of our model galaxies do not depend on the
 shape of the spectra (i.e., the SSP mix) and thus we can reduce the
 number of free parameters in our SSP fits by measuring the velocities
 once and then keeping them fixed for all subsequent analysis. The
-final velocity values are a combination of velocity estimates from two
-sources: the ``fit'' velocities that result from SSP fitting, and
+velocity values we use are a combination of velocity estimates from
+two sources: the ``fit'' velocities that result from SSP fitting, and
 velocities measured from the centers of bright emission lines.
 
 %++++++++++++++++++++++
@@ -151,12 +141,12 @@ During full spectrum fitting the velocity can be a free parameter of
 the model, and this fit provides the first estimate of the velocity of
 each aperture. The first step is to run a fully unconstrained fit
 where all SSP weights, the velocity, and the extinction are allowed to
-vary (see \S\ref{891_2:sec:SSP_method}. This produces a ``best fit'' only in
-the sense that the resulting model spectrum matches the data well in a
-$\chi^2$ sense; to determine velocities the details of the
+vary (see \S\ref{891_2:sec:SSP_method}). This produces a ``best fit''
+only in the sense that the resulting model spectrum matches the data
+well in a $\chi^2$ sense; to determine velocities the details of the
 astrophysical assumptions behind each model are unimportant. The
-velocities found during fitting are generally precise on the order of
-\val{\asim10}{\kms}, depending on \GP fiber size (see
+reported fit uncertainties on these velocities is on the order of
+\val{\asim10}{\kms}, depending on \GP fiber size (see Chapter
 \ref{chap:891_1}), which is slightly better that 10\% of the
 instrumental resolution (again, depending on fiber size).
 
@@ -172,11 +162,11 @@ velocity offset between the model and the data. When fitting these
 velocities we used only the range of wavelengths that lie within the
 region spanned by arc lamp lines ($\val{4100}{\AA} \leq\lambda\leq
 \val{6600}{\AA}$). This avoids wavelengths that could be affected by
-extrapolation of the wavelength solution (see
-\ref{chap:891_1}). In the majority of apertures this
-``refined'' velocity was within \val{\asim 10}{\kms}, which is similar
-to the precision of the fits and indicates that this second iteration
-is perhaps not necessary.
+extrapolation of the wavelength solution (see Chapter
+\ref{chap:891_1}). In the majority of apertures this ``refined''
+velocity was within \val{\asim 10}{\kms} of the original fit velocity,
+which is similar to the precision of the fits and indicates that this
+second iteration is perhaps not necessary.
 
 %+++++++++++++++=
 %% {\bf MAB: How important is this iteration? Again, compare amplitude of
@@ -205,6 +195,18 @@ be though of as the ``stellar'' velocity values.
 %% strong absorption features are certainly enough to simply fit a
 %% centroid.
 
+\begin{figure*}[t]
+  \centering
+  \includegraphics[width=\textwidth]{891_2/figs/Swat_vel.pdf}
+  \caption[Comparison of measure stellar and gas velocities to HI
+    velocity data]{\fixspacing\label{891_2:fig:Swat_vel}Comparison of
+    HI velocity envelope (from \citet{Swaters97}) to \emph{left:}
+    measured H$\alpha$ centroids, \emph{middle:} best fit velocities
+    from SSP models, and \emph{right:} best fit stellar velocities
+    with a constant offset to minimize median difference between gas
+    and stars.}
+\end{figure*}
+
 \subsubsection{Emission line velocities}
 
 As a check on the velocities found above we also measure the velocity
@@ -222,22 +224,23 @@ panel of Figure \ref{891_2:fig:Swat_vel}. We call the velocities measured in
 %%   essential I think. Last sentence are you measuring \Ha velocities or
 %%   \Ha+[NII] velocities?}
 
-The center panel of Figure \ref{891_2:fig:Swat_vel} shows the ``stellar
-velocities'' compared to known HI velocities and our measured \Ha
-velocities. Clearly there is a systematic offset between the stellar
-and gas velocities that is relatively constant across both sides of
-the galaxy. We find that this offset is constant in magnitude and sign
-across both sides of the galaxy. This fact rules out an offset caused
-by asymmetric drift \citep{Binney87}. Furthermore, many of the stellar
-velocities are unphysical in the sense that they lie outside of the HI
-envelope. We therefore conclude that this offset is caused by
-systematic measurement uncertainty (likely arising from uncertainty in
-our wavelength solution) and compute a constant velocity ``correction''
+The center panel of Figure \ref{891_2:fig:Swat_vel} shows the
+``stellar velocities'' compared to known HI velocities and our
+measured \Ha velocities. Clearly there is a systematic offset between
+the stellar and gas velocities and we find that this offset is
+constant in magnitude and sign across both sides of the galaxy. This
+fact rules out an offset caused by asymmetric drift
+\citep{Binney87}. Furthermore, many of the stellar velocities are
+unphysical in the sense that they lie outside of the HI envelope. We
+therefore conclude that this offset is caused by systematic
+measurement uncertainty (likely arising from uncertainty in our
+wavelength solution) and compute a constant velocity ``correction''
 that is applied to the stellar velocities. This offset is computed to
 minimize the median difference between stellar and gas
-velocities. While we expect the stellar tangential speed to lag behind
-the gas since we measure both sides of the galaxy, the median
-difference between gas and stars should be, to first order, zero.
+velocities. While we do expect the stellar tangential speed to lag
+behind the gas the fact that we measure both sides of the galaxy
+means, the median difference between gas and stars should be, to first
+order, zero.
 
 %+++++++++++++++++++++
 %% {\bf MAB: I made a few edits in the above par. As part of or before
@@ -280,15 +283,17 @@ difference between gas and stars should be, to first order, zero.
       sides of the galaxy}.}
 \end{figure}
 
-Figure \ref{891_2:fig:SG_offset} shows the relation between stellar and gas
-velocities after applying an offset of \val{74}{\kms}. Based on these
-results, the final velocity of each aperture is fixed as the velocity
-measured during $\chi^2$ fitting (``stellar velocity'') plus a
-constant offset of \val{74}{\kms}. The right hand panel of Figure
-\ref{891_2:fig:Swat_vel} shows the final velocities used. We note that the
-systematic correction of \val{74}{\kms} is within the total
+Figure \ref{891_2:fig:SG_offset} shows the relation between stellar
+and gas velocities after applying an offset of \val{74}{\kms}. This
+offset minimizes the global difference between gas and stellar
+velocities across both sides of the galaxy. Based on these results,
+the final velocity of each aperture is fixed as the velocity measured
+during $\chi^2$ fitting (``stellar velocity'') plus a constant offset
+of \val{74}{\kms}. The right hand panel of Figure
+\ref{891_2:fig:Swat_vel} shows the final velocities used. We note that
+the systematic correction of \val{74}{\kms} is within the total
 uncertainty in our velocity as dictated by uncertainties in the
-wavelength solution (\val{120}{\kms}, see \ref{chap:891_1}).
+wavelength solution (\val{120}{\kms}, see Chapter \ref{chap:891_1}).
 
 %+++++++++++++++++++=
 %% {\bf MAB: The standard is km s$^{-1}$ not \kms. At the end here you
@@ -299,9 +304,9 @@ wavelength solution (\val{120}{\kms}, see \ref{chap:891_1}).
 \subsection{Extinction Model}
 \label{891_2:sec:extinction}
 
-During full spectral fitting (\S\ref{891_2:sec:SSP_method}) we assume the
-extinction model of \citet{Charlot00} during all analysis steps, which
-is described by
+During all steps of full spectral fitting
+(\S\ref{891_2:sec:SSP_method}) we assume the extinction model of
+\citet{Charlot00}, which is described by
 \begin{equation}
 R(\lambda) = e^{-\tauV \left(\lambda/\val{5500}{\AA}\right)^{-0.7}}.
 \end{equation}
@@ -325,13 +330,14 @@ or
 where \tauV and \tauVB are the normalization factors for stellar continuum and
 gas emission, respectively.
 
-As described in \S\ref{891_2:sec:SSP_method}, \tauV is a free parameter of
-the SSP models that essentially measures the slope of the
-continuum. To measure \tauVB we use the ratio of measured \Ha/\HB flux
-and compare it to the expected value of 2.86 from
-\citet{Osterbrock89}, assuming case B recombination in a \val{10^4}{K}
-gas. Under these assumptions, and given the extinction law in equation
-\ref{891_2:eq:tauVB}, we compute
+As described in \S\ref{891_2:sec:SSP_method}, \tauV is a free
+parameter of the SSP models that essentially measures the slope of the
+continuum. To measure \tauVB (which we need to compute emission
+corrections a la \S\ref{891_2:sec:emission_corr}) we use the ratio of
+measured \Ha/\HB flux and compare it to the expected value of 2.86
+from \citet{Osterbrock89}, assuming case B recombination in a
+\val{10^4}{K} gas. Under these assumptions, and given the extinction
+law in equation \ref{891_2:eq:tauVB}, we compute
 \begin{equation}
 \label{891_2:eq:Balmer_extinction}
 \tauVB = 4.84 \ln \left(\frac{\Ha/\HB}{2.86}\right).
@@ -408,21 +414,26 @@ iteration.
 \label{891_2:sec:emission_corr}
 
 Many of our apertures show moderate to strong Balmer emission that is
-not present in the SSP libraries that underlie our galaxy models and
+not present in the SSP libraries underlying our galaxy models and
 therefore must be subtracted before accurate analyses can be made. To
 do this we construct a model spectrum containing only emission from
-\Ha, \HB, \Hg, \Hd, and \He.  The basic idea is to first construct a
-model galaxy based on fits that mask the cores of the Balmer lines and
-then use these fits to remove the stellar continuum and isolate the
-Balmer emission. Then the two strongest emission lines (\Ha and \HB)
-can be used to construct a model containing emission from the
+\Ha, \HB, \Hg, \Hd, and \He. 
+
+The basic idea is to first construct a model galaxy produced from fits
+where the cores of the Balmer lines were masked. These fits will be
+good first guesses of the stellar continuum in the absence Balmer
+emission. We then use these fits to remove the stellar continuum and
+isolate this emission. Then the two strongest emission lines (\Ha and
+\HB) can be used to construct a model containing emission from the
 higher-order lines.  Based on the results of \citet{Osterbrock89}, and
 assuming case B recombination in a \val{10^4}{K} gas, the ratios of
 fluxes for the Balmer series is \mbox{1 : 0.350 : 0.164 : 0.087 :
-  0.056} (\Ha : \HB : \Hg : \Hd : \He). In our emission models the
-width of each line is dictated by the instrumental resolution measured
-at the line location (see \ref{chap:891_1}), with apertures
-made from different sized \GP fibers having different widths.
+  0.056} (\Ha : \HB : \Hg : \Hd : \He), thus if we know the flux in a
+single Balmer line we can construct a model containing all of these
+Balmer lines. In our emission models the width of each line is
+dictated by the instrumental resolution measured at the line location
+(see Chapter \ref{chap:891_1}), with apertures made from different
+sized \GP fibers having different widths.
 
 %++++++++++++++++++++=
 %% {\bf MAB: First sentence: I think you mean SPS models (that use
@@ -493,16 +504,16 @@ Finally, the emission model is scaled so the \Ha flux matches the \Ha
 flux measured in each individual aperture. The data spectra are then
 corrected by subtracting the corresponding emission model. Figure
 \ref{891_2:fig:emission_comp} shows an example of a spectrum with strong \HB
-emission before and after subtracting the Balmer emission model. In
-many apertures the blending of the \Ha/[NII] complex causes imperfect
-subtraction in this region (as it should, our emission model does not
-contain [NII] emission), and in subsequent analysis we do not fit
-(i.e., mask) data within \val{\pm 500}{\kms} of \Ha (which includes
-both [NII] lines).
+emission before and after subtracting the Balmer emission model.
 
-In addition to \Ha/[NII] we mask other strong sources of nebular
-emission ([OIII]$_{4959}$, [OIII]$_{5007}$, and S2) and sky lines with
-strong residuals ([OI]$_{6300}$, NaD, and OI$_{5577}$).
+In many apertures the blending of the \Ha/[NII] complex causes
+imperfect subtraction in this region (as it should, our emission model
+does not contain [NII] emission), and in subsequent analysis we do not
+fit (i.e., mask) data within \val{\pm 500}{\kms} of \Ha (which
+includes both [NII] lines). In addition to \Ha/[NII] we mask other
+strong sources of nebular emission ([OIII]$_{4959}$, [OIII]$_{5007}$,
+and S2) and sky lines with strong residuals ([OI]$_{6300}$, NaD, and
+OI$_{5577}$).
 
 %++++++++++++++++===
 %% {\bf MAB: Itemize the lines that you mask -- all of them -- and give

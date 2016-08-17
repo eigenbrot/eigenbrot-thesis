@@ -4,14 +4,14 @@
 Uncertainties in our derived parameters ($\tau_L$, $Z_L$, $A_V$) come
 from a number of sources: the precision and accuracy of the data
 (e.g., random errors and flux calibration, respectively); degeneracies
-between age, metallicity, and extinction as coupled in the model
-parameters; and systematic uncertainty in our interpretation of the
-results of the fit. In the context of our DFK basis set, the latter
-consists of the assignment of the effective age of each template,
-which then propagates into the mass- or light-weighted mean age and
-metallicity.  In this section we quantify the magnitude of these
-uncertainties, first looking at the coupling between random errors in
-the data and covariance in age, metallicity, and extinction.
+between age, metallicity, and extinction; and systematic uncertainty
+in our interpretation of the results of the fit. In the context of our
+DFK basis set, the latter consists of the assignment of the effective
+age of each template, which then propagates into the mass- or
+light-weighted mean age and metallicity.  In this section we quantify
+the magnitude of these uncertainties, first looking at the coupling
+between random errors in the data and covariance in age, metallicity,
+and extinction.
  
 
 \subsection{Stochastic Uncertainty and Covariance}
@@ -36,10 +36,38 @@ Stochastic uncertainty in ($\tau_L$, $Z_L$, $A_V$) that arises during
 full spectral fitting is driven by two effects: uncertainty in the
 true shape of our galaxy SED and degeneracies between age, extinction,
 and metallicity. The uncertainty of the SED of NGC 891 is already
-quantified, it is exactly the error spectrum computed as part of the
-data reduction described in \ref{chap:891_1} and accounts for
+quantified; it is exactly the error spectrum computed as part of the
+data reduction described in Chapter \ref{chap:891_1} and accounts for
 uncertainty in wavelength calibration, sky subtraction, and flux
 calibration.
+
+To quantify uncertainties caused by degeneracies in the fit parameters
+we construct a set of 100 Monte Carlo iterations of each galaxy
+spectrum. For each iteration the galaxy flux at a specific wavelength,
+$f(\lambda)$, is perturbed by an amount randomly chosen from a
+normally distributed set of values with a width equal to the error
+spectrum computed during data reduction. Thus, the $k$th Monte Carlo
+spectrum is $f_k'(\lambda) = f(\lambda) + r(e(\lambda))$, where
+$r(\sigma)$ represents a normal distribution with width $\sigma$ and
+$e(\lambda)$ is the galaxy error spectrum. Each of the $f_k'(\lambda)$
+spectra are then fit with the identical method and SSP library
+(\S\ref{891_2:sec:final_SSP}). The ``true'' value of the fit
+parameters is then taken to be the mean over all 100 iterations while
+the total fit uncertainty (i.e., stochastic plus degeneracies) is
+defined by an ellipse in ($\tau_L$,$Z_L$,$A_V$) space that contains
+68\% of all Monte Carlo iterations (i.e., a 68\% phase-space
+confidence interval). The reported uncertainties for each individual
+parameter are the projection of the limits of this ellipse onto the
+specific parameter. These uncertainties are shown in Figure
+\ref{891_2:fig:MC_covar}.
+
+The decision to perform Monte Carlo perturbations on our data rather
+than the best fit model is similar to the approach taken by PIPE3D
+\citep{Sanchez16}, and we feel it yields important
+information. Namely, it allows us to quantify how any systematic
+differences between our data and the models couple with random
+uncertainties in the data. In other words, it fully encapsulates all
+sources of uncertainty that affect the final fits.
 
 %+++++++++++++++++
 %% {\bf MAB: above par. may be a bit redundant with intro par. for the
@@ -56,11 +84,10 @@ calibration.
 %%   have not been included in the analysis, and if not, why not, or why
 %%   we don't care.}
 
-Degeneracies in fit parameters are generally well understood, but more
-difficult to quantify. The primary degeneracy in our fits is the well
-known age/metallicity degeneracy \citep[see, for
-  example,][]{Oconnel76,Aaronson78,Worthey94,dePaz02}, whereby a mix
-of younger, more metal-rich populations can be spectrally
+The primary degeneracy in our fit parameters is the well known
+age/metallicity degeneracy \citep[see, for
+example,][]{Oconnel76,Aaronson78,Worthey94,dePaz02}, whereby a mix of
+younger, more metal-rich populations can be spectrally
 indistinguishable from a mix of older, more metal-poor
 populations. This correlation is especially relevant to our work given
 our attempt to simultaneously fit SSPs with multiple metallicities and
@@ -90,15 +117,15 @@ continuum is to either vary age or attenuation.
 In intermediate-aged populations metal absorption lines make up a key
 component of the opacity in stellar atmospheres and a higher
 concentration of metals absorption lines will ``redden'' the spectrum
-through increased line-blanketing at bluer wavelengths in the stellar
-photospheres \citep[see, e.g., Figure 4 in ][]{Vazdekis10}. In this
-regime there is a strong negative correlation between metallicity and
-extinction because the model spectrum can be reddened by increasing
-the strength of these metal lines. The left panel of Figure
-\ref{891_2:fig:MC_covar} shows this effect in the ($A_V$, $Z_L$)
-plane. As we will see in \S\ref{891_2:sec:SFH}, below \val{0.4}{kpc}
-most of the measured light comes from intermediate populations where
-the correlation between $A_V$ and $Z_L$ is strongest.
+through increased line-blanketing at bluer wavelengths \citep[see,
+e.g., Figure 4 in ][]{Vazdekis10}. In this regime there is a strong
+negative correlation between metallicity and extinction because the
+model spectrum can be reddened by increasing the strength of these
+metal lines. The left panel of Figure \ref{891_2:fig:MC_covar} shows
+this effect in the ($A_V$, $Z_L$) plane. As we will see in
+\S\ref{891_2:sec:SFH}, below \val{0.4}{kpc} most of the measured light
+comes from intermediate populations where the correlation between
+$A_V$ and $Z_L$ is strongest.
 
 There is a limit to this effect, however; the very oldest SSPs are
 cool enough that there is significant metal-line reddening regardless
@@ -159,31 +186,6 @@ DFK bin.
 %%   more degenerate with $Z$ is sufficiently large that the age-$Z$
 %%   degeneracy is no significant in altering the discussion.}
 
-To quantify uncertainties caused by these effects we construct a set
-of 100 Monte Carlo iterations of each galaxy spectrum. For each
-iteration the galaxy flux at a specific wavelength, $f(\lambda)$, is
-perturbed by an amount randomly chosen from a normally distributed set
-of values with a width equal to the error spectrum computed during
-data reduction. Thus, the $k$th Monte Carlo spectrum is $f_k'(\lambda)
-= f(\lambda) + r(e(\lambda))$, where $r(\sigma)$ represents a normal
-distribution with width $\sigma$ and $e(\lambda)$ is the galaxy error
-spectrum. Each of the $f_k'(\lambda)$ spectra are then fit with the
-identical method and SSP library (\S\ref{891_2:sec:final_SSP}). The ``true''
-value of the fit parameters is then taken to be the mean over all 100
-iterations while the total fit uncertainty (i.e., stochastic plus
-degeneracies) is defined by an ellipse in ($\tau_L$,$Z_L$,$A_V$) space
-that contains 68\% of all Monte Carlo iterations (i.e., a 68\%
-phase-space confidence interval). The reported uncertainties for each
-individual parameter are the projection of the limits of this ellipse
-onto the specific parameter.
-
-The decision to perform Monte Carlo perturbations on our data rather
-than the best fit model is similar to the approach taken by PIPE3D
-\citep{Sanchez16}, and we feel it yields important
-information. Namely, it allows us to quantify how any systematic
-differences between our data and the models couple with random
-uncertainties in the data. In other words, it fully encapsulates all
-sources of uncertainty that affect the final fits.
 
 %+++++++++++++++++
 %% {\bf MAB: You want to say something about the approach of using the
@@ -195,23 +197,36 @@ sources of uncertainty that affect the final fits.
 %%   Spanish Armada....I think there is a reference to Sanchez who does
 %%   the same. We must reference if so.}
 
-Figure \ref{891_2:fig:MC_covar} shows the result of the Monte Carlo
-runs. In the majority of apertures our quantities of interest show the
-expected degeneracies discussed above (negative age/metallicity
-correlation, negative age/extinction correlation, and negative
-metallicity/extinction correlation) however there are large group of
-apertures that exhibit a \emph{positive} correlation between age and
-metallicity (i.e., increasing the metallicity leads to fits that have
-older ages). This seemingly backward trend is reasonable (and
-expected) in the context of how the reddening affects different aged
-populations. Apertures with a positive age/metallicity relation are
-concentrated below the age break at \val{0.4}{kpc} (Chapter
-\ref{chap:891_1}) and therefore have a high fraction of total flux
-contributed by young SSPs (although, importantly, I2 and Old
-populations still contribute the majority of the light, a la
-\S\ref{891_2:sec:SFH}). As discussed above, young SSPs have a
-continuum shape that is only weakly dependent on metallicity, so
-reddening is achieved by increasing $A_V$. Thus, as the fraction of
+\begin{figure*}
+  \centering
+  \includegraphics[width=0.31\textwidth]{891_2/figs/fit_uncertainty_MLWA.pdf}
+  \includegraphics[width=0.31\textwidth]{891_2/figs/fit_uncertainty_MLWZ.pdf}
+  \includegraphics[width=0.31\textwidth]{891_2/figs/fit_uncertainty_TAUV.pdf}
+  \caption[Distributions of fit uncertainties in $\tau_L$, $Z_L$,
+    $A_V$]{\fixspacing\label{891_2:fig:fit_err_hist}Distribution of
+    parameter uncertainties in age, metallicity, and extinction
+    derived from full spectral fitting.  The uncertainties are 68\%
+    confidence limits on all three parameters simultaneously based on
+    the Monte Carlo perturbations described above.}
+\end{figure*}
+
+
+As shown in Figure \ref{891_2:fig:MC_covar}, the majority of apertures
+our quantities of interest show the expected degeneracies discussed
+above (negative age/metallicity correlation, negative age/extinction
+correlation, and negative metallicity/extinction correlation) however
+there are large group of apertures that exhibit a \emph{positive}
+correlation between age and metallicity (i.e., increasing the
+metallicity leads to fits that have older ages). This seemingly
+backward trend is reasonable (and expected) in the context of how the
+reddening affects different aged populations. Apertures with a
+positive age/metallicity relation are concentrated below the age break
+at \val{0.4}{kpc} (Chapter \ref{chap:891_1}) and therefore have a high
+fraction of total flux contributed by young SSPs (although,
+importantly, I2 and Old populations still contribute the majority of
+the light, a la \S\ref{891_2:sec:SFH}). As discussed above, young SSPs
+have a continuum shape that is only weakly dependent on metallicity,
+so reddening is achieved by increasing $A_V$. Thus, as the fraction of
 Young SSPs increases more extinction is needed to redden the models to
 the level of the data. This increase in total extinction (for a given
 aperture) then requires the I2 and Old SSPs to have lower
@@ -293,26 +308,13 @@ all SSPs in a particular fit.
 
 %% }  
  
-\begin{figure*}
-  \centering
-  \includegraphics[width=0.31\textwidth]{891_2/figs/fit_uncertainty_MLWA.pdf}
-  \includegraphics[width=0.31\textwidth]{891_2/figs/fit_uncertainty_MLWZ.pdf}
-  \includegraphics[width=0.31\textwidth]{891_2/figs/fit_uncertainty_TAUV.pdf}
-  \caption[Distributions of fit uncertainties in $\tau_L$, $Z_L$,
-    $A_V$]{\fixspacing\label{891_2:fig:fit_err_hist}Distribution of
-    parameter uncertainties in age, metallicity, and extinction
-    derived from full spectral fitting.  The uncertainties are 68\%
-    confidence limits on all three parameters simultaneously based on
-    the Monte Carlo perturbations described above.}
-\end{figure*}
-
 The fact that a purely random perturbation of our data results in fits
 that clearly show the expected astrophysical degeneracies indicates
-that these degeneracies are primary source of fitting uncertainty. In
-other words, uncertainty in our SSP fits is driven mainly by
-similarities between different model SSPs; random flux errors in a
-given wavelength channel are only a secondary source of fitting
-uncertainty.
+that these degeneracies are the primary source of fitting
+uncertainty. In other words, uncertainty in our SSP fits is driven
+mainly by similarities between different model SSPs; random flux
+errors in a given wavelength channel are only a secondary source of
+fitting uncertainty.
 
 %% {\bf MAB: The hard question then is why did we bin to such high
 %% S/N?}  
@@ -326,7 +328,7 @@ separately for each aperture. The values thus derived constitute all
 sources uncertainty that arise from the simultaneous measurement of
 the three parameters. Figure \ref{891_2:fig:fit_err_hist} shows the
 distribution of uncertainties in age, metallicity, and
-extinction. Fitting uncertainties are on the order of 5\% for most
+extinction. These uncertainties are on the order of 5\% for most
 apertures, but the distribution of uncertainty in metallicity is
 broader than either $\tau_L$ or $A_V$ and can reach \asim 30\% in the
 worst cases.
@@ -343,19 +345,20 @@ worst cases.
 \subsection{Systematic Uncertainty in DFK Ages}
 \label{891_2:sec:sys_err}
 
-Computing a weighted age for a superposition of model SSPs requires
-assigning a specific age to each individual SSP, which, in turn,
-requires making an assumption about the star formation history (SFH)
-across the range of ages spanned by the SSP age bin (see Table
-\ref{891_2:tab:dfk}). Different SFHs have minimal impact on the youngest
-SSPs due to their narrow age range, but the oldest SSPs span a range
-of over \val{7}{Gyr} and thus the age assigned to this bin can vary by
-the same magnitude, depending on the assumed SFH. Because of this, the
-choice of SFH creates systematic uncertainty in the computed value of
-$\tau_L$. This uncertainty is primarily a consequence of the fact that
-old stellar spectra are essentially constant over a large age
-range. In other words, these old populations do not provide enough
-information in their spectral shape to yield precisely defined ages.
+Computing a weighted age (e.g., Equation \ref{891_2:eq:MLWA}) for a
+superposition of model SSPs requires assigning a specific age to each
+individual SSP, which, in turn, requires making an assumption about
+the star formation history (SFH) across the range of ages spanned by
+the SSP age bin (see Table \ref{891_2:tab:dfk}). Different SFHs have
+minimal impact on the youngest SSPs due to their narrow age range, but
+the oldest SSPs span a range of over \val{7}{Gyr} and thus the age
+assigned to this bin can vary by the same magnitude, depending on the
+assumed SFH. Because of this, the choice of SFH creates systematic
+uncertainty in the computed value of $\tau_L$. This uncertainty is
+primarily a consequence of the fact that old stellar spectra are
+essentially constant over a large age range. In other words, these old
+populations do not provide enough information in their spectral shape
+to yield precisely defined ages.
 
 %+++++++++++++++++
 %% {\bf MAB: Here I think it is worth reminding the reader that this
@@ -375,39 +378,38 @@ quantity that changes between iterations; the specific SSP weights
 deviation of $\tau_L$ across all 100 Monte Carlo iterations quantifies
 the systematic uncertainty that results from assuming a SFH.
 
-By choosing $t_i$ completely randomly from within the corresponding age
-bin we allow completely unconstrained SFHs, which makes our computed
-uncertainty an upper limit. The drawback of this approach is an
-almost-certain over estimation of the true systematic uncertainty, but
-the benefit is that we are not required to make assumptions about the
-general form of the SFH. In this way, our computation
-captures not only our lack of knowledge about the specific shape of
-SFH, but also our lack of knowledge about the general form of SFH
-(e.g., bursty versus smooth).
+By choosing $t_i$ completely randomly from within the corresponding
+age bin we allow completely unconstrained SFHs. The drawback of this
+approach is an almost certain over-estimation of the true systematic
+uncertainty, but the benefit is that we are not required to make
+assumptions about the general form of the SFH. In this way, our
+computation captures not only our lack of knowledge about the specific
+shape of SFH, but also our lack of knowledge about the general form of
+SFH (e.g., bursty versus smooth).
 
 \begin{figure}
   \centering
   \includegraphics[width=0.45\textwidth]{891_2/figs/sys_uncertainty_hist.pdf}
   \includegraphics[width=0.45\textwidth]{891_2/figs/sys_uncertainty.pdf}
   \caption[Distribution of systematic uncertainties in
-    $\tau_L$]{\fixspacing\label{891_2:fig:sys_err}\emph{top:}
+    $\tau_L$]{\fixspacing\label{891_2:fig:sys_err}\emph{left:}
     Distribution of systematic uncertainty that arises from assuming a
     star formation history. The uncertainties are the standard
     deviation of 100 values derived from a random assignment of ages
-    to the SSP basis set. \emph{bottom:} The same systematic
+    to the SSP basis set. \emph{right:} The same systematic
     uncertainties as a function of $\tau_L$.}
 \end{figure}
 
-The top panel Figure \ref{891_2:fig:sys_err} shows the distribution of
-systematic uncertainties in $\tau_L$. In the majority of our apertures
-this uncertainty is \asim 20\%, but there is a tail with high
-fractional uncertainties that extends up to 50\%, which, as shown in
-the bottom panel, comes from apertures with $\tau_L < \val{\asim
+The left panel Figure \ref{891_2:fig:sys_err} shows the distribution
+of systematic uncertainties in $\tau_L$. In the majority of our
+apertures this uncertainty is \asim 20\%, but there is a tail with
+high fractional uncertainties that extends up to 50\%. As shown in the
+right panel this tail comes from apertures with $\tau_L < \val{\asim
   5}{Gyr}$. As we will see in \S\ref{891_2:sec:SFH} I2 and O
 populations make up the largest contributions to the total light in
-all apertures, even those with a significant fraction of younger
-populations and it is these older populations that have the largest
-systematic uncertainty due the large range of ages they
+\emph{all} apertures, even those with a significant fraction of
+younger populations, and it is these older populations that have the
+largest systematic uncertainty due the large range of ages they
 represent. Thus in all apertures the systematic uncertainty is
 dominated by the presence of old populations. Figure
 \ref{891_2:fig:MLWA_sys_err} shows these uncertainties in the context

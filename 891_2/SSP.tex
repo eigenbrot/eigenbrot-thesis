@@ -16,14 +16,15 @@ parameters (i.e., SFH, age, metallicity, and extinction).
 
 In this section explore different methods of combining information
 from SSPs with different ages and metallicities
-(\S\ref{891_2:sec:bc03_SSP}). We then discuss a statistically motivated way
-to reduce the number of free parameters in our figs
-(\S\ref{891_2:sec:bc03_dfk}) and examine systematic differences between
-different SSP libraries (\S\ref{891_2:sec:ma11}). The final SSP library used
-for analysis of NGC 891 is discussed in \S\ref{891_2:sec:final_SSP}.
+(\S\ref{891_2:sec:bc03_SSP}). We then discuss a statistically
+motivated way to reduce the number of free parameters in our fits
+(\S\ref{891_2:sec:bc03_dfk}) and examine systematic differences
+between different SSP libraries (\S\ref{891_2:sec:ma11}). The final
+SSP library used for analysis of NGC 891 is discussed in
+\S\ref{891_2:sec:final_SSP}.
 
 Before any analysis, all model SSPs are degraded to match the spectral
-resolution of our data. As discussed in \ref{chap:891_1} this
+resolution of our data. As discussed in Chapter \ref{chap:891_1} this
 resolution is a function of both \GP fiber size and wavelength.
 
 %++++++++++++++++++==
@@ -77,9 +78,9 @@ described below.
 
 The most basic libraries we used are 10 SSPs corresponding to the ages
 listed above all at a single metallicity. To probe different
-metallicities we constructed a single library for each of the six
-metallicities listed above and ran separate fits for each one. The
-final ``best'' metallicity value in each aperture was then determined
+metallicities we construct a single library for each of the six
+metallicities listed above and run separate fits for each one. The
+final ``best'' metallicity value in each aperture is then determined
 to be the mono-metallicty fit with the lowest $\chi^2_\nu$ value.
 Assuming that all the separate metallicity fits represent the same
 underlying photon distribution (i.e., NGC 891) and therefore sample
@@ -104,9 +105,9 @@ is simply the cumulative distribution function of the $\chi^2$ distribution.
 
 Once the probabilities have been computed we reject any metallicities
 with $\alpha < 0.68$. The final reported age is then the average of
-$\tau_L$ over the remaining metallicities and a good estimate of the
-uncertainty in $\tau_L$ caused by degeneracy in metallicity is the
-corresponding standard deviation. 
+$\tau_L$ over the remaining metallicities, and a good estimate of the
+$\tau_L$ uncertainty caused by degeneracy in metallicity is the
+corresponding standard deviation.
 
 %% {\bf MAB: The above is very nicely described. Do we want to say
 %%   anything here about whether we think the approach yields reasonable
@@ -129,7 +130,7 @@ resolution is constrained to the grid of metallicities defined in
 \label{891_2:sec:multi_metal}
 To address the metallicity issues mentioned above we next explored an
 SSP library that sampled all SSP ages and metallicities
-\emph{simultaneously}. In other words, each age bin of stars was
+\emph{simultaneously}. In other words, each age bin of stars is
 allowed to contribute flux from an arbitrary combination of SSPs at
 different metallicities; instead of fitting 10 ages six times (one for
 each metallicity) we now fit 60 SSPs (10 ages times 6 metallicities)
@@ -151,8 +152,8 @@ metallicity described in Equation \ref{891_2:eq:MLWZ}.
 \end{figure}
 
 Unlike the mono-metallicity libraries our multi-metallicity SSP
-library allows fore a more physically realistic picture NGC 891, one
-in which each location in the galaxy is a superposition stellar
+library allows for a more physically realistic picture NGC 891, one in
+which each location in the galaxy is a superposition stellar
 populations with different formation ages and metallicities. This
 additional information comes at a cost, however; 60 free parameters
 (plus one for the extinction) can lead to degeneracies that severely
@@ -182,13 +183,16 @@ reduced $\chi^2$ values resulting from fitting 60 SSPs to fits using
 only 3 SSPs. As shown in Figure \ref{891_2:fig:3SSP_chi} these two
 $\chi^2_\nu$ distributions look remarkably similar and a 2-sample KS
 test confirms that they are drawn from the same distribution with $p >
-0.99$. This result confirms the claim that 60 SSPs over-constrain our
-fits, but don't provide a satisfying resolution; the choice of the
-three SSPs used in the comparison was largely arbitrary and similar
-results can be obtained regardless of the specific SSPs used. In other
-words, we lack the ability to downselect from 60 SSPs in a physically
-or statistically motivated way. In \S\ref{891_2:sec:bc03_dfk} we argue that
-a downselection based diffusion k-means can solve this problem.
+0.99$. 
+
+This result confirms the claim that 60 SSPs over-constrain our fits,
+but doesn't' provide a satisfying resolution; the choice of the three
+SSPs used in the comparison was largely arbitrary and similar results
+can be obtained regardless of the specific SSPs used. In other words,
+we lack the ability to downselect from 60 SSPs in a physically or
+statistically motivated way. In \S\ref{891_2:sec:bc03_dfk} we argue
+that a downselection based on diffusion k-means can solve this
+problem.
 
 %% {\bf MAB: yet again, well described and a compelling example. I
 %%   suspect this general result has some precedent in the
@@ -199,13 +203,13 @@ a downselection based diffusion k-means can solve this problem.
 \subsubsection{Multi-Extinction SSPs}
 
 In the above cases we apply a single extinction parameter to all SSPs
-within an aperture, however models of dust in galaxies
-\citep{Charlot00} often prescribe separate extinctions for different
-age populations. In a basic example \citep{Charlot00} stars younger
-than \val{30}{Myr} are still shrouded in an HI envelope and therefore
-experience more attenuation of their light. We can simulate this type
-of behavior by allowing each SSP to have its own value of \tauV so
-that Equation \ref{891_2:eq:SSP_galaxy} becomes
+within an aperture, however models of dust in galaxies often prescribe
+separate extinctions for different age populations. In a basic example
+\citep{Charlot00} stars younger than \val{30}{Myr} are still shrouded
+in an HI envelope and therefore experience more attenuation of their
+light. We can simulate this type of behavior by allowing each SSP to
+have its own value of \tauV so that Equation \ref{891_2:eq:SSP_galaxy}
+becomes
 \begin{equation}
 g(\lambda,Z) = \sum_{i} R(\lambda,\tau_{V,i}) M(\Delta t_i,Z)
 f(\lambda,\Delta t_i, Z).
@@ -253,14 +257,32 @@ differences between different aged populations. The age range of these
 bins is shown in Table \ref{891_2:tab:dfk} and we refer to them as Young
 (Y), Intermediate 1 (I1), Intermediate 2 (I2), and Old (O).
 
+\begin{deluxetable}{ccr}
+\tablewidth{0pt}
+\tablecaption{Diffusion k-means bins}
+\tablehead{ 
+  \colhead{DFK group} &
+  \colhead{M15\tablenotemark{a} label} &
+  \colhead{Age range}
+}
+\startdata 
+1 & Y & 0.9-5.2 Myr \\
+2 & I1 & 5.5-404 Myr \\
+3 & I2 & 453.5-5750 Myr \\
+4 & O & 6000-13500 Myr
+\enddata
+\label{891_2:tab:dfk}
+\tablenotetext{a}{\citet{Mosby15}}
+\end{deluxetable}
+
 It is important to note that \citetalias{Mosby15} find that simply
 using the median \citetalias{Bruzual03} SSP from within a DFK bin does
 not produce a basis set that is is more precise than the full set of
 \citetalias{Bruzual03} templates. The spectrum associated with each
-DFK bin must be an average of all the component spectra and thus the
-DFK basis set constitutes a set of spectra that are different than the
-standard \citetalias{Bruzual03} templates. These averages are weighted
-by the time interval straddled by each of the input
+DFK bin must be an average of all the spectra within that bin and thus
+the DFK basis set constitutes a set of spectra that are different than
+the standard \citetalias{Bruzual03} templates. These averages are
+weighted by the time interval straddled by each of the input
 \citetalias{Bruzual03} spectra and the weights used in
 \citetalias{Mosby15} and in this work assume a constant star formation
 across each DFK bin.
@@ -312,23 +334,6 @@ still represented well by their single, averaged DFK spectra.
 
 %% }
 
-\begin{deluxetable}{ccr}
-\tablewidth{0pt}
-\tablecaption{Diffusion k-means bins}
-\tablehead{ 
-  \colhead{DFK group} &
-  \colhead{M15\tablenotemark{a} label} &
-  \colhead{Age range}
-}
-\startdata 
-1 & Y & 0.9-5.2 Myr \\
-2 & I1 & 5.5-404 Myr \\
-3 & I2 & 453.5-5750 Myr \\
-4 & O & 6000-13500 Myr
-\enddata
-\label{891_2:tab:dfk}
-\tablenotetext{a}{\citet{Mosby15}}
-\end{deluxetable}
 %% , but we assign ages to each SSP by computing a
 %% mass weighted age from the SSPs in each bin. Assuming a constant start
 %% formation history (as do \citet{Mosby15}) the weight of each SSP is
@@ -424,6 +429,20 @@ from using isochrones (as do \citetalias{Bruzual03}) to simulate the
 rapid changes in phase that occur at the tip of the RGB, the AGB, and
 the RGB bump.
 
+\begin{figure}
+  \centering
+  \includegraphics[width=\columnwidth]{891_2/figs/ma_bc_comp.pdf}
+  \caption[Comparison of DFK BC03 and MA11 SSP template
+    libraries]{\fixspacing\label{891_2:fig:ma_bc_comp}Comparison of
+    diffusion k-means \citetalias{Bruzual03} and
+    \citetalias{Maraston11} models. Colors correspond to DFK age bins,
+    as defined in Table \ref{891_2:tab:dfk}. The solid and dashed
+    lines are the \citetalias{Bruzual03} and \citetalias{Maraston11}
+    basis sets, respectively. Note that the \citetalias{Maraston11}
+    basis set lacks the youngest age bin and does not extend redward
+    of \val{\asim 7500}{\AA}}
+\end{figure}
+
 To make as fair a comparison as possible the \citetalias{Maraston11}
 models were first grouped into the same diffusion k-means bins as the
 BC03 models (the consequences of using a DFK grouping from a different
@@ -435,19 +454,6 @@ youngest \citetalias{Maraston11} age is \val{6.5}{Myr}, which is
 this reason our \citetalias{Maraston11} basis set does not have a
 ``Young'' SSP and thus consists of only 3 SSPs for each metallicity.
 
-\begin{figure}
-  \centering
-  \includegraphics[width=\columnwidth]{891_2/figs/ma_bc_comp.pdf}
-  \caption[Comparison of DFK BC03 and MA11 SSP template
-    libraries]{\fixspacing\label{891_2:fig:ma_bc_comp}Comparison of
-    diffusion k-means \citetalias{Bruzual03} and
-    \citetalias{Maraston11} models. Colors correspond to DFK age bins,
-    as defined in Table \ref{891_2:tab:dfk}. The solid and dashed
-    lines are the \citetalias{Bruzual03} and \citetalias{Maraston11}
-    basis sets, respectively. Note that the \citetalias{Maraston11}
-    basis set lacks the youngest age bin and doesn not extend redward
-    of \val{\asim 7500}{\AA}}
-\end{figure}
 
 Figure \ref{891_2:fig:ma_bc_comp} shows a comparison between the
 \citetalias{Maraston11} and \citetalias{Bruzual03} SSP basis sets at
@@ -471,7 +477,7 @@ be lower than those derived using \citetalias{Bruzual03} SSPs.
 %%   by M15's analysis of BC03? I.e., the differences we are finding here
 %%   may not be as important or significant.}
 
-In addition to the lack of young ages the age resolution of
+In addition to the lack of young ages, the age resolution of
 \citetalias{Maraston11} is much less than
 \citetalias{Bruzual03}. Compared to \citetalias{Bruzual03}'s 107 age
 bins the \citetalias{Maraston11} have at most 50 age bins (for solar
@@ -534,9 +540,9 @@ set.
     mono-metallicity and multi-metallicity DFK SSP library sets.}
 \end{figure}
 
-We choose the \citetalias{Bruzual03} DFK model set as our primary SSP
-library because it is statistically motivated, reduces the number of
-fit free parameters (which also reduced computation time), and
+We choose the \citetalias{Bruzual03} DFK template set as our primary
+SSP library because it is statistically motivated, reduces the number
+of fit free parameters (which also reduces computation time), and
 approximates important epochs in stellar evolution. We do note,
 however, that the DFK bins presented in \citetalias{Mosby15} are
 designed for very low signal to noise data and therefore may reduce
@@ -555,16 +561,16 @@ multiple bins.
 
 We modify the solar metallicity basis set defined by
 \citetalias{Mosby15} to consider multiple metallicities using the same
-method described in \S\ref{891_2:sec:multi_metal}; each age bin is allowed to
-contribute light from an arbitrary number of SSPs with different
-metallicities. Thus the full set contains 24 separate SSPs: six
-metallicities each in the four age bins described by
+method described in \S\ref{891_2:sec:multi_metal}; each age bin is
+allowed to contribute light from an arbitrary number of SSPs with
+different metallicities. Thus the full set contains 24 separate SSPs:
+six metallicities each in the four age bins described by
 \citetalias{Mosby15}. We find, however, that SSPs with metallicity
 below \val{0.2}{\Zsol} are both statistically unrepresentative of our
-galaxy spectra and astrophysically   implausible given
-expected rapid chemical enrichment time-scales and therefore the
-minimal contribution from super metal-poor populations to the
-integrated light.
+galaxy spectra and astrophysically implausible given the expected
+rapid chemical enrichment time-scales that result in a minimal
+contribution from super metal-poor populations to the integrated
+light.
 
 To test this assertion we construct mono-metallicity DFK basis sets in
 the same metallicity bins listed in \S\ref{891_2:sec:mono_metal} and fit
@@ -590,10 +596,10 @@ metallicity over another.
 Figure \ref{891_2:fig:chisq_hist} also shows that our final,
 multi-metallicity basis set (with only $Z \geq \val{0.2}{\Zsol}$)
 produces fits of comparable quality to the mono-metallicity fits ($p >
-0.8$). Thus we cannot say that our multi-metallicity basis set provide
-a statistical improvement over any one mono-metallicity basis set. The
-advantage, however, of the final basis set is in the physical insight
-gained by creating a more realistic physical model of the
+0.8$). Thus we cannot say that our multi-metallicity basis set
+provides a statistical improvement over any one mono-metallicity basis
+set. The advantage, however, of the final basis set is in the physical
+insight gained by creating a more realistic physical model of the
 galaxy. Using a multi-metallicity SSP set also allows us to check if
 astrophysically reasonable age-metallicity relations come out of our
 analysis \emph{without} having to assume age/metallicity priors (as is
@@ -632,20 +638,6 @@ age and metallicity, but we can only quantify these degeneracies
 %%   the mono-z with multi-z. I still think that is a good idea.
 
 %% }
-
-Finally, Figure \ref{891_2:fig:ex_fit} shows an example of the best
-fit in one aperture (pointing 6, aperture 9). This example is typical
-for most apertures in our data set; the data has relatively high
-signal/noise and is well fit by the superposition of our final SSP
-basis set.
-
-%-----------------
-%% {\bf MAB: For the figure we discussed the idea of putting in a few
-%%   apertures with different characteristic ages. Also, coul you label
-%%   the lines by DFK age and Z as well as the L-weighted total values?
-%%   You should also show a residual spectrum at the bottom of each panel
-%%   (for each aperture.}
-
 \begin{figure}
   \centering
   \includegraphics[width=\columnwidth]{891_2/figs/example_fit.pdf}
@@ -658,3 +650,16 @@ basis set.
     colors are the same as in Figure \ref{891_2:fig:bc_dfk_comp}. The
     red line is the superposition of all the individual SSP spectra.}
 \end{figure}
+
+Finally, Figure \ref{891_2:fig:ex_fit} shows an example of the best
+fit in one of our apertures (pointing 6, aperture 9). This example is
+typical for most apertures in our data set; the data has relatively
+high signal/noise and is well fit by the superposition of our final
+SSP basis set.
+
+%-----------------
+%% {\bf MAB: For the figure we discussed the idea of putting in a few
+%%   apertures with different characteristic ages. Also, coul you label
+%%   the lines by DFK age and Z as well as the L-weighted total values?
+%%   You should also show a residual spectrum at the bottom of each panel
+%%   (for each aperture.}
