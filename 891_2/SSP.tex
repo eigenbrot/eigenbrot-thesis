@@ -14,7 +14,7 @@ need to use an SSP library that a) produces ``good'' fits, and b)
 minimizes internal degeneracies to increase the precision on derived
 parameters (i.e., SFH, age, metallicity, and extinction).
 
-In this section explore different methods of combining information
+In this section we explore different methods of combining information
 from SSPs with different ages and metallicities
 (\S\ref{891_2:sec:bc03_SSP}). We then discuss a statistically
 motivated way to reduce the number of free parameters in our fits
@@ -152,8 +152,8 @@ metallicity described in Equation \ref{891_2:eq:MLWZ}.
 \end{figure}
 
 Unlike the mono-metallicity libraries our multi-metallicity SSP
-library allows for a more physically realistic picture NGC 891, one in
-which each location in the galaxy is a superposition stellar
+library allows for a more physically realistic picture of NGC 891, one
+in which each location in the galaxy is a superposition of stellar
 populations with different formation ages and metallicities. This
 additional information comes at a cost, however; 60 free parameters
 (plus one for the extinction) can lead to degeneracies that severely
@@ -163,11 +163,11 @@ dilute our ability to precisely interpret the results of our fits.
   \centering
   \includegraphics[width=\columnwidth]{891_2/figs/allz_chihist.pdf}
   \caption[$\chi_{\nu}^2$ distributions for template libraries with 60
-    and 3 SSPs]{\fixspacing\label{891_2:fig:3SSP_chi}Distribution of
+  and 3 SSPs]{\fixspacing\label{891_2:fig:3SSP_chi}Distribution of
     best-fit $\chi^2_\nu$ values for the full, multi-metallicity basis
     set described in \S\ref{891_2:sec:multi_metal} (\emph{red}) and a
     artificially down-selected basis set containing only 5, 904, and
-    \val{1000}{Myr} SSPs 1 \Zsol (\emph{blue}). A 2-sample KS test
+    \val{1000}{Myr} SSPs at 1 \Zsol (\emph{blue}). A 2-sample KS test
     indicates these two distributions come from the same underlying
     distribution with $p > 0.99$.}
 \end{figure}
@@ -221,7 +221,7 @@ $\tau_{\mathrm{V,cont},i}$).
 In practice this library produced fits that failed to converge on
 reasonable timescales (days) and was abandoned. We note, however, that
 the reduction in parameters provided by the method discussed in the
-next section might make this problem tractable. Future work in will
+next section might make this problem tractable. Future work will
 investigate the resurrection of a multi-extinction SSP mix.
 
 \subsection{Diffusion K-Means BC03 SSPs}
@@ -277,7 +277,7 @@ bins is shown in Table \ref{891_2:tab:dfk} and we refer to them as Young
 
 It is important to note that \citetalias{Mosby15} find that simply
 using the median \citetalias{Bruzual03} SSP from within a DFK bin does
-not produce a basis set that is is more precise than the full set of
+not produce a basis set that is more precise than the full set of
 \citetalias{Bruzual03} templates. The spectrum associated with each
 DFK bin must be an average of all the spectra within that bin and thus
 the DFK basis set constitutes a set of spectra that are different than
@@ -481,7 +481,7 @@ In addition to the lack of young ages, the age resolution of
 \citetalias{Maraston11} is much less than
 \citetalias{Bruzual03}. Compared to \citetalias{Bruzual03}'s 107 age
 bins the \citetalias{Maraston11} have at most 50 age bins (for solar
-metallicity) and sometimes as few as 14. To asses whether this limited
+metallicity) and sometimes as few as 14. To assess whether this limited
 age sampling affects the diffusion k-means averages we rebinned the
 \citetalias{Bruzual03} diffusion k-means spectra from a sample of
 \citetalias{Bruzual03} spectra down-selected to match the age bins of
