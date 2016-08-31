@@ -4,8 +4,8 @@
 %\documentclass[final,10pt,oneside]{thesis}
 %\documentclass[compact,10pt]{thesis}  % this looks like shit. (AAK, 8/2/08)
 %\documentclass[compact,12pt,twoside]{thesis}  % this looks like shit. (AAK, 8/2/08)
-\documentclass[final,12pt,oneside]{thesis}
-%\documentclass[final,12pt,twoside]{thesis}
+%\documentclass[final,12pt,oneside]{thesis}
+\documentclass[final,12pt,twoside]{thesis}
 %\documentclass[draft,12pt]{thesis}
         % Curly brackets: Specify the "thesis" class file (thesis.cls).
         %   It assumes the existence of a few other style (*.sty) files.
@@ -202,11 +202,22 @@
 %\setlength{\tabcolsep}{0.035in}
 
 \include{Introduction/Introduction}
+\cleardoublepage
+
 \include{FRD/FRD}
+\cleardoublepage
+
 \include{Pak_build/Pak_build}
+\cleardoublepage
+
 \include{891_1/891_1}
+\cleardoublepage
+
 \include{891_2/891_2}
+\cleardoublepage
+
 \include{Conclusion/Conclusion}
+\cleardoublepage
 
 \begin{appendices}
 
@@ -215,7 +226,11 @@
 \setcounter{figure}{0}
 \renewcommand{\thefigure}{\Alph{chapter}\arabic{figure}}
 \include{Appendix/Appendix}
+\cleardoublepage
+
 \include{Appendix/tau_model}
+\cleardoublepage
+
 \include{Appendix/Appendix_tables}
 
 \end{appendices}
